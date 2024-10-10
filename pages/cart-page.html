@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../styles/styles.css" type="text/css">
+    <link rel="icon" href="../assets/images/logos/png/sunny_logos_white.png" type="image/png">
+</head>
+
+<body>
+
+    <div class="cart-container">
+
+        <!-- Green Sock -->
+        <div class="uni-green-product product-item">
+
+            <img src="../assets/sunny_socks_photos/packaging/png/catalogus_sokken_uni_green.png" alt="Uni_Green_Sock"
+                class="uni-green-img">
+
+            <div class="product-details">
+                <h4><b>Classic Uni Color</b></h4>
+                <p><b>Size:</b> 37-40</p>
+                <p><b>Color:</b> Green</p>
+                <h3><b>€6.75</b></h3>
+            </div>
+
+            <div class="up-num-input">
+                <button class="minus" onclick="decreaseg()">-</button>
+                <input type="number" id="quantity1" value="1" min="0">
+                <button class="plus" onclick="increaseg()">+</button>
+            </div>
+
+            <div class="product-action">
+                <button class="delete-button">🗑️</button>
+            </div>
+
+        </div>
+
+        <!-- Yellow Sock -->
+        <div class="uni-yellow-product product-item">
+
+            <img src="../assets/sunny_socks_photos/packaging/png/catalogus_sokken_uni_yellow.png" alt="Uni-yellow-sock"
+                class="uni-yellow-img">
+
+            <div class="product-details">
+                <h4><b>Classic Uni Color</b></h4>
+                <p><b>Size:</b> 37-40</p>
+                <p><b>Color:</b> Yellow</p>
+                <h3><b>€6.75</b></h3>
+            </div>
+
+            <div class="up-num-input">
+                <button class="minus" onclick="decreasey()">-</button>
+                <input type="number" id="quantity2" value="1" min="0">
+                <button class="plus" onclick="increasey()">+</button>
+            </div>
+
+            <div class="product-action">
+                <button class="delete-button">🗑️</button>
+            </div>
+
+        </div>
+
+        <!-- Pink Sock -->
+        <div class="uni-pink-product product-item">
+
+            <img src="../assets/sunny_socks_photos/packaging/png/catalogus_sokken_uni_pink.png" alt="Uni-pink-sock"
+                class="uni-pink-img">
+
+            <div class="product-details">
+                <h4><b>Classic Uni Color</b></h4>
+                <p><b>Size:</b> 37-40</p>
+                <p><b>Color:</b> Pink</p>
+                <h3><b>€6.75</b></h3>
+            </div>
+
+            <div class="up-num-input">
+                <button class="minus" onclick="decreasep()">-</button>
+                <input type="number" id="quantity3" value="1" min="0">
+                <button class="plus" onclick="increasep()">+</button>
+            </div>
+
+            <div class="product-action">
+                <button class="delete-button">🗑️</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/cart-page.js"></script>
+
+</body>
+
+</html>
