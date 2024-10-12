@@ -25,42 +25,42 @@
                         "price" => "€6,75",
                         "original_price" => "€11,50",
                         "image" =>
-                        "../assets/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_green.jpg",
+                        "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_green.jpg",
                     ],
                     [
                         "name" => "Classic Stripes",
                         "price" => "€6,75",
                         "original_price" => "€11,50",
                         "image" =>
-                        "../assets/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_blue.jpg",
+                        "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_blue.jpg",
                     ],
                     [
                         "name" => "Classic Stripes",
                         "price" => "€6,75",
                         "original_price" => "€11,50",
                         "image" =>
-                        "../assets/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_pink.jpg",
+                        "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_pink.jpg",
                     ],
                     [
                         "name" => "Classic Uni Color",
                         "price" => "€6,75",
                         "original_price" => "€11,50",
                         "image" =>
-                        "../assets/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_red.jpg",
+                        "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_red.jpg",
                     ],
                     [
                         "name" => "Classic Uni Color",
                         "price" => "€6,75",
                         "original_price" => "€11,50",
                         "image" =>
-                        "../assets/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_yellow.jpg",
+                        "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_yellow.jpg",
                     ],
                     [
                         "name" => "Classic Uni Color",
                         "price" => "€6,75",
                         "original_price" => "€11,50",
                         "image" =>
-                        "../assets/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_blue.jpg",
+                        "../assets//images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_blue.jpg",
                     ],
                 ];
 
