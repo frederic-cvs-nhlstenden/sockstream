@@ -33,3 +33,50 @@ body {
   background-size: auto;
   font-family: "Nexa Light", sans-serif;
 }
+
+header {
+  background-color:rgb(79, 187, 162);
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(79, 187, 162);
+  padding: 20px;
+  height: 400px;
+  width: 100%;
+}
+
+.headerlogo
+{
+  align-content: center;
+}
+
+.headerleft, .headerright
+{
+  margin: 0;
+  width: 15%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.headerleft
+{
+display: flex;
+}
+
+hr
+{
+  min-height: 100%;
+  max-height: 100vh;
+  margin: 0;
+}
+
+a:active 
+{
+  color: white;
+  text-decoration: underline;
+}
