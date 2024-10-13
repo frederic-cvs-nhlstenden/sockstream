@@ -33,3 +33,145 @@ body {
   background-size: auto;
   font-family: "Nexa Light", sans-serif;
 }
+
+/* Product Display */
+.cart-container
+{
+    display: flex;
+    flex-direction: column;
+    margin: 100px 150px auto;
+    border-radius: 10px ;
+    border: 2px solid #51b2a2;
+    width: 650px;
+
+}
+
+/* Product Parts */
+.cart-product-item
+{
+    display: grid;
+    grid-template-columns: 80px 1fr auto auto;
+    align-items: end;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Product Image */
+.uni-green-img, .uni-yellow-img, .uni-pink-img
+{
+    background-color: #ebe7e7;
+    height: fit-content;
+    width: 80px;
+    border-radius: 5px;
+}
+
+/* Product Details  */
+.cart-product-details 
+{
+	flex-grow: 1;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+
+.cart-product-details h4
+{
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.cart-product-details h3
+{
+    margin: 0px 0px;
+    padding-top: 45px;
+    font-weight: bolder;
+}
+
+.cart-product-details p
+{
+    margin: 5px 0;
+    color: #777;
+    font-size: small;
+    font-weight: bolder;
+    
+}
+
+.cart-product-details > p > b
+{
+    color: black;
+    font-weight: bolder;
+}
+
+/* Button */
+.up-num-input
+{
+    display: flex;
+    align-items: end;
+    border: 1px solid #ddd;
+    border-radius: 20px ;
+    background-color: #f3f3f3;
+    padding: 5px;
+    box-shadow: 10px rgb(172, 171, 171);
+}
+
+.up-num-input button
+{
+    border: none;
+    background: none;
+    font-size: 20px;
+    padding: 0 5px;
+    cursor: pointer;
+    color: #555;
+    width: 40px;
+}
+
+.up-num-input button:hover
+{
+    color:#f15b39;
+}
+
+.up-num-input input
+{
+    text-align: right;
+    width: 30px;
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+
+.up-num-input .minus
+{
+    font-size: 25px;
+    color: #999;
+}
+
+.up-num-input .plus
+{
+    font-size: 25px;
+    color: #007bff;
+}
+
+/* Delete Button */
+.cart-product-action
+{
+    grid-template-columns: 3/5;
+    margin-bottom: 110px;
+}
+
+.cart-delete-button
+{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #f15b39;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.cart-delete-button :hover
+{
+    color: #d9534f;
+}
