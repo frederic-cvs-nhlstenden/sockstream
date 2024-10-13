@@ -33,3 +33,79 @@ body {
   background-size: auto;
   font-family: "Nexa Light", sans-serif;
 }
+#faq .container {
+  display: flex;
+  width: 83%;
+  padding: 20px;
+  height: fit-content;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  color: white;
+}
+#faq body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../assets/sunny_illustrations/png/background-socks.png);
+  
+}
+#faq h2 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+}
+#faq p {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+#faq .container-wrapper {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 1/5;
+}
+#faq .container-1 {
+  background-color: #1d4079;
+  height: fit-content;
+  border-radius: 20px;
+}
+#faq .container-2 {
+  background-color: #50b1a1;
+  height: fit-content;
+  border-radius: 20px;
+}
+#faq .container-3 {
+  background-color: #f05a39;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+#faq .text-area1 {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+#faq .text-area2 {
+  width: 1150px;
+  height: fit-content;
+  top: 124px;
+  left: 25px;
+  line-height: 24px;
+}
+#faq .text-area3 {
+  width: 1150px;
+  height: fit-content;
+  top: 124px;
+  line-height: 24px;
+}
+
+#faq .question {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 24px;
+}
