@@ -35,21 +35,22 @@ body {
 }
 
 header {
-  background-color:rgb(79, 187, 162);
   height: 90px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  transition: background-color 0.5s;
 }
 
 footer {
-  background-color: rgb(79, 187, 162);
   height: 520px;
   width: 100%;
+  margin-bottom: 0%;
   align-items: center;
   justify-content: space-between;
+  transition: background-color 0.5s;
 }
 
 .headerlogo
@@ -131,3 +132,27 @@ a:active
   margin-left: 40px;
 }
 
+.footer-socials a{
+  text-decoration: none;
+}
+
+
+.color1 header, .color1 footer {
+  background-color: #1e407a;   /* Blue */
+}
+
+.color2 header, .color2 footer {
+  background-color: #f15b39;    /* orange */
+}
+
+.color3 header, .color3 footer {
+  background-color: #51b2a2;  /* Green */
+}
+
+.color4 header, .color4 footer {
+  background-color: #fecd3e;  /* yellow */
+}
+
+.color5 header, .color5 footer {
+  background-color: #e990b9;  /* pink */
+}
