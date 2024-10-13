@@ -45,7 +45,7 @@ header {
 }
 
 footer {
-  height: 520px;
+  height: 550px;
   width: 100%;
   margin-bottom: 0%;
   align-items: center;
@@ -53,27 +53,29 @@ footer {
   transition: background-color 0.5s;
 }
 
-.headerlogo
-{
+.header-logo {
   align-content: center;
+  padding-top: 5px;
 }
 
-.headerleft, .headerright
-{
+.header-left, .header-right {
   margin: 0;
   width: 15%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 50px;
 }
 
-.headerleft
-{
-display: flex;
+.header-left a {
+  text-decoration: none;
+
+}
+
+.header-right a {
+  text-decoration: none;
 }
 
 
-a:active 
-{
+a:active {
   color: white;
   text-decoration: underline;
 }
@@ -83,7 +85,7 @@ a:active
   display: flex;
   margin-left: 40px;
   justify-content: space-between;
-  padding-top: 100px;
+  padding-top: 80px;
 
 }
 
@@ -109,11 +111,15 @@ a:active
 .hr-footer
 {
   color: white;
-  margin-top: 100px;
-  width: 94%;
-  margin-right: 30px;
-  margin-left: 60px;
-  
+  margin-top: 70px;
+  width: 91%;
+  margin-right: 50px;
+  margin-left: 62px;
+}
+
+.ssl-secured-footer
+{
+  width: 200px;
 }
 
 .footer-copyrights
@@ -124,12 +130,15 @@ a:active
   padding: 30px;
   margin: 10px;
   margin-left: 40px;
-  margin-right: 40px;
+  margin-right: 60px;
 }
 
 .footer-socials
 {
+  display: flex;
   margin-left: 40px;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .footer-socials a{
