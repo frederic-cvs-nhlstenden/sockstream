@@ -39,6 +39,8 @@ body
   font-family: "Nexa Light", sans-serif;
 }
 
+/* Cart */
+
 /* Main Cart-Container */
 .cart-main-container 
 {
@@ -329,3 +331,6 @@ body
   width: 100px;
   margin-top: 5px;
 }
+
+
+/* Checkout Page */
