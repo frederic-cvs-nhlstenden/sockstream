@@ -234,7 +234,7 @@ section {
 
 #color-wheel {
   height: 100vh;
-  background-color: var(--color-pink);
+  background-color: var(--color-orange);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -255,39 +255,6 @@ section {
   height: 100%;
   clip: rect(0, 15vw, 15vw, 0);
   transform-origin: 50%;
-}
-
-.segment1 {
-  background-color: var(--color-blue);
-  transform: rotate(0deg);
-}
-.segment2 {
-  background-color: var(--color-orange);
-  transform: rotate(72deg);
-}
-.segment3 {
-  background-color: var(--color-yellow);
-  transform: rotate(144deg);
-}
-.segment4 {
-  background-color: var(--color-green);
-  transform: rotate(216deg);
-}
-.segment5 {
-  background-color: var(--color-pink);
-  transform: rotate(288deg);
-}
-
-.circle::after {
-  content: "";
-  position: absolute;
-  top: 15%;
-  left: 15%;
-  width: 70%;
-  height: 70%;
-  background-color: var(--color-pink);
-  border-radius: 50%;
-  z-index: 2;
 }
 
 .form-wrapper {
