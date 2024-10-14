@@ -38,15 +38,13 @@ function increasep() {
 }
 
 // Promo Code
-function applyPromo()
-{
+function applyPromo() {
     let promoCode = document.getElementById('promo-code').value;
     let totalElemenet = document.getElementById('cart-total');
     let subtotal = parseFloat(document.getElementById('cart-subtotal').textContent.replace('€', ''));
     let total = subtotal + 2.50; //just for testing purpose
 
-    if (promoCode === 'DISCOUNT10')
-    {
+    if (promoCode === 'DISCOUNT10') {
         total *= 0.90; //should apply 10% discount
     }
 
@@ -54,11 +52,22 @@ function applyPromo()
 }
 
 //Payment Method
+document.querySelectorAll(".img-radio").forEach(function (image) {
+    image.addEventListener("click", function () {
+        document.querySelectorAll(".img-radio").forEach(function (img) {
+            img.classList.remove("selected");
+        });
 
+        image.classList.add("selected");
+
+        const selectedValue = image.previousElementSibling.value;
+
+        document.getElementById("result").textContent = "Selected Option: " + selectedValue;
+    });
+});
 
 
 //Checkout Button
- document.getElementById("checkout-btn").addEventListener("click", function()
-{
+document.getElementById("checkout-btn").addEventListener("click", function () {
     window.location.assign("/checkout-page.html");
 });
