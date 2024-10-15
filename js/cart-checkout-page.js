@@ -1,3 +1,4 @@
+//CART:
 // Button - Green
 function decreaseg() {
     let input = document.getElementById('quantity1');
@@ -69,5 +70,7 @@ document.querySelectorAll(".img-radio").forEach(function (image) {
 
 //Checkout Button
 document.getElementById("checkout-btn").addEventListener("click", function () {
-    window.location.assign("/checkout-page.html");
+    window.location.assign("checkout-page.html");
 });
+
+//CHECKOUT:
