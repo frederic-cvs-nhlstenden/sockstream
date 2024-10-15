@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store</title>
     <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="../styles/main.css" type="text/css">
     <link rel="stylesheet" href="../styles/styles.css" type="text/css">
 </head>
 <body>
     <div class="layout">
-        <aside class="sidebar">
+    <aside class="sidebar">
         <div class="sidebar__filters">
             <h2 class="sidebar__title">Filters</h2>
             <div class="sidebar__filter-group">
@@ -47,66 +46,12 @@
             <button class="sidebar__apply-button">Apply Filter</button>
         </div>
     </aside>
-        <main class="main-content">
+        <main class="main-content" id="main-content">
             <h1 class="main-content__title">BRIGHT DEALS, BOLD SOCKS</h1>
-            <div class="product-grid">
-                <?php
-                $products = [
-                    [
-                        "name" => "Classic Stripes",
-                        "price" => "€6,75",
-                        "original_price" => "€11,50",
-                        "image" => "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_green.jpg",
-                    ],
-                    [
-                        "name" => "Classic Stripes",
-                        "price" => "€6,75",
-                        "original_price" => "€11,50",
-                        "image" => "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_blue.jpg",
-                    ],
-                    [
-                        "name" => "Classic Stripes",
-                        "price" => "€6,75",
-                        "original_price" => "€11,50",
-                        "image" => "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_pink.jpg",
-                    ],
-                    [
-                        "name" => "Classic Uni Color",
-                        "price" => "€6,75",
-                        "original_price" => "€11,50",
-                        "image" => "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_red.jpg",
-                    ],
-                    [
-                        "name" => "Classic Uni Color",
-                        "price" => "€6,75",
-                        "original_price" => "€11,50",
-                        "image" => "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_yellow.jpg",
-                    ],
-                    [
-                        "name" => "Classic Uni Color",
-                        "price" => "€6,75",
-                        "original_price" => "€11,50",
-                        "image" => "../assets//images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_blue.jpg",
-                    ],
-                ];
-                foreach ($products as $product_id => $product): ?>
-                    <article class="product-grid__item">
-                        <a href="productpage.php?product_id=<?= $product_id + 1 ?>" class="product-grid__link">
-                            <div class="product-grid__image-container">
-                                <img class="product-grid__image" src="<?= $product["image"] ?>" alt="<?= $product["name"] ?>" loading="lazy" />
-                            </div>
-                        </a>
-                        <div class="product-grid__details">
-                            <h2 class="product-grid__title"><?= $product["name"] ?></h2>
-                            <p class="product-grid__price">
-                                <span class="product-grid__price--discounted"><?= $product["price"] ?></span>
-                                <span class="product-grid__price--original"><?= $product["original_price"] ?></span>
-                            </p>
-                        </div>
-                    </article>
-                <?php endforeach; ?>
+            <div class="product-grid" id="product-grid">
             </div>
         </main>
     </div>
+    <script src="../js/store-page.js"></script>
 </body>
 </html>
