@@ -29,10 +29,10 @@
                 <h3 class="sidebar__subtitle">Colors</h3>
                 <div class="sidebar__color-grid">
                     <button class="sidebar__color-button" style="background: linear-gradient(to right, red, yellow, green, blue);"></button>
-                    <button class="sidebar__color-button" style="background-color: #00ff00;"></button>
-                    <button class="sidebar__color-button" style="background-color: #00ffff;"></button>
-                    <button class="sidebar__color-button" style="background-color: #ffa500;"></button>
-                    <button class="sidebar__color-button" style="background-color: #0000ff;"></button>
+                    <button class="sidebar__color-button" style="background-color: green;"></button>
+                    <button class="sidebar__color-button" style="background-color: yellow;"></button>
+                    <button class="sidebar__color-button" style="background-color: red"></button>
+                    <button class="sidebar__color-button" style="background-color: blue;"></button>
                 </div>
             </div>
             <div class="sidebar__filter-group">
