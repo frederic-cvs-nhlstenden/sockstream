@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="login-form">
+          <h2>Log in</h2>
+          <form action="#" method="POST">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="password">Password</label>
+            <div class="password-container">
+              <input type="password" id="password" name="password" required />
+              <span class="toggle-password">Hide</span>
+            </div>
+
+            <button type="submit" class="login-button">Log in</button>
+          </form>
+          <a href="#" class="forgot-password">Can't log in?</a>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="social-login">
+          <div>
+            <button class="social-button google">Continue with Google</button>
+            <button class="social-button facebook">
+              Continue with Facebook
+            </button>
+            <button class="social-button email">Sign up with email</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
