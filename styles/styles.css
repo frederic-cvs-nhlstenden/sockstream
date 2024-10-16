@@ -6,6 +6,9 @@
   --color-yellow-100: #fecd3e;
   --color-white-100: #ffffff;
   --color-white-80: rgba(255, 255, 255, 0.8);
+  --color-black-100: #000000;
+  --color-light-grey-100: #b9b8b8;
+  --color-purple-100: #6c249d;
 }
 
 @font-face {
@@ -146,6 +149,11 @@ body::before {
   margin-top: 20px;
 }
 
+.sidebar__divider {
+  border-top: 1px solid var(--color-light-grey-100);
+  margin: 20px 0;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -164,7 +172,8 @@ body::before {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   background-color: var(--color-orange-100);
-  border-radius: 10px;
+  border: 1px solid var(--color-black-100);
+  border-radius: 20px;
   padding: 20px;
   overflow-y: auto;
   max-height: 80vh;

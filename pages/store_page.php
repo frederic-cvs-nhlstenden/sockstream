@@ -12,11 +12,13 @@
     <aside class="sidebar">
         <div class="sidebar__filters">
             <h2 class="sidebar__title">Filters</h2>
+            <hr class="sidebar__divider"/>
             <div class="sidebar__filter-group">
                 <button class="sidebar__filter-item">Casual Socks</button>
                 <button class="sidebar__filter-item">Dress Socks</button>
                 <button class="sidebar__filter-item">Athletic Socks</button>
             </div>
+            <hr class="sidebar__divider"/>
             <div class="sidebar__filter-group">
                 <h3 class="sidebar__subtitle">Price</h3>
                 <input type="range" min="4" max="20" value="4" class="sidebar__price-slider" id="priceSlider">
@@ -25,6 +27,7 @@
                     <span>€20+</span>
                 </div>
             </div>
+            <hr class="sidebar__divider"/>
             <div class="sidebar__filter-group">
                 <h3 class="sidebar__subtitle">Colors</h3>
                 <div class="sidebar__color-grid">
@@ -33,8 +36,14 @@
                     <button class="sidebar__color-button" style="background-color: yellow;"></button>
                     <button class="sidebar__color-button" style="background-color: red"></button>
                     <button class="sidebar__color-button" style="background-color: blue;"></button>
+                    <button class="sidebar__color-button" style="background-color: pink;"></button>
+                    <button class="sidebar__color-button" style="background-color: purple;"></button>
+                    <button class="sidebar__color-button" style="background-color: orange;"></button>
+                    <button class="sidebar__color-button" style="background-color: cyan;"></button>
+                    <button class="sidebar__color-button" style="background-color: lime;"></button>
                 </div>
             </div>
+            <hr class="sidebar__divider"/>
             <div class="sidebar__filter-group">
                 <h3 class="sidebar__subtitle">Size</h3>
                 <div class="sidebar__size-buttons">
@@ -43,6 +52,7 @@
                     <button class="sidebar__size-button">45+</button>
                 </div>
             </div>
+            <hr class="sidebar__divider"/>
             <button class="sidebar__apply-button">Apply Filter</button>
         </div>
     </aside>

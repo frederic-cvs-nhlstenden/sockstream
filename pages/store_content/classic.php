@@ -1,19 +1,19 @@
 <?php
 $products = [
     [
-        "name" => "Classic Stripes",
+        "name" => "Classic Uni Color",
         "price" => "€6,75",
         "original_price" => "€11,50",
         "image" => "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_green.jpg",
     ],
     [
-        "name" => "Classic Stripes",
+        "name" => "Classic Uni Color",
         "price" => "€6,75",
         "original_price" => "€11,50",
         "image" => "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_blue.jpg",
     ],
     [
-        "name" => "Classic Stripes",
+        "name" => "Classic Uni Color",
         "price" => "€6,75",
         "original_price" => "€11,50",
         "image" => "../assets/images/sunny_socks_photos/packaging/jpeg/catalogus_sokken_uni_pink.jpg",

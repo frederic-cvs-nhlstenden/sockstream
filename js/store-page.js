@@ -8,6 +8,10 @@ function loadStore(storeType) {
         storeType === "seasonal"
           ? "url('../assets/images/sunny_illustrations/png/background-seasonal.png')"
           : "url('../assets/images/sunny_illustrations/png/background-socks.png')";
+      document.querySelector(".sidebar").style.backgroundColor =
+        storeType === "seasonal"
+          ? "var(--color-purple-100)"
+          : "var(--color-blue-100)";
     }
   };
   xhr.send();
