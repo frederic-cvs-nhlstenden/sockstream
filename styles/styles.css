@@ -42,6 +42,7 @@ header {
   justify-content: space-between;
   text-align: center;
   transition: background-color 0.5s;
+  font-family: "Nexa Light";
 }
 
 footer {
@@ -53,16 +54,18 @@ footer {
   transition: background-color 0.5s;
 }
 
+
+
+
 .header-logo {
   align-content: center;
   padding-top: 5px;
+  transform: translate(250px);
 }
 
 .header-left, .header-right {
   margin: 0;
   width: 15%;
-  padding-left: 20px;
-  padding-right: 50px;
 }
 
 .header-left a {
@@ -70,10 +73,49 @@ footer {
 
 }
 
-.header-right a {
-  text-decoration: none;
+.header-right
+{
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  display: grid;
+  padding-top: 80px;
+  padding-bottom: 10px;
+  padding-left: 80px;
+  transform: translate(190px);
 }
 
+
+.header-right a {
+  text-decoration: none;
+  padding-bottom: 70px;
+}
+
+.icons-header
+{
+  display: flex;
+  padding-top: 35px;
+  padding-right: 60px;
+}
+
+.cart-header
+{
+
+  width: 45px;
+  height: 40px;
+  padding-right: 50px;
+  
+  
+}
+
+.profile-header
+{
+  align-items: right;
+  width: 40px;
+  height: 40px;
+  padding-left: px;
+  padding-bottom: 40px;
+
+}
 
 a:active {
   color: white;
@@ -165,3 +207,19 @@ a:active {
 .color5 header, .color5 footer {
   background-color: #e990b9;  /* pink */
 }
+
+.breadcrumb-navigation
+{
+  display: inline;
+  text-decoration: none;
+  color: rgb(135, 142, 142);
+}
+
+.breadcrumb-navigation a:hover {
+  text-decoration: underline; 
+}
+
+.breadcrumb-navigation {
+  background-color: rgb(255, 255, 255);
+}
+
