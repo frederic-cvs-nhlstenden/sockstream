@@ -1,5 +1,5 @@
 <?php
-require_once "configs.php";
+require_once "globals.php";
 
 displayProducts($products, true);
 ?>

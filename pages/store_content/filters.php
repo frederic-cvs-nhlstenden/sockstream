@@ -1,5 +1,5 @@
 <?php
-include 'configs.php';
+include 'globals.php';
 
 function filterProducts($products, $filters) {
     return array_filter($products, function($product) use ($filters) {
