@@ -21,13 +21,11 @@
 * {
   box-sizing: content-box;
 }
-
 body {
   width: 100vw;
   max-width: 100%;
   min-height: 100vh;
-  background-image: url(../assets/sunny_illustrations/png/background-socks.png);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url(../assets/images/sunny_illustrations/png/background-socks.png);
   background-blend-mode: overlay;
   background-repeat: repeat;
   background-size: auto;
@@ -43,19 +41,13 @@ body {
   border-radius: 20px;
   color: white;
 }
-#faq body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: url(../assets/sunny_illustrations/png/background-socks.png);
-  
-}
 #faq h2 {
   font-weight: bold;
   font-size: 26px;
   line-height: 24px;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 #faq p {
   font-weight: normal;
@@ -67,43 +59,40 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-column: 1/5;
 }
 #faq .container-1 {
-  background-color: #1d4079;
+  background-color: var(--color-blue);
   height: fit-content;
   border-radius: 20px;
 }
 #faq .container-2 {
-  background-color: #50b1a1;
+  background-color: var(--color-green);
   height: fit-content;
   border-radius: 20px;
 }
 #faq .container-3 {
-  background-color: #f05a39;
+  background-color: var(--color-orange);
   height: fit-content;
   border-radius: 20px;
 }
-
 #faq .text-area1 {
   display: flex;
   flex-direction: column;
   height: fit-content;
+  line-height: 24px;
 }
 #faq .text-area2 {
-  width: 1150px;
+  display: flex;
+  flex-direction: column;
   height: fit-content;
-  top: 124px;
-  left: 25px;
   line-height: 24px;
 }
 #faq .text-area3 {
-  width: 1150px;
+  display: flex;
+  flex-direction: column;
   height: fit-content;
-  top: 124px;
   line-height: 24px;
 }
-
 #faq .question {
   font-weight: 700;
   font-size: 26px;
