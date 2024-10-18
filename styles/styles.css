@@ -55,6 +55,34 @@ body::before {
   gap: 20px;
 }
 
+.sidebar__color-button.selected {
+  border: 2px solid white;
+}
+
+.sidebar__filter-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--color-white-100);
+  font-size: 16px;
+  padding: 10px 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+.sidebar__filter-item::after {
+  content: ">";
+  float: right;
+}
+
+.sidebar__filter-item.selected {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .sidebar {
   background-color: var(--color-blue-100);
   color: var(--color-white-100);
