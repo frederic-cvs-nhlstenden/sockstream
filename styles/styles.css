@@ -26,18 +26,11 @@ body {
   width: 100vw;
   max-width: 100%;
   min-height: 100vh;
-  background-image: url(../assets/sunny_illustrations/png/background-socks.png);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url(../assets/images/sunny_illustrations/png/background-socks.png);
   background-blend-mode: overlay;
   background-repeat: repeat;
   background-size: auto;
   font-family: "Nexa Light", sans-serif;
-}
-#aboutus body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Nexa";
 }
 #aboutus .container {
   display: flex;
@@ -51,40 +44,39 @@ body {
 }
 #aboutus h2 {
   font-weight: bold;
-  font-size: 36px;
-  line-height: 46.8px;
+  font-size: 35px;
+  line-height: 45px;
 }
 #aboutus p {
   font-weight: normal;
-  font-size: 24px;
-  line-height: 31.2px;
+  font-size: 25px;
+  line-height: 30px;
 }
 #aboutus .container-wrapper {
   height: fit-content;
-  width: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-column: 1/5;
+  margin: 10px 0;
 }
 #aboutus .container-1 {
-  background-color: #f05a39;
+  background-color:var(--color-orange);
 }
 #aboutus .container-2 {
-  background-color: #50b1a1;
+  background-color: var(--color-green);
   display: flex;
   flex-direction: row-reverse;
 }
 #aboutus .container-3 {
-  background-color: #e890b7;
+  background-color: var(--color-pink);
 }
 #aboutus .container-4 {
-  background-color: #1d4079;
+  background-color: var(--color-blue);
   display: flex;
   flex-direction: row-reverse;
 }
 #aboutus .text-area {
-  width: 48%;
+  width: 45%;
   height: fit-content;
 }
 #aboutus .image-factory {
