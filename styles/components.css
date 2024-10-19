@@ -1,0 +1,137 @@
+:root {
+    --color-blue: #1e407a;
+    --color-green: #51b2a2;
+    --color-pink: #e990b9;
+    --color-orange: #f15b39;
+    --color-yelow: #fecd3e;
+}
+
+@font-face {
+    font-family: "Nexa Bold";
+    src: url("../assets/fonts/Nexa\ Bold.otf") format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nexa Light";
+    src: url("../assets/fonts/Nexa\ Light.otf") format("opentype");
+    font-style: normal;
+}
+
+.chatbot {
+    display: none;
+    background-image: url(../assets/images/sunny_illustrations/png/background-socks.png);
+    background-size: 320px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: overlay;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.chat-header{
+    background-color: var(--color-pink);
+    border-radius: 10px;
+    color: white;
+    height: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.chat-header h2 {
+    grid-column: 2/3;
+    text-align: center;
+    margin-top: 25px;
+    font-family: "Nexa Bold";
+}
+
+#close-btn {
+    border: none;
+    background-color: var(--color-pink);
+    color: white;
+    grid-column: 3/4;
+    text-align: center;
+    margin-top: 9px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    font-family: "Nexa Bold";
+}
+
+.chat-body {
+    height: 300px;
+    padding-top: 10px;
+    font-family: "Nexa Light";
+}
+
+#base-question {
+    background-color: var(--color-blue);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.chat-body p {
+    margin:  0;
+}
+
+.bot-response {
+    background-color: var(--color-blue);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.user-message {
+    background-color: var(--color-green); 
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 20px; 
+}
+
+.chat-footer {
+    background-color: var(--color-green);
+    border-radius: 10px;
+    color: white;
+    height: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: "Nexa Light";
+}
+
+.chat-footer div {
+    margin-top: 27px;
+    height: 40px;
+}
+
+.chat-footer input {
+    background-color: var(--color-green);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+}
+
+.chat-footer ::placeholder {
+    color: white;
+}
+
+.chat-footer button {
+    background-color: var(--color-green);
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    color: white;
+    padding: 5px;
+    width: 30px;
+}
