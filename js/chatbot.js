@@ -58,4 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    
+    document.getElementById('cart-button').addEventListener('click', function() {
+        document.getElementById('cart-overlay').style.display = 'block';
+    });
 
+    document.getElementById('cart-close-button').addEventListener('click', function() {
+        document.getElementById('cart-overlay').style.display = 'none';
+    });
+});

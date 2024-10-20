@@ -135,3 +135,97 @@
     padding: 5px;
     width: 30px;
 }
+
+#cart-button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.cart-overlay {
+    display: none;
+    position: fixed;
+    top: 5px; 
+    right: 30px; 
+    background-image: url(../assets/images/sunny_illustrations/png/background-socks.png);
+    background-size: 320px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: overlay;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 20px;
+    margin: 20px;
+    height: 300px;
+}
+
+.cart-header {
+    background-color: var(--color-pink);
+    border-radius: 10px;
+    color: white;
+    height: 80px; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: 1fr; 
+    align-items: center; 
+    justify-items: center; 
+}
+
+.cart-header h2 {
+    grid-column: 2/3;
+    text-align: center;
+    font-family: "Nexa Bold";
+    margin: 0;
+}
+
+.cart-overlay-content {
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.cart-close-button {
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    grid-column: 3/4;
+    text-align: center;
+    margin: 0;
+    font-family: "Nexa Bold";
+}
+
+.cart-body {
+    height: 190px;
+    padding: 10px;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin: 10px 0;
+}
+
+.cart-footer {
+    background-color: var(--color-green);
+    border-radius: 10px;
+    color: white;
+    height: 50px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+#checkout-button {
+    background-color: var(--color-green);
+    color: white;
+    font-size: 16px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 20px;
+    width: fit-content;
+    height: 40px;
+    font-family: "Nexa Light";
+}
