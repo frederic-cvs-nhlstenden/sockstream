@@ -2,104 +2,82 @@ let selectedFilters = {};
 let currentStoreType = "classic";
 let selectedColors = [];
 
-function loadStore(storeType, filters = {}) {
+const loadStore = (storeType, filters = {}) => {
   currentStoreType = storeType;
-  const xhr = new XMLHttpRequest();
   const filterParams = new URLSearchParams(filters);
   filterParams.append("storeType", storeType);
-  xhr.open("GET", `store_content/filters.php?${filterParams.toString()}`, true);
-  xhr.onload = function () {
-    if (this.status === 200) {
-      document.getElementById("product-grid").innerHTML = this.responseText;
-      document.body.style.backgroundImage =
-        storeType === "seasonal"
-          ? "url('../assets/images/sunny_illustrations/png/background-seasonal.png')"
-          : "url('../assets/images/sunny_illustrations/png/background-socks.png')";
-      document.querySelector(".sidebar").style.backgroundColor =
-        storeType === "seasonal"
-          ? "var(--color-purple)"
-          : "var(--color-blue)";
-    }
-  };
-  xhr.send();
-}
 
-function updateButtonStates() {
-  document
-    .querySelectorAll(".sidebar__filter-item, .sidebar__size-button")
-    .forEach((button) => {
-      const filter = button.dataset.filter;
-      const value = button.dataset.value;
-      if (selectedFilters[filter] === value) {
-        button.classList.add("selected");
-      } else {
-        button.classList.remove("selected");
-      }
-    });
+  fetch(`store_content/filters.php?${filterParams.toString()}`)
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById("product-grid").innerHTML = html;
+      document.body.style.backgroundImage = `url('../assets/images/sunny_illustrations/png/background-${storeType === "seasonal" ? "seasonal" : "socks"}.png')`;
+      document.querySelector(".sidebar").style.backgroundColor = `var(--color-${storeType === "seasonal" ? "purple" : "blue"})`;
+    })
+    .catch(error => console.error('Error loading store:', error));
+};
 
-  document.querySelectorAll(".sidebar__color-button").forEach((button) => {
-    const value = button.dataset.value;
-    if (selectedColors.includes(value)) {
-      button.style.border = "2px solid white";
-    } else {
-      button.style.border = "none";
-    }
+const updateButtonStates = () => {
+  document.querySelectorAll(".sidebar__filter-item, .sidebar__size-button").forEach(button => {
+    const { filter, value } = button.dataset;
+    button.classList.toggle("selected", selectedFilters[filter] === value);
   });
-}
 
-document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".sidebar__color-button").forEach(button => {
+    const { value } = button.dataset;
+    button.style.border = selectedColors.includes(value) ? "2px solid white" : "none";
+  });
+};
+
+const handleFilterClick = (element, isColorFilter = false) => {
+  const { filter, value } = element.dataset;
+  
+  if (isColorFilter) {
+    const index = selectedColors.indexOf(value);
+    if (index > -1) {
+      selectedColors.splice(index, 1);
+    } else {
+      selectedColors.push(value);
+    }
+  } else {
+    if (selectedFilters[filter] === value) {
+      delete selectedFilters[filter];
+    } else {
+      selectedFilters[filter] = value;
+    }
+  }
+
+  updateButtonStates();
+};
+
+document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   currentStoreType = urlParams.get("storeType") || "classic";
 
-  document
-    .querySelectorAll(".sidebar__filter-item, .sidebar__size-button")
-    .forEach((button) => {
-      button.addEventListener("click", function () {
-        const filter = this.dataset.filter;
-        const value = this.dataset.value;
-        if (selectedFilters[filter] === value) {
-          delete selectedFilters[filter];
-          this.classList.remove("selected");
-        } else {
-          selectedFilters[filter] = value;
-          this.classList.add("selected");
-        }
-        updateButtonStates();
-      });
-    });
+  document.querySelectorAll(".sidebar__filter-item, .sidebar__size-button").forEach(button => {
+    button.addEventListener("click", () => handleFilterClick(button));
+  });
 
-  document.querySelectorAll(".sidebar__color-button").forEach((button) => {
-    button.addEventListener("click", function () {
-      const value = this.dataset.value;
-      const index = selectedColors.indexOf(value);
-      if (index > -1) {
-        selectedColors.splice(index, 1);
-      } else {
-        selectedColors.push(value);
-      }
-      updateButtonStates();
-    });
+  document.querySelectorAll(".sidebar__color-button").forEach(button => {
+    button.addEventListener("click", () => handleFilterClick(button, true));
   });
 
   const priceSlider = document.getElementById("priceSlider");
   const priceMin = document.getElementById("priceMin");
-  const priceMax = document.getElementById("priceMax");
-  priceSlider.addEventListener("input", function () {
-    const value = this.value;
-    priceMin.textContent = `€${value}`;
-    selectedFilters["price"] = `${value}-20`;
+
+  priceSlider.addEventListener("input", function() {
+    priceMin.textContent = `€${this.value}`;
+    selectedFilters["price"] = `${this.value}-20`;
   });
 
-  document
-    .getElementById("applyFilters")
-    .addEventListener("click", function () {
-      if (selectedColors.length > 0) {
-        selectedFilters["color"] = selectedColors.join(",");
-      } else {
-        delete selectedFilters["color"];
-      }
-      loadStore(currentStoreType, selectedFilters);
-    });
+  document.getElementById("applyFilters").addEventListener("click", () => {
+    if (selectedColors.length > 0) {
+      selectedFilters["color"] = selectedColors.join(",");
+    } else {
+      delete selectedFilters["color"];
+    }
+    loadStore(currentStoreType, selectedFilters);
+  });
 
   loadStore(currentStoreType);
 });
