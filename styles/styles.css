@@ -1,14 +1,14 @@
 :root {
-  --color-blue-100: #1e407a;
-  --color-green-100: #51b2a2;
-  --color-pink-100: #e990b9;
-  --color-orange-100: #f15b39;
-  --color-yellow-100: #fecd3e;
-  --color-white-100: #ffffff;
+  --color-blue: #1e407a;
+  --color-green: #51b2a2;
+  --color-pink: #e990b9;
+  --color-orange: #f15b39;
+  --color-yelow: #fecd3e;
+  --color-white: #ffffff;
   --color-white-80: rgba(255, 255, 255, 0.8);
-  --color-black-100: #000000;
-  --color-light-grey-100: #b9b8b8;
-  --color-purple-100: #6c249d;
+  --color-black: #000000;
+  --color-light-grey: #b9b8b8;
+  --color-purple: #6c249d;
 }
 
 @font-face {
@@ -72,7 +72,7 @@ body::before {
   text-align: left;
   background: none;
   border: none;
-  color: var(--color-white-100);
+  color: var(--color-white);
   font-size: 16px;
   padding: 10px 0;
   cursor: pointer;
@@ -91,12 +91,13 @@ body::before {
 }
 
 .sidebar {
-  background-color: var(--color-blue-100);
-  color: var(--color-white-100);
+  background-color: var(--color-blue);
+  color: var(--color-white);
   padding: 20px;
   border-radius: 10px;
   font-family: "Nexa Light", sans-serif;
   height: 70vh;
+  box-sizing: border-box;
 }
 
 .sidebar__title {
@@ -115,7 +116,7 @@ body::before {
   text-align: left;
   background: none;
   border: none;
-  color: var(--color-white-100);
+  color: var(--color-white);
   font-size: 16px;
   padding: 10px 0;
   cursor: pointer;
@@ -155,6 +156,7 @@ body::before {
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .sidebar__size-buttons {
@@ -163,9 +165,9 @@ body::before {
 }
 
 .sidebar__size-button {
-  background-color: var(--color-green-100);
+  background-color: var(--color-green);
   border: none;
-  color: var(--color-white-100);
+  color: var(--color-white);
   padding: 5px 10px;
   border-radius: 20px;
   cursor: pointer;
@@ -173,19 +175,20 @@ body::before {
 
 .sidebar__apply-button {
   width: 100%;
-  background-color: var(--color-green-100);
+  background-color: var(--color-green);
   border: none;
-  color: var(--color-white-100);
+  color: var(--color-white);
   padding: 10px;
   border-radius: 5px;
   font-family: "Nexa Bold", sans-serif;
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
+  box-sizing: border-box;
 }
 
 .sidebar__divider {
-  border-top: 1px solid var(--color-light-grey-100);
+  border-top: 1px solid var(--color-light-grey);
   margin: 20px 0;
 }
 
@@ -195,7 +198,7 @@ body::before {
 }
 
 .main-content__title {
-  color: var(--color-blue-100);
+  color: var(--color-blue);
   font-family: "Nexa Bold", sans-serif;
   margin-bottom: 20px;
   font-size: 24px;
@@ -206,8 +209,8 @@ body::before {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  background-color: var(--color-orange-100);
-  border: 1px solid var(--color-black-100);
+  background-color: var(--color-orange);
+  border: 1px solid var(--color-black);
   border-radius: 20px;
   padding: 20px;
   overflow-y: auto;
@@ -223,7 +226,7 @@ body::before {
 .product-grid__image-container {
   width: 15vw;
   height: 15vw;
-  background-color: var(--color-white-100);
+  background-color: var(--color-white);
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
@@ -238,13 +241,13 @@ body::before {
 
 .product-grid__title {
   font-family: "Nexa Bold", sans-serif;
-  color: var(--color-white-100);
+  color: var(--color-white);
   font-size: 16px;
   margin: 10px 0;
 }
 
 .product-grid__price {
-  color: var(--color-white-100);
+  color: var(--color-white);
 }
 
 .product-grid__price--discounted {

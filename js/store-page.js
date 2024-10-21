@@ -17,8 +17,8 @@ function loadStore(storeType, filters = {}) {
           : "url('../assets/images/sunny_illustrations/png/background-socks.png')";
       document.querySelector(".sidebar").style.backgroundColor =
         storeType === "seasonal"
-          ? "var(--color-purple-100)"
-          : "var(--color-blue-100)";
+          ? "var(--color-purple)"
+          : "var(--color-blue)";
     }
   };
   xhr.send();
