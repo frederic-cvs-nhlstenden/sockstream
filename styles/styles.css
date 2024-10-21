@@ -23,6 +23,10 @@
   font-style: normal;
 }
 
+* {
+  box-sizing: content-box;
+}
+
 body {
   width: 100vw;
   max-width: 100%;
@@ -33,6 +37,9 @@ body {
   background-size: auto;
   font-family: "Nexa Light", sans-serif;
   padding: 20px;
+}
+
+.store-page {
   box-sizing: border-box;
 }
 
