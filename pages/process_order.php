@@ -17,7 +17,7 @@
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        // Collect form data
+        
         $email = $_POST['email'];
         $firstName = $_POST['first-name'];
         $lastName = $_POST['last-name'];
@@ -28,7 +28,6 @@
         $expiry = $_POST['expiry'];
         $cvv = $_POST['cvv'];
 
-        // Simulate storing form data
         echo "<h1>Thank you for your purchase, $firstName $lastName!</h1>";
         echo "<p>We've received your order and will ship it to $address, $city, $postalCode.</p>";
     }
