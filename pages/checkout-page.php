@@ -76,35 +76,37 @@
             <!-- Payment buttons -->
             <div class="form-row">
                 <div class="CO-payment-options full-width">
-                <label>
-                    <input type="radio" name="applepay" value="option1">
-                    <img src="../assets/icons/png/applepay-badge.png" alt="applepay" class="img-radio" id="ap1">
-                </label>
 
-                <label>
-                    <input type="radio" name="ideal" value="option2">
-                    <img src="../assets/icons/png/ideal-badge.png" alt="ideal" class="img-radio" id="id1">
-                </label>
+                    <label>
+                        <input type="radio" name="applepay" value="option1">
+                        <img src="../assets/icons/png/applepay-badge.png" alt="applepay" class="img-radio" id="ap1">
+                    </label>
 
-                <label>
-                    <input type="radio" name="mastercard" value="option3">
-                    <img src="../assets/icons/png/mastercard-badge.png" alt="mastercard" class="img-radio" id="mc1">
-                </label>
+                    <label>
+                        <input type="radio" name="ideal" value="option2">
+                        <img src="../assets/icons/png/ideal-badge.png" alt="ideal" class="img-radio" id="id1">
+                    </label>
 
-                <label>
-                    <input type="radio" name="paypal" value="option4">
-                    <img src="../assets/icons/png/paypal-badge.png" alt="paypal" class="img-radio" id="pp1">
-                </label>
+                    <label>
+                        <input type="radio" name="mastercard" value="option3">
+                        <img src="../assets/icons/png/mastercard-badge.png" alt="mastercard" class="img-radio" id="mc1">
+                    </label>
 
-                <label>
-                    <input type="radio" name="visa" value="option5">
-                    <img src="../assets/icons/png/visa-badge.png" alt="visa" class="img-radio" id="v1">
-                </label>
+                    <label>
+                        <input type="radio" name="paypal" value="option4">
+                        <img src="../assets/icons/png/paypal-badge.png" alt="paypal" class="img-radio" id="pp1">
+                    </label>
 
-                <label>
-                    <input type="radio" name="googleplay" value="option6">
-                    <img src="../assets/icons/png/googlepay-badge.png" alt="googlepay" class="img-radio" id="gp1">
-                </label>
+                    <label>
+                        <input type="radio" name="visa" value="option5">
+                        <img src="../assets/icons/png/visa-badge.png" alt="visa" class="img-radio" id="v1">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="googleplay" value="option6">
+                        <img src="../assets/icons/png/googlepay-badge.png" alt="googlepay" class="img-radio" id="gp1">
+                    </label>
+
                 </div>
             </div>
 
@@ -114,95 +116,117 @@
         </form>
 
         <!-- Right side: Cart and order summary -->
-        <div class="order-summary">
+        <div class="CO-order-summary">
 
-            <h2>Your Cart</h2>
-            <!-- Green Sock -->
-            <div class="uni-green-product cart-product-item">
+            <div class="CO-product-items-wrapper">
 
-                <img src="../assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_green.png"
-                    alt="Uni_Green_Sock" class="uni-green-img">
+                <!-- Product-items -->
+                <h2>Your Cart</h2>
 
-                <div class="cart-product-details">
-                    <h4><b>Classic Uni Color</b></h4>
-                    <p><b>Size:</b> 37-40</p>
-                    <p><b>Color:</b> Green</p>
-                    <h3><b>€6.75</b></h3>
+
+                <!-- Green Sock -->
+                <div class="uni-green-product cart-product-item CO-product-items">
+
+                    <img src="../assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_green.png"
+                        alt="Uni_Green_Sock" class="uni-green-img">
+
+                    <div class="cart-product-details">
+                        <h4><b>Classic Uni Color</b></h4>
+                        <p><b>Size:</b> 37-40</p>
+                        <p><b>Color:</b> Green</p>
+                        <h3><b>€6.75</b></h3>
+                    </div>
+
+                    <div class="up-num-input">
+                        <button class="minus" onclick="Gdecrease()">-</button>
+                        <input type="number" id="sock1" value="1" min="0">
+                        <button class="plus" onclick="Gincrease()">+</button>
+                    </div>
+
+                    <div class="cart-product-action">
+                        <button class="delete-button">🗑️</button>
+                    </div>
+
                 </div>
 
-                <div class="up-num-input">
-                    <button class="minus" onclick="decreaseg()">-</button>
-                    <input type="number" id="quantity1" value="1" min="0">
-                    <button class="plus" onclick="increaseg()">+</button>
+                <!-- Yellow Sock -->
+                <div class="uni-yellow-product cart-product-item CO-product-items">
+
+                    <img src="../assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_yellow.png"
+                        alt="Uni-yellow-sock" class="uni-yellow-img">
+
+                    <div class="cart-product-details">
+                        <h4><b>Classic Uni Color</b></h4>
+                        <p><b>Size:</b> 37-40</p>
+                        <p><b>Color:</b> Yellow</p>
+                        <h3><b>€6.75</b></h3>
+                    </div>
+
+                    <div class="up-num-input">
+                        <button class="minus" onclick="Ydecrease()">-</button>
+                        <input type="number" id="sock2" value="1" min="0">
+                        <button class="plus" onclick="Yincrease()">+</button>
+                    </div>
+
+                    <div class="cart-product-action">
+                        <button class="delete-button">🗑️</button>
+                    </div>
+
                 </div>
 
-                <div class="cart-product-action">
-                    <button class="delete-button">🗑️</button>
+                <!-- Pink Sock -->
+                <div class="uni-pink-product cart-product-item CO-product-items">
+
+                    <img src="../assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_pink.png"
+                        alt="Uni-pink-sock" class="uni-pink-img">
+
+                    <div class="cart-product-details">
+                        <h4><b>Classic Uni Color</b></h4>
+                        <p><b>Size:</b> 37-40</p>
+                        <p><b>Color:</b> Pink</p>
+                        <h3><b>€6.75</b></h3>
+                    </div>
+
+                    <div class="up-num-input">
+                        <button class="minus" onclick="Pdecrease()">-</button>
+                        <input type="number" id="sock3" value="1" min="0">
+                        <button class="plus" onclick="Pincrease()">+</button>
+                    </div>
+
+                    <div class="cart-product-action">
+                        <button class="delete-button">🗑️</button>
+                    </div>
+
                 </div>
+            </div>
+            <!-- SUMMARY -->
+            <div class="CO-summary">
+
+                <h2><b>Order Summary</h2>
+                <p><b>Subtotal</b> <span id="cart-subtotal">€20.25</span></p>
+                <p><b>Delivery</b> <span id="cart-delivery">€2.50</span></p>
+
+                <hr>
+
+                <p><b>Total</b> <span id="cart-total">€22.75</span></p>
+
+                <div class="promo-code">
+
+                    <input type="text" id="promo-code" placeholder="Add promo code">
+                    <button onclick="applyPromo()">Apply</button>
+
+                </div>
+
 
             </div>
 
-            <!-- Yellow Sock -->
-            <div class="uni-yellow-product cart-product-item">
 
-                <img src="../assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_yellow.png"
-                    alt="Uni-yellow-sock" class="uni-yellow-img">
-
-                <div class="cart-product-details">
-                    <h4><b>Classic Uni Color</b></h4>
-                    <p><b>Size:</b> 37-40</p>
-                    <p><b>Color:</b> Yellow</p>
-                    <h3><b>€6.75</b></h3>
-                </div>
-
-                <div class="up-num-input">
-                    <button class="minus" onclick="decreasey()">-</button>
-                    <input type="number" id="quantity2" value="1" min="0">
-                    <button class="plus" onclick="increasey()">+</button>
-                </div>
-
-                <div class="cart-product-action">
-                    <button class="delete-button">🗑️</button>
-                </div>
-
-            </div>
-
-            <!-- Pink Sock -->
-            <div class="uni-pink-product cart-product-item">
-
-                <img src="../assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_pink.png"
-                    alt="Uni-pink-sock" class="uni-pink-img">
-
-                <div class="cart-product-details">
-                    <h4><b>Classic Uni Color</b></h4>
-                    <p><b>Size:</b> 37-40</p>
-                    <p><b>Color:</b> Pink</p>
-                    <h3><b>€6.75</b></h3>
-                </div>
-
-                <div class="up-num-input">
-                    <button class="minus" onclick="decreasep()">-</button>
-                    <input type="number" id="quantity3" value="1" min="0">
-                    <button class="plus" onclick="increasep()">+</button>
-                </div>
-
-                <div class="cart-product-action">
-                    <button class="delete-button">🗑️</button>
-                </div>
-
-            </div>
-
-            <div class="summary">
-                <p>Subtotal: €20.25</p>
-                <p>Delivery Fee: €2.50</p>
-                <p>Total: €22.75</p>
-                <input type="text" placeholder="Add promo code">
-                <button>Apply</button>
-            </div>
         </div>
+
+
     </div>
 
-    <script src="cart-checkout-page.js"></script>
+    <script src="checkout-page.js" defer></script>
 
 </body>
 
