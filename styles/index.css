@@ -14,16 +14,16 @@ h1 {
   margin: 0;
 }
 
-h2 {
+.heading {
   font-size: 3rem;
   color: var(--color-blue);
   margin-bottom: 10vh;
   text-align: center;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+#name,
+#email,
+#message {
   width: 100%;
   padding: 1rem;
   margin-bottom: 2rem;
@@ -32,7 +32,7 @@ textarea {
   border-radius: 0.5rem;
 }
 
-textarea {
+#message {
   resize: vertical;
 }
 
@@ -189,7 +189,7 @@ section {
   margin-left: 8px;
 }
 
-#reviews {
+#main-reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,13 +228,13 @@ section {
   color: var(--color-blue);
 }
 
-.stars {
+.main-stars {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.stars i {
+.main-stars i {
   color: var(--color-pink);
 }
 

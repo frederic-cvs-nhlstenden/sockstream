@@ -118,6 +118,7 @@ const preloadImages = async (imageArray) => {
   const promises = imageArray.map((src) => {
     const img = new Image();
     img.src = src;
+    console.log(img.src);
     return new Promise((resolve, reject) => {
       img.onload = resolve;
       img.onerror = reject;
