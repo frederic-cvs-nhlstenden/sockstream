@@ -39,6 +39,61 @@ body {
   font-family: "Nexa Light", sans-serif;
 }
 
+#aboutus {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 10px; 
+  padding: 20px 0;
+
+  .about-us, 
+  .our-socks, 
+  .meet-the-team, 
+  .our-philosophy {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    width: 85%; 
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding: 25px;
+    color: white;
+    justify-content: space-around;
+  }
+
+  .about-subtitles {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .about-paragraph {
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  .about-us {
+    background-color: var(--color-orange);
+  }
+
+  .our-socks {
+    background-color: var(--color-green);
+  }
+
+  .meet-the-team {
+    background-color: var(--color-pink);
+  }
+
+  .our-philosophy {
+    background-color: var(--color-blue);
+  }
+
+  .image-factory {
+    width: 95%;
+    border-radius: 45px;
+  }
+}
+
 #sock-store {
   box-sizing: border-box;
   padding: 20px;
