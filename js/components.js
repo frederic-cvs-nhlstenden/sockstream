@@ -68,3 +68,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('cart-overlay').style.display = 'none';
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var popup = document.getElementById('newsletter-popup');
+    var closeBtn = document.querySelector('.newsletter-close-btn');
+
+    popup.style.display = 'flex';
+
+    closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+});

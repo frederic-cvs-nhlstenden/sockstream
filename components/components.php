@@ -10,8 +10,8 @@ $faqs = [
 ];
 
 $cartItems = [
-    ['name' => 'Product 1', 'quantity' => 1],
-    ['name' => 'Product 2', 'quantity' => 2]
+    ['name' => 'Product 1', 'quantity' => 1, 'image' => '../assets/images/product1.jpg'],
+    ['name' => 'Product 2', 'quantity' => 2, 'image' => '../assets/images/product2.jpg']
 ];
 
 
@@ -23,15 +23,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['userInput'])) {
 }
 
 
-function searchFAQs($input, $faqs) {
-    $input = strtolower($input); 
+function searchFAQs($input, $faqs)
+{
+    $input = strtolower($input);
     foreach ($faqs as $keyword => $answer) {
         if (stripos($input, $keyword) !== false) {
-            return $answer; 
+            return $answer;
         }
     }
-    return "I'm sorry, I don't have an answer for that."; 
+    return "I'm sorry, I don't have an answer for that.";
 }
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+        file_put_contents('subscribers.txt', $email . PHP_EOL, FILE_APPEND); // Placehoder for where to store the user emails
+        //echo "<p>Thank you for subscribing!</p>";
+    } else {
+        //echo "<p>Invalid email address.</p>";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +63,7 @@ function searchFAQs($input, $faqs) {
     <div id="chatbot" class="chatbot">
         <div class="chat-header">
             <h2>Support</h2>
-            <button id="close-btn">X</button>                
+            <button id="close-btn">X</button>
         </div>
         <div class="chat-body">
             <div id="base-question">
@@ -63,9 +77,8 @@ function searchFAQs($input, $faqs) {
             </div>
         </div>
     </div>
-    <img src="../assets/icons/svg/icon-chatbot.svg" id="chat-icon" alt="Chat Icon" />
-    <script src="../js/chatbot.js"></script>
-
+    <img class="chat-icon" src="../assets/icons/svg/icon-chatbot.svg" id="chat-icon" alt="Chat Icon" />
+    
     <button id="cart-button">View Cart</button>
 
     <div id="cart-overlay" class="cart-overlay">
@@ -77,16 +90,43 @@ function searchFAQs($input, $faqs) {
             <div class="cart-body">
                 <ul id="cart-items">
                     <?php foreach ($cartItems as $item): ?>
-                        <li><?php echo htmlspecialchars($item['name']); ?> - Quantity: <?php echo htmlspecialchars($item['quantity']); ?></li>
+                        <li>
+                            <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['name']); ?>" class="cart-item-image">
+                            <?php echo htmlspecialchars($item['name']); ?> - Quantity: <?php echo htmlspecialchars($item['quantity']); ?>
+                        </li>
                     <?php endforeach; ?>
                 </ul>
-            </div>            
+            </div>
             <div class="cart-footer">
                 <button id="checkout-button">View Cart</button>
             </div>
         </div>
     </div>
 
+    <div id="newsletter-popup" class="popup">
+        <div class="popup-content">
+            <div><img src="../assets/images/sunny_misc_photos/sustainablesocks.png" alt="sustainablesocks"></div>
+            <div>
+                <div class="newsletter-close-btn"><span>&times;</span></div>
+                <div id="discount">
+                    <h2>EXTRA 10% OFF ON OUR</h2>
+                    <h2 id="hallowen">HALLOWEEN SALE</h2>
+                </div>
+                <div>
+                    <h2>FOR</h2>
+                    <img id="logohalloween" src="../assets/images/logos/png/sunny_logos_white.png" alt="sunny">
+                    <h2>CUSTOMERS</h2>
+                </div>
+                
+                <form id="newsletter-form" method="POST" action="components.php">
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                    <button type="submit">></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/components.js"></script>
 </body>
 
 </html>
