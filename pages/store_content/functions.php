@@ -45,8 +45,8 @@ function displayProducts($products, $is_seasonal) {
         if ($product["is_seasonal"] === $is_seasonal) {
             echo "<article class='product-grid__item'>
                 <a href='productpage.php?product_id=" . ($product_id + 1) . "' class='product-grid__link'>
-                    <div class='product-grid__image-container'>
-                        <img class='product-grid__image' src='" . $product["image"] . "' alt='" . $product["name"] . "' loading='lazy' />
+                    <div class='product-card__image-wrapper'>
+                        <img class='product-card__image' src='" . $product["image"] . "' alt='" . $product["name"] . "' loading='lazy' />
                     </div>
                 </a>
                 <div class='product-grid__details'>

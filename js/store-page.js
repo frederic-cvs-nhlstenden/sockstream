@@ -7,7 +7,7 @@ const loadStore = (storeType, filters = {}) => {
   const filterParams = new URLSearchParams(filters);
   filterParams.append("storeType", storeType);
 
-  fetch(`store_content/filters.php?${filterParams.toString()}`)
+  fetch(`store_content/functions.php?${filterParams.toString()}`)
     .then(response => response.text())
     .then(html => {
       document.getElementById("product-grid").innerHTML = html;
