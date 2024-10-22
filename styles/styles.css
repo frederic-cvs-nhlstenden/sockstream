@@ -3,7 +3,7 @@
   --color-green: #51b2a2;
   --color-pink: #e990b9;
   --color-orange: #f15b39;
-  --color-yelow: #fecd3e;
+  --color-yellow: #fecd3e;
 }
 
 @font-face {
@@ -26,10 +26,330 @@ body {
   width: 100vw;
   max-width: 100%;
   min-height: 100vh;
-  background-image: url(../assets/sunny_illustrations/png/background-socks.png);
+  background-image: url(../assets/images/sunny_illustrations/png/background-socks.png);
   background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: overlay;
+  background-attachment: fixed;
   background-repeat: repeat;
   background-size: auto;
   font-family: "Nexa Light", sans-serif;
+}
+
+#main-page {
+  display: block;
+
+  * {
+    margin: 0;
+    font-family: "Nexa Bold", Arial, sans-serif;
+    color: #fff;
+  }
+
+  h1 {
+    font-size: 10rem;
+    color: #fff;
+    margin: 0;
+  }
+
+  .heading {
+    font-size: 3rem;
+    color: var(--color-blue);
+    margin-bottom: 10vh;
+    text-align: center;
+  }
+
+  #name,
+  #email,
+  #message {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background-color: var(--color-blue);
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+  }
+
+  #message {
+    resize: vertical;
+  }
+
+  button[type="submit"] {
+    background-color: var(--color-orange);
+    border: none;
+    color: white;
+    padding: 2vh 2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin: auto;
+  }
+
+  section {
+    margin-bottom: 14vh;
+  }
+
+  #hero-section {
+    display: flex;
+    height: 100vh;
+    margin-bottom: 0;
+  }
+
+  .hero-background {
+    background-color: var(--color-blue);
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70%;
+    width: 70%;
+  }
+
+  .hero-image {
+    width: 50vw;
+  }
+
+  .description {
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    margin: 0 0 4vh 0;
+  }
+
+  .hero-button {
+    padding: 1.5vh 2vw;
+    font-size: 2rem;
+    color: #fff;
+    border: 1.5px solid #fff;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  #features {
+    background-color: var(--color-green);
+    height: 20vh;
+    display: flex;
+    align-items: center;
+  }
+
+  #features ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .feature-item img {
+    width: 50px;
+    margin-bottom: 10px;
+    border-radius: 0.5rem;
+  }
+
+  .feature-item p {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  #best-sellers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-background {
+    background-color: var(--color-blue);
+    width: 80vw;
+    padding-top: 8vh;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .carousel {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    gap: 3.5vw;
+    width: 90%;
+    height: 50vh;
+  }
+
+  .carousel::-webkit-scrollbar {
+    height: 7px;
+  }
+
+  .carousel::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+  }
+
+  .carousel::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+  }
+
+  .carousel-item img {
+    width: 10vw;
+    height: 37vh;
+    background-color: #fff;
+    padding-inline: 5vh;
+    border-radius: 1rem;
+  }
+
+  .product-label {
+    margin: 2vh 0 0 0;
+  }
+
+  .product-name {
+    font-family: "Nexa Light", Arial, sans-serif;
+  }
+
+  .discount {
+    text-decoration: line-through;
+    margin-left: 8px;
+  }
+
+  #main-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-review {
+    background-color: var(--color-yellow);
+    color: #000;
+    padding: 3vh 3vw;
+    flex-shrink: 0;
+    width: 15vw;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5vh;
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    margin-top: 2vh;
+  }
+
+  .user .profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 2rem;
+    background-color: #ddd;
+    margin-right: 1vw;
+  }
+
+  .user .user-name {
+    font-size: 1.2rem;
+    color: var(--color-blue);
+  }
+
+  .main-stars {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .main-stars i {
+    color: var(--color-pink);
+  }
+
+  #color-wheel {
+    height: 100vh;
+    background-color: var(--color-blue);
+  }
+
+  .color-choice-title {
+    text-align: center;
+    position: relative;
+    top: 15%;
+  }
+
+  .color-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #svg-container {
+    position: relative;
+  }
+
+  .inner-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 65%;
+    height: 65%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 1;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  .form-wrapper {
+    background-color: var(--color-blue);
+    max-width: 80vw;
+    border-radius: 4rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5vh 0;
+  }
+
+  .form-wrapper img {
+    width: 40%;
+    border-radius: 1rem;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-headers {
+    margin-bottom: 4vh;
+  }
+
+  .form-headers h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  input:focus,
+  textarea:focus,
+  button:focus {
+    outline: 2px solid var(--color-orange);
+    border-radius: 0.5rem;
+  }
 }
