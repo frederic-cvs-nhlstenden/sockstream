@@ -39,6 +39,41 @@ body {
   font-family: "Nexa Light", sans-serif;
 }
 
+#faq {
+  display: grid;
+  justify-items: center;
+
+  .customer-support,
+  .general-information,
+  .orders-shipping {
+    width: 83%;
+    padding: 20px;
+    height: fit-content;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    color: white;
+  }
+  .faq-subtitle {
+    font-weight: bold;
+    font-size: 25px;
+    display: grid;
+    justify-content: center;
+  }
+  .general-information {
+    background-color: var(--color-blue);
+  }
+  .orders-shipping {
+    background-color: var(--color-green);
+  }
+  .customer-support {
+    background-color: var(--color-orange);
+  }
+  #faq .question {
+    font-weight: 700;
+    font-size: 25px;
+  }
+}
+
 #aboutus {
   display: grid;
   justify-items: center;
