@@ -15,23 +15,26 @@
 
 <body>
 
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        
-        $email = $_POST['email'];
-        $firstName = $_POST['first-name'];
-        $lastName = $_POST['last-name'];
-        $address = $_POST['address'];
-        $city = $_POST['city'];
-        $postalCode = $_POST['postal-code'];
-        $cardNumber = $_POST['card-number'];
-        $expiry = $_POST['expiry'];
-        $cvv = $_POST['cvv'];
+    <div class="PO-align">
 
-        echo "<h1>Thank you for your purchase, $firstName $lastName!</h1>";
-        echo "<p>We've received your order and will ship it to $address, $city, $postalCode.</p>";
-    }
-    ?>
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            $email = $_POST['email'];
+            $firstName = $_POST['first-name'];
+            $lastName = $_POST['last-name'];
+            $address = $_POST['address'];
+            $city = $_POST['city'];
+            $postalCode = $_POST['postal-code'];
+            $cardNumber = $_POST['card-number'];
+            $expiry = $_POST['expiry'];
+            $cvv = $_POST['cvv'];
+
+            echo "<h1>Thank you for your purchase, $firstName $lastName!</h1>";
+            echo "<p>We've received your order and will ship it to $address, $city, $postalCode.</p>";
+        }
+        ?>
+    </div>
 
 </body>
 
