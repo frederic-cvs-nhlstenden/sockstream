@@ -12,7 +12,7 @@ const loadStore = (storeType, filters = {}) => {
     .then(html => {
       document.getElementById("product-grid").innerHTML = html;
       document.body.style.backgroundImage = `url('../assets/images/sunny_illustrations/png/background-${storeType === "seasonal" ? "seasonal" : "socks"}.png')`;
-      document.querySelector(".sidebar").style.backgroundColor = `var(--color-${storeType === "seasonal" ? "purple" : "blue"})`;
+      document.querySelector(".sock-store__filter-panel").style.backgroundColor = `var(--color-${storeType === "seasonal" ? "purple" : "blue"})`;
     })
     .catch(error => console.error('Error loading store:', error));
 };
