@@ -32,6 +32,10 @@ body {
   background-repeat: repeat;
   background-size: auto;
   font-family: "Nexa Light", sans-serif;
+  background-image: url(../assets/images/sunny_illustrations/png/background-socks.png);
+  background-blend-mode: overlay;
+  background-repeat: repeat;
+  background-size: auto;
 }
 
 header {
@@ -54,13 +58,10 @@ footer {
   transition: background-color 0.5s;
 }
 
-
-
-
 .header-logo {
   align-content: center;
   padding-top: 5px;
-  transform: translate(250px);
+  transform: translate(70px);
 }
 
 .header-left, .header-right {
@@ -68,56 +69,58 @@ footer {
   width: 15%;
 }
 
+.header-left
+{
+  display: flex;
+  column-gap: 40px;
+  padding-top: 80px;
+  padding-bottom: 75px;
+  padding-left: 40px;
+}
+
+
 .header-left a {
   text-decoration: none;
-
 }
 
 .header-right
 {
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  display: grid;
+  display: flex;
+  column-gap: 40px;
   padding-top: 80px;
   padding-bottom: 10px;
-  padding-left: 80px;
-  transform: translate(190px);
+  transform: translate(200px);
 }
-
 
 .header-right a {
   text-decoration: none;
   padding-bottom: 70px;
 }
 
+
 .icons-header
 {
   display: flex;
   padding-top: 35px;
-  padding-right: 60px;
-}
-
-.cart-header
-{
-
-  width: 45px;
-  height: 40px;
-  padding-right: 50px;
-  
-  
+  padding-right: 40px;
+  column-gap: 50px;
 }
 
 .profile-header
 {
-  align-items: right;
-  width: 40px;
-  height: 40px;
-  padding-left: px;
-  padding-bottom: 40px;
-
+  width: 35px;
+  height: 35px;
+  padding-right: 0px;
 }
 
-a:active {
+.cart-header
+{
+  width: 35px;
+  height: 35px;
+  padding-bottom: 40px;
+}
+
+header a:hover {
   color: white;
   text-decoration: underline;
 }
@@ -128,10 +131,9 @@ a:active {
   margin-left: 40px;
   justify-content: space-between;
   padding-top: 80px;
-
 }
 
-.left 
+.farleft-text-footer
 {
   text-align: left;
   width: 300%;
@@ -187,26 +189,6 @@ a:active {
   text-decoration: none;
 }
 
-
-.color1 header, .color1 footer {
-  background-color: #1e407a;   /* Blue */
-}
-
-.color2 header, .color2 footer {
-  background-color: #f15b39;    /* orange */
-}
-
-.color3 header, .color3 footer {
-  background-color: #51b2a2;  /* Green */
-}
-
-.color4 header, .color4 footer {
-  background-color: #fecd3e;  /* yellow */
-}
-
-.color5 header, .color5 footer {
-  background-color: #e990b9;  /* pink */
-}
 
 .breadcrumb-navigation
 {
