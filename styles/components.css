@@ -1,0 +1,339 @@
+:root {
+    --color-blue: #1e407a;
+    --color-green: #51b2a2;
+    --color-pink: #e990b9;
+    --color-orange: #f15b39;
+    --color-yelow: #fecd3e;
+}
+
+@font-face {
+    font-family: "Nexa Bold";
+    src: url("../assets/fonts/Nexa\ Bold.otf") format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nexa Light";
+    src: url("../assets/fonts/Nexa\ Light.otf") format("opentype");
+    font-style: normal;
+}
+
+.chatbot {
+    display: none;
+    position: fixed; 
+    bottom: 80px; 
+    right: 20px;
+    background-image: url(../assets/images/sunny_illustrations/png/background-socks.png);
+    background-size: 320px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: overlay;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 20px;
+    z-index: 1000; 
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;
+    cursor: pointer; 
+    z-index: 1000; 
+}
+
+.chat-header{
+    background-color: var(--color-pink);
+    border-radius: 10px;
+    color: white;
+    height: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.chat-header h2 {
+    grid-column: 2/3;
+    text-align: center;
+    margin-top: 25px;
+    font-family: "Nexa Bold";
+}
+
+#close-btn {
+    border: none;
+    background-color: var(--color-pink);
+    color: white;
+    grid-column: 3/4;
+    text-align: center;
+    margin-top: 9px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    font-family: "Nexa Bold";
+}
+
+.chat-body {
+    height: 300px;
+    padding-top: 10px;
+    font-family: "Nexa Light";
+}
+
+#base-question {
+    background-color: var(--color-blue);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.chat-body p {
+    margin:  0;
+}
+
+.bot-response {
+    background-color: var(--color-blue);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.user-message {
+    background-color: var(--color-green); 
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 20px; 
+}
+
+.chat-footer {
+    background-color: var(--color-green);
+    border-radius: 10px;
+    color: white;
+    height: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: "Nexa Light";
+}
+
+.chat-footer div {
+    margin-top: 27px;
+    height: 40px;
+}
+
+.chat-footer input {
+    background-color: var(--color-green);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+}
+
+.chat-footer ::placeholder {
+    color: white;
+}
+
+.chat-footer button {
+    background-color: var(--color-green);
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    color: white;
+    padding: 5px;
+    width: 30px;
+}
+
+#cart-button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.cart-overlay {
+    display: none;
+    position: fixed;
+    top: 5px; 
+    right: 30px; 
+    background-image: url(../assets/images/sunny_illustrations/png/background-socks.png);
+    background-size: 320px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: overlay;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 20px;
+    margin: 20px;
+    height: 300px;
+}
+
+.cart-header {
+    background-color: var(--color-pink);
+    border-radius: 10px;
+    color: white;
+    height: 80px; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: 1fr; 
+    align-items: center; 
+    justify-items: center; 
+}
+
+.cart-header h2 {
+    grid-column: 2/3;
+    text-align: center;
+    font-family: "Nexa Bold";
+    margin: 0;
+}
+
+.cart-overlay-content {
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.cart-close-button {
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    grid-column: 3/4;
+    text-align: center;
+    margin: 0;
+    font-family: "Nexa Bold";
+}
+
+.cart-body {
+    height: 190px;
+    padding: 10px;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin: 10px 0;
+}
+
+.cart-footer {
+    background-color: var(--color-green);
+    border-radius: 10px;
+    color: white;
+    height: 50px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.product-image, .cart-item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#checkout-button {
+    background-color: var(--color-green);
+    color: white;
+    font-size: 16px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 20px;
+    width: fit-content;
+    height: 40px;
+    font-family: "Nexa Light";
+}
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+}
+
+.popup-content {
+    background-color: var(--color-orange);
+    border-radius: 20px;
+    text-align: center;
+    font-family: "Nexa Bold";
+    color: white;
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    width: 90%;
+    gap: 10px;
+    overflow: hidden; 
+}
+
+#discount {
+    margin-bottom: 20px;
+}
+
+#hallowen {
+    color: purple;
+}
+
+.popup-content img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    object-fit: cover;
+}
+
+#logohalloween {
+    width: 90%;
+}
+
+.popup-content input {
+    background-color: var(--color-orange);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 10px;
+    color: white;
+    height: 40px;
+    width: 190px;
+    padding: 5px;
+    font-family: "Nexa Light";
+}
+
+.popup-content ::placeholder {
+    color: white;
+}
+
+.popup-content button {
+    background-color: var(--color-orange);
+    color: white;
+    font-size: 16px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 50%;
+    width: fit-content;
+    height: 25px;
+    width: 25px;
+    font-family: "Nexa Light";
+}
+
+.newsletter-close-btn {
+    text-align: right;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: "Nexa Bold";
+    color: white;
+    z-index: 1001; 
+    margin-right: 10px;
+    margin-top: 5px;
+}
