@@ -361,19 +361,26 @@ body {
   border-radius: 5px;
 }
 
-.CO-payment-options {
-  input[type="radio"] {
+.CO-payment-options input[type="radio"] {
     display: none;
   }
-}
+
 
 .CO-payment-options img:hover {
+  border-radius: 10px;
   background-color: #33706681;
 }
 
-.CO-payement-options .img-radio.selected {
-  border-color: #51b2a2;
-  box-shadow: 0px 0px 10px #555;
+.CO-payment-options input[type="radio"]:checked + img {
+  border-radius: 10px;
+  border: 1px solid #51b2a2;
+  box-shadow: 0 5px 5px #51b2a2;
+}
+
+.CO-img-pay {
+  font-family: 'Nexa Light';
+  color: #555;
+  margin-bottom: inherit;
 }
 
 /* Checkout-button */
@@ -427,7 +434,7 @@ body {
 
 .CO-summary {
   width: 100%;
-  background-color: #d4d4d4;
+  background-color: #ffffff;
   border-radius: 30px;
   padding: 10px;
   box-shadow: 0 2px 5px #555;
@@ -436,10 +443,11 @@ body {
 
 .CO-summary > h2{
   font-family: 'Nexa Bold';
+  margin-bottom: 20px;
 }
 
 .CO-summary > p > b {
-  font-weight: bolder;
+  font-family:'Nexa Bold';
 }
 
 .CO-summary>hr {
@@ -448,7 +456,13 @@ body {
 }
 
 .CO-summary>p>span {
-  padding-left: 340px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.CO-total{
+  font-size: 20px;
+  font-family: 'Nexa Bold';
 }
 
 /* Promo Code */
@@ -486,4 +500,16 @@ body {
 
 .promo-code>button:hover {
   background-color: #337066;
+}
+
+/* Process Order */
+.PO-align{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 300px;
+  border-radius: 20px;
+  background-color: #f15b3965;
+
 }
