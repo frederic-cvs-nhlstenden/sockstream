@@ -38,13 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
         userInput.value = '';
 
         
-        fetch('', { 
+        fetch('components/chatbot.php', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
             body: 'userInput=' + encodeURIComponent(inputText)
         })
+        
         .then(response => response.json())
         .then(data => {
             const botResponseDiv = document.createElement('div');

@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
     <link rel="stylesheet" href="../styles/styles.css" type="text/css">
+    <link rel="stylesheet" href="../styles/components.css" type="text/css">
 </head>
 
 <body>
@@ -99,7 +100,10 @@
 
         </div>
     </footer>
-            <script src="../js/headerandfooter.js"></script>
+
+    <?php include '../components/cart.php'; ?>
+    <script src="../js/components.js" ></script>
+    <script src="../js/headerandfooter.js"></script>
 </body>
 
 </html>

@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
     <link rel="stylesheet" href="../styles/styles.css" type="text/css">
+    <link rel="stylesheet" href="../styles/components.css" type="text/css">
     <link rel="icon" href="../assets/images/logos/png/sunny_logos_white.png" type="image/png">
 
     <?php
     // Debug mode flag
-    $debug_mode = false;
+    $debug_mode = true;
     $default_product_id = 1;
 
     // Check for product ID from GET or use default in debug mode
@@ -370,8 +371,10 @@
             </div>
         </div>
     </main>
-</body>
 
+<?php include '../components/chatbot.php'; ?>
+</body>
+<script src="../js/components.js"></script>
 <script src="../js/product_page.js"></script>
 
 </html>

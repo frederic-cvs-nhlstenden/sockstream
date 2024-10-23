@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sunny Socks</title>
-    <link rel="stylesheet" href="./assets/css/normalize.css" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" type="text/css"/>
+    <link rel="stylesheet" href="./styles/styles.css" type="text/css"/>
+    <link rel="stylesheet" href="../sockstream/styles/components.css" type="text/css">
     <link
       rel="shortcut icon"
       href="./assets/images/logos/png/sunny_logos-01.png"
@@ -411,6 +412,9 @@
       </section>
     </main>
 
+    <?php include 'components/chatbot.php'; ?>
+    <?php include 'components/newsteller.php'; ?>
     <script src="./js/index.js"></script>
+    <script src="./js/components.js"></script>
   </body>
 </html>

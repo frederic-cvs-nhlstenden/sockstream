@@ -9,11 +9,6 @@ $faqs = [
     "payment" => "We accept a wide range of payment options, including IDeal, Visa, Mastercard, PayPal, and Apple Pay. All transactions are securely processed to protect your information."
 ];
 
-$cartItems = [
-    ['name' => 'Product 1', 'quantity' => 1, 'image' => '../assets/images/product1.jpg'],
-    ['name' => 'Product 2', 'quantity' => 2, 'image' => '../assets/images/product2.jpg']
-];
-
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['userInput'])) {
     $userInput = $_POST['userInput'];
@@ -54,9 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Components</title>
+    <title>Chatbot</title>
     <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
     <link rel="stylesheet" href="../styles/components.css" type="text/css">
+    
 </head>
 
 <body>
@@ -77,56 +73,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
-    <img class="chat-icon" src="../assets/icons/svg/icon-chatbot.svg" id="chat-icon" alt="Chat Icon" />
+    <img class="chat-icon" src="./assets/icons/svg/icon-chatbot.svg" id="chat-icon" alt="Chat Icon" />
+
     
-    <button id="cart-button">View Cart</button>
-
-    <div id="cart-overlay" class="cart-overlay">
-        <div class="cart-overlay-content">
-            <div class="cart-header">
-                <h2>Your Cart</h2>
-                <span class="cart-close-button" id="cart-close-button">&times;</span>
-            </div>
-            <div class="cart-body">
-                <ul id="cart-items">
-                    <?php foreach ($cartItems as $item): ?>
-                        <li>
-                            <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['name']); ?>" class="cart-item-image">
-                            <?php echo htmlspecialchars($item['name']); ?> - Quantity: <?php echo htmlspecialchars($item['quantity']); ?>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
-            <div class="cart-footer">
-                <button id="checkout-button">View Cart</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="newsletter-popup" class="popup">
-        <div class="popup-content">
-            <div><img src="../assets/images/sunny_misc_photos/sustainablesocks.png" alt="sustainablesocks"></div>
-            <div>
-                <div class="newsletter-close-btn"><span>&times;</span></div>
-                <div id="discount">
-                    <h2>EXTRA 10% OFF ON OUR</h2>
-                    <h2 id="hallowen">HALLOWEEN SALE</h2>
-                </div>
-                <div>
-                    <h2>FOR</h2>
-                    <img id="logohalloween" src="../assets/images/logos/png/sunny_logos_white.png" alt="sunny">
-                    <h2>CUSTOMERS</h2>
-                </div>
-                
-                <form id="newsletter-form" method="POST" action="components.php">
-                    <input type="email" name="email" placeholder="Enter your email address" required>
-                    <button type="submit">></button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <script src="../js/components.js"></script>
 </body>
+<script src="../js/components.js"></script>
 
 </html>
