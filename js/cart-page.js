@@ -1,4 +1,5 @@
-// Green
+//CART:
+// Button - Green
 function decreaseg() {
     let input = document.getElementById('quantity1');
     if (parseInt(input.value) > 0) {
@@ -11,7 +12,7 @@ function increaseg() {
     input.value = parseInt(input.value) + 1;
 }
 
-//Yellow
+//Button - Yellow
 function decreasey() {
     let input = document.getElementById('quantity2');
     if (parseInt(input.value) > 0) {
@@ -24,7 +25,7 @@ function increasey() {
     input.value = parseInt(input.value) + 1;
 }
 
-//Pink
+//Button - Pink
 function decreasep() {
     let input = document.getElementById('quantity3');
     if (parseInt(input.value) > 0) {
@@ -37,3 +38,22 @@ function increasep() {
     input.value = parseInt(input.value) + 1;
 }
 
+// Promo Code
+function applyPromo() {
+    let promoCode = document.getElementById('promo-code').value;
+    let totalElemenet = document.getElementById('cart-total');
+    let subtotal = parseFloat(document.getElementById('cart-subtotal').textContent.replace('€', ''));
+    let total = subtotal + 2.50; //just for testing purpose
+
+    if (promoCode === 'DISCOUNT10') {
+        total *= 0.90; //should apply 10% discount
+    }
+
+    totalElemenet.textContent = '€' + total.toFixed(2);
+}
+
+
+//Checkout Button
+document.getElementById("checkout-btn").addEventListener("click", function () {
+    window.location.assign("checkout-page.php");
+});
