@@ -43,7 +43,6 @@ body {
   background-size: auto;
 }
 
-<<<<<<< HEAD
 header {
   height: 90px;
   width: 100%;
@@ -196,22 +195,6 @@ header a:hover {
 }
 
 
-.breadcrumb-navigation
-{
-  display: inline;
-  text-decoration: none;
-  color: rgb(135, 142, 142);
-}
-
-.breadcrumb-navigation a:hover {
-  text-decoration: underline; 
-}
-
-.breadcrumb-navigation {
-  background-color: rgb(255, 255, 255);
-}
-
-=======
 #faq {
   display: grid;
   justify-items: center;
@@ -828,4 +811,3 @@ header a:hover {
     border-radius: 0.5rem;
   }
 }
->>>>>>> 6698958a109d833afbc749b40ba3211af15c1d37
