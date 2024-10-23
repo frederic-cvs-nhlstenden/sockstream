@@ -170,6 +170,13 @@ body {
 }
 
 /* Order Summary Box */
+.right-cart{
+  grid-column: 2/2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .cart-order-summary {
   display: flex;
   flex-direction: column;
@@ -255,7 +262,6 @@ body {
 .powered-by {
   text-align: center;
   grid-column: 2/2;
-  grid-row: 2/2;
   background-color: #fece3e96;
   border-radius: 25px;
   display: flex;
