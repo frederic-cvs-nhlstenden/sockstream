@@ -7,12 +7,39 @@ const colors = [
 ];
 
 const images = [
-  "../assets/images/sunny_socks_photos/catalogus/Sunny_socks_blue.webp",
-  "../assets/images/sunny_socks_photos/catalogus/Sunny_socks_red.webp",
-  "../assets/images/sunny_socks_photos/catalogus/Sunny_socks_yellow.webp",
-  "../assets/images/sunny_socks_photos/catalogus/Sunny_socks_green.webp",
-  "../assets/images/sunny_socks_photos/catalogus/Sunny_socks_pink_01.webp",
+  "assets/images/sunny_socks_photos/catalogus/Sunny_socks_blue.webp",
+  "assets/images/sunny_socks_photos/catalogus/Sunny_socks_red.webp",
+  "assets/images/sunny_socks_photos/catalogus/Sunny_socks_yellow.webp",
+  "assets/images/sunny_socks_photos/catalogus/Sunny_socks_green.webp",
+  "assets/images/sunny_socks_photos/catalogus/Sunny_socks_pink_01.webp",
 ];
+
+const carouselProducts = document.getElementById("carousel-products");
+const prevBtnProducts = document.getElementById("products-prevBtn");
+const nextBtnProducts = document.getElementById("products-nextBtn");
+
+const carouselReviews = document.getElementById("carousel-reviews");
+const prevBtnReviews = document.getElementById("reviews-prevBtn");
+const nextBtnReviews = document.getElementById("reviews-nextBtn");
+
+const scrollStepProducts = 1140;
+const scrollStepReviews = 1120;
+
+prevBtnProducts.addEventListener("click", () => {
+  carouselProducts.scrollBy({ left: -scrollStepProducts });
+});
+
+nextBtnProducts.addEventListener("click", () => {
+  carouselProducts.scrollBy({ left: scrollStepProducts });
+});
+
+prevBtnReviews.addEventListener("click", () => {
+  carouselReviews.scrollBy({ left: -scrollStepReviews });
+});
+
+nextBtnReviews.addEventListener("click", () => {
+  carouselReviews.scrollBy({ left: scrollStepReviews });
+});
 
 let makeSVG = (tag, attrs) => {
   let el = document.createElementNS("http://www.w3.org/2000/svg", tag);
@@ -118,7 +145,6 @@ const preloadImages = async (imageArray) => {
   const promises = imageArray.map((src) => {
     const img = new Image();
     img.src = src;
-    console.log(img.src);
     return new Promise((resolve, reject) => {
       img.onload = resolve;
       img.onerror = reject;
