@@ -1,40 +1,446 @@
 :root {
   --color-blue: #1e407a;
   --color-green: #51b2a2;
+  --color-green-transparent: rgba(81, 178, 162, 0.75);
   --color-pink: #e990b9;
   --color-orange: #f15b39;
   --color-yellow: #fecd3e;
+  --text-color: #333;
+  --border-color: #dcdcdc;
 }
-
+/*Fonts added such that font-family stays Nexa and you can control the font-weight! */
 @font-face {
-  font-family: "Nexa Bold";
-  src: url("../assets/fonts/Nexa\ Bold.otf") format("opentype");
+  font-family: "Nexa";
+  src: url("../assets/fonts/Nexa_Light.otf") format("opentype");
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Nexa Light";
-  src: url("../assets/fonts/Nexa\ Light.otf") format("opentype");
+  font-family: "Nexa";
+  src: url("../assets/fonts/Nexa_Bold.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
-}
-
-* {
-  box-sizing: content-box;
 }
 
 body {
-  width: 100vw;
-  max-width: 100%;
-  min-height: 100vh;
+  font-family: "Nexa", sans-serif;
+  background-color: rgba(255, 255, 255, 0.85);
   background-image: url(../assets/images/sunny_illustrations/png/background-socks.png);
-  background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: overlay;
   background-attachment: fixed;
   background-repeat: repeat;
   background-size: auto;
-  font-family: "Nexa Light", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
 }
 
+/* Product Page */
+#productPage {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+#mainProductView {
+  margin: 50px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.productPageBreak {
+  width: 100%;
+  border: 1px solid rgba(155, 155, 155, 0.33);
+  border-radius: 20px;
+}
+
+.productPreviewImages {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.productPreviewImages > img {
+  background-color: #ffffff;
+  width: 80px;
+  height: 100px;
+  object-fit: contain;
+  padding: 0 5px;
+  margin: 5px 5px 0 0;
+  border: 2px solid gray;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.productPreviewImages > img.selected {
+  border-color: var(--color-green);
+}
+
+.mainProductImage {
+  margin-left: 10px;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4 / 5;
+  border: 2px solid gray;
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.mainProductImage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0 auto 25px;
+  max-width: 400px;
+}
+
+.productInfo > h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.productInfo * {
+  margin: 10px 0 0;
+}
+
+.mainProductPrices {
+  display: flex;
+  flex-direction: row;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.mainProductPrices .originalPrice {
+  margin-left: 5px;
+  color: gray;
+  text-decoration: line-through;
+}
+
+.discount-bubble {
+  margin-left: 10px;
+  background-color: #7ad4a5;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mainProductDescription {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.productColors > p {
+  font-weight: 700;
+  color: gray;
+}
+
+.selectColors {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px;
+}
+
+.colorOption {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.colorOption .checkmark {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.colorOption.selected .checkmark {
+  display: block;
+  stroke: white;
+  stroke-width: 2;
+  margin: 5px auto;
+}
+
+.productSizing {
+  margin: 0 0 10px;
+}
+
+.productSizing p {
+  font-weight: 700;
+  color: gray;
+}
+
+.productSizes {
+  display: flex;
+  gap: 10px;
+}
+
+.sizeOption {
+  border: 1px solid #ccc;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.sizeOption.selected {
+  border-color: green;
+  color: green;
+}
+
+.sizeOption:hover {
+  border-color: #aaa;
+}
+
+.productAddToCart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.quantitySelector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  height: 40px;
+  width: 150px;
+}
+
+.quantitySelector > * {
+  margin: auto;
+}
+
+.quantityBtn {
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.quantityBtn:hover {
+  background-color: #ddd;
+}
+
+#quantityDisplay {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.addToCartBtn {
+  background-color: #00a86b;
+  color: white;
+  border: none;
+  font-weight: 700;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  width: 225px;
+}
+
+.addToCartBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.addToCartBtn:hover:not(:disabled) {
+  background-color: #008b55;
+}
+
+.productPageRecommended {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-green-transparent);
+  margin: 200px 300px;
+  border: 1px solid none;
+  border-radius: 20px;
+  padding: 25px 0;
+}
+
+.productPageRecommended h3 {
+  font-size: 24px;
+}
+
+.productPageRecommended a {
+  text-decoration: none;
+  color: #333;
+}
+
+.ppCarousel {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.ppCarouselItem img {
+  height: 250px;
+  padding: 0 40px;
+  background-color: white;
+  border: 1px solid none;
+  border-radius: 20px;
+}
+
+.ppCarouselItem h4 {
+  margin: 15px 0 5px;
+}
+
+.ppCarouselItemPricing {
+  display: flex;
+  gap: 10px;
+}
+
+.ppCarouselItemPricing > p {
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+
+.ppCarouselItemPricing .originalPrice {
+  text-decoration: line-through;
+}
+
+.ppReviewSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 200px 300px;
+  border: 1px solid none;
+  border-radius: 20px;
+  padding: 25px 0;
+}
+
+.ppReviewTopInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ppReviewButtons {
+  display: flex;
+  gap: 25px;
+}
+
+.ppSortReviews {
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 0 10px;
+  border: 1px solid none;
+  border-radius: 20px;
+  gap: 5px;
+}
+
+.ppSortReviews img {
+  height: 16px;
+}
+
+.ppSortReviews:hover {
+  cursor: pointer;
+}
+
+.ppReviewTopInfo {
+  font-weight: 700;
+}
+
+.ppWriteReview {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-green);
+  color: white;
+  padding: 0 10px;
+  border: 1px solid none;
+  border-radius: 20px;
+}
+
+.ppWriteReview:hover {
+  cursor: pointer;
+}
+
+.ppReviews {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.ppReviewItem {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: var(--color-green);
+  border: 1px solid none;
+  border-radius: 20px;
+}
+
+.ppReviewItem h3 {
+  margin: 10px 0 0;
+}
+
+.ppReviewDesc {
+  margin: 10px 0;
+  height: 75px;
+  font-weight: 700;
+  color: #444;
+}
+
+.ppReviewLeft {
+  margin: 25px 50px 25px 0;
+}
+
+.ppReviewRight {
+  margin: 25px 0 25px 50px;
+}
+
+.ppVerifiedReview {
+  color: #2a695e;
+  font-weight: 700;
+}
+
+/* Landing Page */
 #main-page {
   display: block;
 
