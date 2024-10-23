@@ -58,53 +58,56 @@
             <div class="form-row">
                 <div class="form-group full-width">
                     <label for="card-number">Card Number</label>
-                    <input type="text" id="card-number" name="card-number" placeholder="Card Number" required>
+                    <input type="text" type="hidden" id="card-number" name="card-number" placeholder="Card Number" required minlength="8" maxlength="19">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group half-width">
                     <label for="expiry">Expiry Date</label>
-                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
                 </div>
                 <div class="form-group half-width">
                     <label for="cvv">CVV</label>
-                    <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+                    <input type="text" id="cvv" name="cvv" placeholder="CVV" required minlength="3" maxlength="3">
                 </div>
             </div>
 
             <!-- Payment buttons -->
+
+            <h4 class="CO-img-pay">Mode of Payment:</h4>
+            
             <div class="form-row">
                 <div class="CO-payment-options full-width">
 
                     <label>
-                        <input type="radio" name="applepay" value="option1">
-                        <img src="../assets/icons/png/applepay-badge.png" alt="applepay" class="img-radio" id="ap1">
+                        <input type="radio" name="option1" value="applepay" required>
+                        <img src="../assets/icons/png/applepay-badge.png" alt="applepay" id="ap1">
                     </label>
 
                     <label>
-                        <input type="radio" name="ideal" value="option2">
-                        <img src="../assets/icons/png/ideal-badge.png" alt="ideal" class="img-radio" id="id1">
+                        <input type="radio" name="option1" value="ideal" required>
+                        <img src="../assets/icons/png/ideal-badge.png" alt="ideal" id="id1">
                     </label>
 
                     <label>
-                        <input type="radio" name="mastercard" value="option3">
-                        <img src="../assets/icons/png/mastercard-badge.png" alt="mastercard" class="img-radio" id="mc1">
+                        <input type="radio" name="option1" value="mastercard" required>
+                        <img src="../assets/icons/png/mastercard-badge.png" alt="mastercard" id="mc1">
                     </label>
 
                     <label>
-                        <input type="radio" name="paypal" value="option4">
-                        <img src="../assets/icons/png/paypal-badge.png" alt="paypal" class="img-radio" id="pp1">
+                        <input type="radio" name="option1" value="paypal" required>
+                        <img src="../assets/icons/png/paypal-badge.png" alt="paypal" id="pp1">
                     </label>
 
                     <label>
-                        <input type="radio" name="visa" value="option5">
-                        <img src="../assets/icons/png/visa-badge.png" alt="visa" class="img-radio" id="v1">
+                        <input type="radio" name="option1" value="visa" required>
+                        <img src="../assets/icons/png/visa-badge.png" alt="visa" id="v1">
                     </label>
 
                     <label>
-                        <input type="radio" name="googleplay" value="option6">
-                        <img src="../assets/icons/png/googlepay-badge.png" alt="googlepay" class="img-radio" id="gp1">
+                        <input type="radio" name="option1" value="googleplay" required>
+                        <img src="../assets/icons/png/googlepay-badge.png" alt="googlepay" id="gp1">
                     </label>
 
                 </div>
@@ -202,13 +205,13 @@
             <!-- SUMMARY -->
             <div class="CO-summary">
 
-                <h2><b>Order Summary</h2>
+                <h2><b>Order Summary</b></h2>
                 <p><b>Subtotal</b> <span id="cart-subtotal">€20.25</span></p>
                 <p><b>Delivery</b> <span id="cart-delivery">€2.50</span></p>
 
                 <hr>
 
-                <p><b>Total</b> <span id="cart-total">€22.75</span></p>
+                <p class="CO-total"><b>Total</b> <span id="cart-total">€22.75</span></p>
 
                 <div class="promo-code">
 
@@ -226,7 +229,7 @@
 
     </div>
 
-    <script src="checkout-page.js" defer></script>
+    <script src="../js/checkout-page.js"></script>
 
 </body>
 
