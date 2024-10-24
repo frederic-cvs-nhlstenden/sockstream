@@ -446,20 +446,70 @@ body {
   font-weight: 700;
 }
 
+/* Header and Footer Styling */
+
 header {
-  height: 90px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-align: center;
-  transition: background-color 0.5s;
+  height: 90px;
+  padding: 0 40px;
+  background-color: #ffd700;
   font-family: "Nexa Light";
+  color: white;
+  position: relative;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.header-left p,
+.header-left a,
+.header-right a {
+  text-decoration: none;
   color: white;
 }
 
-header a {
+.header-left p,
+.header-left a:hover,
+.header-right a:hover {
   color: white;
+  text-decoration: underline;
+}
+
+.header-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-logo img {
+  width: 190px;
+}
+
+.icons-header {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.profile-header,
+.cart-header {
+  width: 35px;
+  height: 35px;
+}
+
+.header-left {
+  margin-right: auto;
+}
+
+.header-right {
+  margin-left: auto;
+  margin-right: 50px;
 }
 
 footer {
@@ -475,72 +525,6 @@ footer {
 .footer-socials img {
   width: 25px;
   height: 25px;
-}
-
-.header-logo {
-  align-content: center;
-  padding-top: 5px;
-  transform: translate(70px);
-}
-
-.header-logo img {
-  width: 190px;
-}
-
-.header-left,
-.header-right {
-  margin: 0;
-  width: 15%;
-}
-
-.header-left {
-  display: flex;
-  column-gap: 40px;
-  padding-top: 80px;
-  padding-bottom: 75px;
-  padding-left: 40px;
-}
-
-.header-left a {
-  text-decoration: none;
-}
-
-.header-right {
-  display: flex;
-  column-gap: 40px;
-  padding-top: 80px;
-  padding-bottom: 10px;
-  transform: translate(200px);
-}
-
-.header-right a {
-  text-decoration: none;
-  padding-bottom: 70px;
-}
-
-.icons-header {
-  display: flex;
-  padding-top: 35px;
-  padding-right: 40px;
-  column-gap: 50px;
-  padding-bottom: 40px;
-}
-
-.profile-header {
-  width: 35px;
-  height: 35px;
-  padding-right: 0px;
-}
-
-.cart-header {
-  width: 35px;
-  height: 35px;
-  padding-bottom: 40px;
-}
-
-header a:hover {
-  color: white;
-  text-decoration: underline;
 }
 
 .footer-top-text {
@@ -599,6 +583,8 @@ header a:hover {
 .footer-socials a {
   text-decoration: none;
 }
+
+/* FAQ and About Us Styling */
 
 #faq {
   display: flex;
@@ -664,10 +650,13 @@ header a:hover {
   flex-direction: column;
   justify-content: center;
   gap: 120px;
-  padding: 80px;
-  padding-left: 145px;
-  padding-right: 145px;
+  padding: 80px 225px;
   color: white;
+}
+
+#aboutus > div,
+#faq > div {
+  margin: 0 auto;
 }
 
 #aboutus h2 {
