@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatBody = document.querySelector('.chat-body');
     const cartButton = document.getElementById('cart-button');
     const cartCloseButton = document.getElementById('cart-close-button');
+    const increaseQty = document.getElementById('increaseQty');
+    const decreaseQty = document.getElementById('decreaseQty');
     const popup = document.getElementById('newsletter-popup');
     const newsletterCloseBtn = document.querySelector('.newsletter-close-btn');
 
@@ -68,6 +70,25 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('cart-overlay').style.display = 'none';
         });
     }
+
+    if (increaseQty && decreaseQty) {
+        document.getElementById('increaseQty').addEventListener('click', function() {
+            let quantityDisplay = document.getElementById('quantityDisplay');
+            let quantity = parseInt(quantityDisplay.textContent);
+            quantityDisplay.textContent = quantity + 1;
+            document.getElementById('productQuantity').value = quantity + 1;
+        });
+        
+        document.getElementById('decreaseQty').addEventListener('click', function() {
+            let quantityDisplay = document.getElementById('quantityDisplay');
+            let quantity = parseInt(quantityDisplay.textContent);
+            if (quantity > 1) {
+                quantityDisplay.textContent = quantity - 1;
+                document.getElementById('productQuantity').value = quantity - 1;
+            }
+        });
+    }
+    
 
     if (popup && newsletterCloseBtn) {
         popup.style.display = 'flex';

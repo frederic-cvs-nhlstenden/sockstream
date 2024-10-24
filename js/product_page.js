@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "product_id"
       );
       const color = new URLSearchParams(window.location.search).get("color");
-      const cartUrl = `cart.php?product_id=${productId}&color=${color}&size=${selectedSize}&quantity=${quantity}`;
+      const cartUrl = `../components/cart.php?product_id=${productId}&color=${color}&size=${selectedSize}&quantity=${quantity}`;
       window.location.href = cartUrl;
     } else {
       alert("Please select a size.");
