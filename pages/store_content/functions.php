@@ -53,7 +53,7 @@ function displayProducts($products, $is_seasonal) {
                     <h2 class='product-grid__title'>" . $product["name"] . "</h2>
                     <p class='product-grid__price'>
                         <span class='product-grid__price--discounted'>€" . $product["price"] . "</span>
-                        <span class='product-grid__price--original'>€" . $product["original_price"] . "</span>
+                        <span class='product-grid__price--original'>€" . $product["reduced"] . "</span>
                     </p>
                 </div>
             </article>";
