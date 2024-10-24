@@ -1339,11 +1339,12 @@ footer {
 }
 
 #profile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  height: 100vh;
+  .profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
 
   .section-title {
     color: var(--color-pink);
@@ -1357,7 +1358,6 @@ footer {
     border-radius: 0.5rem;
     box-shadow: 0 0.3vh 0.5vh rgba(0, 0, 0, 0.15);
     max-width: 60vw;
-    width: 100%;
   }
 
   .page-title {
@@ -1490,7 +1490,7 @@ footer {
     align-items: center;
   }
 
-  .profile-header {
+  .profile-header-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1500,7 +1500,7 @@ footer {
     padding-right: 0px;
   }
 
-  .profile-header .page-title {
+  .profile-header-form .page-title {
     flex-grow: 1;
     text-align: center;
   }
@@ -1527,8 +1527,9 @@ footer {
 
 #login-page {
   display: flex;
-  flex-direction: column; /* Stack header and main vertically */
+  flex-direction: column;
   min-height: 100vh;
+
   main#login-elements {
     display: flex;
     justify-content: center;

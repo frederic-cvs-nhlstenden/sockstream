@@ -14,7 +14,9 @@
     <header>
         <div class="header-left">
             <p class="header-left-border"><a href="../pages/store_page.php">All Socks</p></a>
-            <a href="../pages/store_page.php?storeType=seasonal"><p>Seasonal</p></a>
+            <a href="../pages/store_page.php?storeType=seasonal">
+                <p>Seasonal</p>
+            </a>
         </div>
 
 
@@ -28,7 +30,7 @@
         </div>
 
         <div class="icons-header">
-            <img src="../assets/icons/png/profile.png" class="profile-header">
+            <a href="../pages/login.php"><img src="../assets/icons/png/profile.png" class="profile-header"></a>
             <img src="../assets/icons/png/cart.png" class="cart-header" id="cart-button">
         </div>
     </header>
