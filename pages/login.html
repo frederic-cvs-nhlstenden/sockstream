@@ -14,13 +14,17 @@
         <div class="login-form">
           <h2 class="login">Log in</h2>
           <form action="#" method="POST">
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" required />
+            <div class="email">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
 
-            <label for="password">Password</label>
-            <div class="password-container">
-              <input type="password" id="password" name="password" required />
-              <span class="toggle-password">Hide</span>
+            <div class="password">
+              <label for="password">Password</label>
+              <div class="password-container">
+                <input type="password" id="password" name="password" required />
+                <span class="toggle-password">Hide</span>
+              </div>
             </div>
 
             <button type="submit" class="login-button">Log in</button>
@@ -28,17 +32,46 @@
           <a href="#" class="forgot-password">Can't log in?</a>
         </div>
 
-        <div class="separator"></div>
+        <div class="or">
+          <div class="separator"></div>
+          <p>OR</p>
+          <div class="separator"></div>
+        </div>
 
         <div class="social-login">
           <div>
-            <button class="social-button google">Continue with Google</button>
-            <button class="social-button facebook">
-              Continue with Facebook
-            </button>
-            <button class="social-button email">Sign up with email</button>
+            <a class="social-button google"
+              ><img
+                class="social-icon"
+                src="../assets/icons/svg/google-icon-logo-svgrepo-com.svg"
+                alt="google icon"
+              />
+              <p>Continue with Google</p></a
+            >
+            <a class="social-button facebook">
+              <img
+                class="social-icon"
+                src="../assets/icons/svg/facebook-3-logo-svgrepo-com.svg"
+                alt="facebook icon"
+              />
+              <p>Continue with Facebook</p>
+            </a>
+            <a class="social-button email"
+              ><img
+                class="social-icon"
+                src="../assets/icons/svg/mail-svgrepo-com.svg"
+                alt="mail icon"
+              />
+              <p>Sign up with email</p></a
+            >
           </div>
         </div>
+      </div>
+      <div class="privacy">
+        <p>
+          Secure Login with reCAPTCHA subject to Google <a href="#">Terms</a> &
+          <a href="#">Privacy</a>
+        </p>
       </div>
     </main>
   </body>
