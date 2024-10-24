@@ -212,6 +212,10 @@ body {
     border-radius: 1rem;
   }
 
+  .carousel-item {
+    text-decoration: 0;
+  }
+
   .carousel-item img {
     width: 10vw;
     height: 37vh;
