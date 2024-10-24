@@ -151,16 +151,15 @@
 }
 
 #cart-button {
-    margin: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
 .cart-overlay {
     display: none;
     position: fixed;
-    top: 5px;
-    right: 30px;
+    top: 80px;
+    right: 0px;
     background-image: url(../assets/images/sunny_illustrations/png/background-socks.png);
     background-size: 320px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -170,6 +169,8 @@
     border-radius: 20px;
     margin: 20px;
     height: 300px;
+    z-index: 1000;
+    
 }
 
 .cart-overlay-header {
@@ -193,9 +194,9 @@
 }
 
 .cart-overlay-content {
-    padding: 20px;
     width: 300px;
-    border-radius: 8px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 black;
 }
 
 .cart-close-button {
@@ -234,8 +235,7 @@
     justify-content: center;
 }
 
-.product-image,
-.cart-item-image {
+.product-image, .cart-item-image {
     width: 50px;
     height: 50px;
     object-fit: cover;

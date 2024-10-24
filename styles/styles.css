@@ -454,6 +454,11 @@ header {
   text-align: center;
   transition: background-color 0.5s;
   font-family: "Nexa Light";
+  color: white;
+}
+
+header a {
+  color: white;
 }
 
 footer {
@@ -463,12 +468,22 @@ footer {
   align-items: center;
   justify-content: space-between;
   transition: background-color 0.5s;
+  color: white;
+}
+
+.footer-socials img {
+  width: 25px;
+  height: 25px;
 }
 
 .header-logo {
   align-content: center;
   padding-top: 5px;
   transform: translate(70px);
+}
+
+.header-logo img {
+  width: 190px;
 }
 
 .header-left,
@@ -507,6 +522,7 @@ footer {
   padding-top: 35px;
   padding-right: 40px;
   column-gap: 50px;
+  padding-bottom: 40px;
 }
 
 .profile-header {
@@ -565,6 +581,7 @@ header a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
   padding: 30px;
   margin: 10px;
   margin-left: 40px;

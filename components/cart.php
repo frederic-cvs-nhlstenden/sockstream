@@ -17,7 +17,6 @@ $cartItems = [
     <link rel="stylesheet" href="../styles/components.css" type="text/css">
 </head>
 <body>
-    <button id="cart-button">View Cart</button>
 
     <div id="cart-overlay" class="cart-overlay">
         <div class="cart-overlay-content">
