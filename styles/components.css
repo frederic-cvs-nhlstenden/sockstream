@@ -33,6 +33,7 @@
     max-width: 100%;
     border-radius: 20px;
     z-index: 1000;
+    box-shadow: 0 4px 8px 0 black;
 }
 
 .chat-icon {
