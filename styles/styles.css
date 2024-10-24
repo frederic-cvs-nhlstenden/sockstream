@@ -635,6 +635,8 @@ header a:hover {
   padding: 50px;
   padding-top: 30px;
   padding-bottom: 50px;
+  max-width: 1610px;
+  max-height: 486px;
 }
 
 .orders-shipping {
@@ -643,6 +645,8 @@ header a:hover {
   padding: 50px;
   padding-top: 30px;
   padding-bottom: 50px;
+  max-width: 1610px;
+  max-height: 538px;
 }
 
 .customer-support {
@@ -651,6 +655,8 @@ header a:hover {
   padding: 50px;
   padding-top: 30px;
   padding-bottom: 50px;
+  max-width: 1610px;
+  max-height: 486px;
 }
 
 
@@ -688,6 +694,8 @@ header a:hover {
   padding-left: 60px;
   padding-right: 60px;
   border-radius: 20px;
+  max-width: 1609px;
+  max-height: 636px;
 }
 
 .our-socks {
@@ -699,6 +707,8 @@ header a:hover {
   padding-left: 60px;
   padding-right: 60px;
   border-radius: 20px;
+  max-width: 1609px;
+  max-height: 636px;
 }
 
 .meet-the-team {
@@ -710,6 +720,8 @@ header a:hover {
   padding-left: 60px;
   padding-right: 60px;
   border-radius: 20px;
+  max-width: 1609px;
+  max-height: 636px;
 }
 
 .our-philosophy {
@@ -721,6 +733,8 @@ header a:hover {
   padding-left: 60px;
   padding-right: 60px;
   border-radius: 20px;
+  max-width: 1609px;
+  max-height: 636px;
 }
 
 #sock-store {
