@@ -101,7 +101,7 @@ let pie = (data) => {
     svgElement.appendChild(svgPath);
 
     svgPath.addEventListener("click", () => {
-      let background = document.getElementById("color-wheel");
+      let background = document.getElementById("color-wheel-background");
 
       background.style.backgroundColor = element.color;
       innerCircle.setAttribute("fill", element.color);
