@@ -18,14 +18,19 @@ const loadStore = (storeType, filters = {}) => {
 };
 
 const updateButtonStates = () => {
-  document.querySelectorAll(".sidebar__filter-item, .sidebar__size-button").forEach(button => {
+  document.querySelectorAll(".filter-panel__category-btn").forEach(button => {
     const { filter, value } = button.dataset;
     button.classList.toggle("selected", selectedFilters[filter] === value);
   });
 
-  document.querySelectorAll(".sidebar__color-button").forEach(button => {
+  document.querySelectorAll(".filter-panel__color-btn").forEach(button => {
     const { value } = button.dataset;
-    button.style.border = selectedColors.includes(value) ? "2px solid white" : "none";
+    button.classList.toggle("selected", selectedColors.includes(value));
+  });
+
+  document.querySelectorAll(".filter-panel__size-btn").forEach(button => {
+    const { filter, value } = button.dataset;
+    button.classList.toggle("selected", selectedFilters[filter] === value);
   });
 };
 
@@ -54,12 +59,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   currentStoreType = urlParams.get("storeType") || "classic";
 
-  document.querySelectorAll(".sidebar__filter-item, .sidebar__size-button").forEach(button => {
+  document.querySelectorAll(".filter-panel__category-btn").forEach(button => {
     button.addEventListener("click", () => handleFilterClick(button));
   });
 
-  document.querySelectorAll(".sidebar__color-button").forEach(button => {
+  document.querySelectorAll(".filter-panel__color-btn").forEach(button => {
     button.addEventListener("click", () => handleFilterClick(button, true));
+  });
+
+  document.querySelectorAll(".filter-panel__size-btn").forEach(button => {
+    button.addEventListener("click", () => handleFilterClick(button));
   });
 
   const priceSlider = document.getElementById("priceSlider");
