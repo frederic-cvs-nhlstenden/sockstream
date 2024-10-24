@@ -688,15 +688,20 @@ header a:hover {
     background-color: var(--color-blue);
     color: var(--color-white);
     padding: 20px;
-    border-radius: 10px;
-    font-family: "Nexa Light", sans-serif;
-    height: 70vh;
+    border-radius: 20px;
+    font-family: "Nexa", sans-serif;
+    font-weight: 700;
+    min-height: min(70vh, 600px);
+    max-height: min(70vh, 800px);
     box-sizing: border-box;
+    overflow-y: auto;
+    position: sticky;
+    top: 20px;
   }
 
   .filter-panel__main-title,
   .filter-panel__subtitle {
-    font-family: "Nexa Bold", sans-serif;
+    font-weight: 700;
     margin-bottom: 20px;
   }
 
@@ -790,7 +795,7 @@ header a:hover {
     background-color: var(--color-green);
     color: var(--color-white);
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
   }
 
@@ -800,7 +805,8 @@ header a:hover {
   }
 
   .filter-panel__apply-btn {
-    font-family: "Nexa Bold", sans-serif;
+    font-family: "Nexa", sans-serif;
+    font-weight: 700;
     font-size: 16px;
     margin-top: 20px;
     padding: 10px;
@@ -820,9 +826,9 @@ header a:hover {
 
   .product-section__title {
     color: var(--color-blue);
-    font-family: "Nexa Bold", sans-serif;
+    font-weight: 700;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
   }
 
@@ -844,10 +850,10 @@ header a:hover {
   }
 
   .product-card__image-wrapper {
-    width: 15vw;
-    height: 15vw;
+    width: min(15vw, 250px);
+    height: min(15vw, 250px);
     background-color: var(--color-white);
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px;
     margin-bottom: 10px;
     display: flex;
@@ -856,25 +862,30 @@ header a:hover {
   }
 
   .product-card__image {
-    max-height: 15vw;
+    max-height: min(15vw, 250px);
+    max-width: 100%;
+    object-fit: contain;
   }
 
-  .product-card__title {
-    font-family: "Nexa Bold", sans-serif;
+  .product-grid__title {
+    font-weight: 700;
     color: var(--color-white);
-    font-size: 16px;
+    font-size: 24px;
     margin: 10px 0;
   }
 
-  .product-card__price {
+  .product-grid__price {
     color: var(--color-white);
   }
 
-  .product-card__price--discounted {
-    font-family: "Nexa Bold", sans-serif;
+  .product-grid__price--discounted {
+    font-size: 18px;
+    font-family: "Nexa", sans-serif;
+    font-weight: 700;
   }
 
-  .product-card__price--original {
+  .product-grid__price--original {
+    font-size: 18px;
     text-decoration: line-through;
     margin-left: 5px;
     opacity: 0.7;
@@ -1229,7 +1240,6 @@ header a:hover {
   padding: 20px;
 }
 
-
 /* Product Image */
 .uni-green-img,
 .uni-yellow-img,
@@ -1247,28 +1257,28 @@ header a:hover {
   padding-bottom: 20px;
 }
 
-.cart-product-details>h4 {
+.cart-product-details > h4 {
   margin: 5px 0;
   font-size: 18px;
-  font-family: 'Nexa Bold';
+  font-family: "Nexa Bold";
 }
 
-.cart-product-details>h3 {
+.cart-product-details > h3 {
   margin: 0px 0px;
   padding-top: 45px;
-  font-family: 'Nexa Bold';
+  font-family: "Nexa Bold";
 }
 
-.cart-product-details>p {
+.cart-product-details > p {
   margin: 5px 0;
   color: #777;
   font-size: small;
   font-weight: bolder;
 }
 
-.cart-product-details>p>b {
+.cart-product-details > p > b {
   color: black;
-  font-family: 'Nexa Bold';
+  font-family: "Nexa Bold";
 }
 
 /* Button */
@@ -1282,7 +1292,7 @@ header a:hover {
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
 }
 
-.up-num-input>button {
+.up-num-input > button {
   border: none;
   background: none;
   font-size: 20px;
@@ -1292,11 +1302,11 @@ header a:hover {
   width: 40px;
 }
 
-.up-num-input>button:hover {
+.up-num-input > button:hover {
   color: #f15b39;
 }
 
-.up-num-input>input {
+.up-num-input > input {
   text-align: right;
   width: 30px;
   border: none;
@@ -1335,7 +1345,7 @@ header a:hover {
 }
 
 /* Order Summary Box */
-.right-cart{
+.right-cart {
   grid-column: 2/2;
 
   display: flex;
@@ -1354,11 +1364,11 @@ header a:hover {
   border: 2px solid #51b2a2;
 }
 
-.cart-order-summary>h2 {
+.cart-order-summary > h2 {
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: bolder;
-  font-family: 'Nexa Bold';
+  font-family: "Nexa Bold";
 }
 
 .cart-sum-details {
@@ -1368,23 +1378,22 @@ header a:hover {
   font-size: 16px;
 }
 
-.cart-sum-details p>span {
+.cart-sum-details p > span {
   padding-left: 270px;
   text-align: right;
-
 }
 
-.cart-sum-details>hr {
+.cart-sum-details > hr {
   width: 100%;
   color: lightgray;
 }
 
-.cart-sum-details>p.cart-total {
-  font-family: 'Nexa Bold';
+.cart-sum-details > p.cart-total {
+  font-family: "Nexa Bold";
 }
 
 /* Checkout Button */
-.cart-checkout>button {
+.cart-checkout > button {
   width: 370px;
   padding: 15px;
   align-items: center;
@@ -1408,18 +1417,17 @@ header a:hover {
   text-align: center;
 }
 
-.payment-options>p {
+.payment-options > p {
   margin: 0;
   font-size: 14px;
 }
 
-.payment-options>img {
+.payment-options > img {
   width: 100%;
   max-width: 45px;
   padding: auto;
   margin: auto;
   border-radius: 5px;
-
 }
 
 /* Powered By */
@@ -1436,18 +1444,17 @@ header a:hover {
   padding: 0 2em 0;
 }
 
-.powered-by>p {
+.powered-by > p {
   margin: 47px 10px auto;
   font-size: 17px;
   justify-content: center;
   font-family: "Nexa Bold";
 }
 
-.powered-by>img {
+.powered-by > img {
   width: 100px;
   margin-top: 5px;
 }
-
 
 /* Checkout Page */
 
@@ -1493,14 +1500,14 @@ header a:hover {
   width: 48%;
 }
 
-.form-group>label {
+.form-group > label {
   margin-bottom: 5px;
   font-size: 14px;
   font-weight: bold;
   color: #555;
 }
 
-.form-group>input {
+.form-group > input {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ddd;
@@ -1508,9 +1515,9 @@ header a:hover {
   transition: border-color 0.2s ease-in-out;
 }
 
-.form-group>input:focus {
+.form-group > input:focus {
   outline: none;
-  border-color: #007BFF;
+  border-color: #007bff;
 }
 
 /* CHECKOUT- Payment Options */
@@ -1526,16 +1533,15 @@ header a:hover {
   text-align: center;
 }
 
-.CO-payment-options>img {
+.CO-payment-options > img {
   height: 75px;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .CO-payment-options input[type="radio"] {
-    display: none;
-  }
-
+  display: none;
+}
 
 .CO-payment-options img:hover {
   border-radius: 10px;
@@ -1549,7 +1555,7 @@ header a:hover {
 }
 
 .CO-img-pay {
-  font-family: 'Nexa Light';
+  font-family: "Nexa Light";
   color: #555;
   margin-bottom: inherit;
 }
@@ -1597,7 +1603,7 @@ header a:hover {
   border: 2px solid #51b2a2;
 }
 
-.CO-product-items-wrapper > h2{
+.CO-product-items-wrapper > h2 {
   padding: 20px 30px 0;
 }
 
@@ -1612,28 +1618,28 @@ header a:hover {
   border: 2px solid #51b2a2;
 }
 
-.CO-summary > h2{
-  font-family: 'Nexa Bold';
+.CO-summary > h2 {
+  font-family: "Nexa Bold";
   margin-bottom: 20px;
 }
 
 .CO-summary > p > b {
-  font-family:'Nexa Bold';
+  font-family: "Nexa Bold";
 }
 
-.CO-summary>hr {
+.CO-summary > hr {
   width: 100%;
   color: black;
 }
 
-.CO-summary>p>span {
+.CO-summary > p > span {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.CO-total{
+.CO-total {
   font-size: 20px;
-  font-family: 'Nexa Bold';
+  font-family: "Nexa Bold";
 }
 
 /* Promo Code */
@@ -1642,7 +1648,7 @@ header a:hover {
   margin: 20px 0;
 }
 
-.promo-code>input {
+.promo-code > input {
   flex-grow: 1;
   padding: 10px;
   border: 1px solid #ddd;
@@ -1651,7 +1657,7 @@ header a:hover {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.promo-code>input[type="text"] {
+.promo-code > input[type="text"] {
   width: 100%;
   padding: 10px;
   margin-right: 10px;
@@ -1659,7 +1665,7 @@ header a:hover {
   border-radius: 10px;
 }
 
-.promo-code>button {
+.promo-code > button {
   padding: 10px 20px;
   background-color: #51b2a2;
   color: white;
@@ -1669,12 +1675,12 @@ header a:hover {
   box-shadow: inset 0 0 3px 0.2px #555;
 }
 
-.promo-code>button:hover {
+.promo-code > button:hover {
   background-color: #337066;
 }
 
 /* Process Order */
-.PO-align{
+.PO-align {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1682,5 +1688,4 @@ header a:hover {
   margin: 300px;
   border-radius: 20px;
   background-color: #f15b3965;
-
 }
