@@ -29,7 +29,6 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
     <title>Sunny Socks</title>
     <link rel="stylesheet" href="../assets/css/normalize.css" />
     <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="../styles/profile.css" />
     <link
       rel="shortcut icon"
       href="../assets/images/logos/png/sunny_logos-01.png"
@@ -39,7 +38,8 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   </head>
 
-  <body>
+  <body id="profile">
+
     <section class="profile-page">
       <div class="container">
         <div class="profile-header">
@@ -217,10 +217,9 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
     <title>Log In</title>
     <link rel="stylesheet" href="../assets/css/normalize.css" />
     <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="../styles/login.css" />
   </head>
 
-  <body>
+  <body id="login-page">
     <main>
       <div class="container">
         <div class="login-form">
