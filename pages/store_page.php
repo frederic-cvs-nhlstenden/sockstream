@@ -11,6 +11,7 @@
 </head>
 
 <body id="sock-store">
+  <?php include '../components/header.php'; ?>
   <div class="sock-store__layout">
     <aside class="sock-store__filter-panel">
       <div class="filter-panel__container">
@@ -113,6 +114,7 @@
     </main>
   </div>
   <? include '../components/chatbot.php'; ?>
+  <?php include '../components/footer.php'; ?>
 </body>
 <script src="../js/store-page.js"></script>
 <script src="../js/components.js"></script>

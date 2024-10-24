@@ -13,8 +13,8 @@
 <body>
     <header>
         <div class="header-left">
-            <p class="header-left-border"><a href="../pages/store_page.php">All Socks</p>
-            <p>Seasonal</p>
+            <p class="header-left-border"><a href="../pages/store_page.php">All Socks</p></a>
+            <a href="../pages/store_page.php?storeType=seasonal"><p>Seasonal</p></a>
         </div>
 
 
