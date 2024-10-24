@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Chatbot</title>
     <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
     <link rel="stylesheet" href="../styles/components.css" type="text/css">
-    
+
 </head>
 
 <body>
@@ -73,9 +73,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
-    <img class="chat-icon" src="./assets/icons/svg/icon-chatbot.svg" id="chat-icon" alt="Chat Icon" />
+    <img class="chat-icon" src="../assets/icons/svg/icon-chatbot.svg" id="chat-icon" alt="Chat Icon" />
 
-    
+
 </body>
 <script src="../js/components.js"></script>
 
