@@ -299,8 +299,8 @@
                             <img src="<?php echo $product['images'][0]; ?>" alt="<?php echo $product['name']; ?>">
                             <h4><?php echo $product['name']; ?></h4>
                             <div class="ppCarouselItemPricing">
-                                <p class="reducedPrice"><?php echo $product['reduced']; ?></p>
-                                <p class="originalPrice"><?php echo $product['price']; ?></p>
+                                <p class="reducedPrice"><?php echo $product['price']; ?></p>
+                                <p class="originalPrice"><?php echo $product['reduced']; ?></p>
                             </div>
                         </a>
                     </div>
