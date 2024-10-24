@@ -32,8 +32,8 @@
             <img src="../assets/icons/png/cart.png" class="cart-header" id="cart-button">
         </div>
     </header>
-    <? include '../components/cart.php'; ?>
 </body>
 <script src="../js/headerandfooter.js"></script>
 <script src="../js/components.js"></script>
+
 </html>

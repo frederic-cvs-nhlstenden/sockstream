@@ -4,13 +4,13 @@ $cartItems = '';
 
 
 if (isset($_GET['product_id']) && isset($_GET['color']) && isset($_GET['selectedSize']) && isset($_GET['quantity'])) {
-    
+
     $product_id = $_GET['product_id'];
     $quantity = $_GET['quantity'];
     $selectedSize = $_GET['selectedSize'];
     $color = isset($_GET['color']) ? $_GET['color'] : 'default';
 
-    
+
     $cartItems = [
         'name' => $product_id,
         'quantity' => $quantity,
@@ -45,7 +45,7 @@ if (isset($_GET['product_id']) && isset($_GET['color']) && isset($_GET['selected
                         <? foreach ($cartItems as $item): ?>
                             <li>
                                 <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['name']); ?>" class="cart-item-image">
-                                <?php echo htmlspecialchars($item['name']); ?> - Quantity: <?php echo htmlspecialchars($item['quantity']); ?> 
+                                <?php echo htmlspecialchars($item['name']); ?> - Quantity: <?php echo htmlspecialchars($item['quantity']); ?>
                             </li>
                         <? endforeach; ?>
                     <? else: ?>

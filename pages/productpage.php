@@ -192,7 +192,7 @@
         <p>Don’t worry, we’re on it. The page you’re looking for is missing, but you can hop back to our homepage and find your perfect pair!</p></div>";
         exit();
     }
-    require '../components/header.php';
+    include '../components/header.php';
     ?>
     <main id="productPage">
         <div id="mainProductView">
@@ -372,10 +372,28 @@
             </div>
         </div>
     </main>
-    <? require '../components/footer.php'; ?>
+    <? include '../components/footer.php'; ?>
     <? include '../components/chatbot.php'; ?>
+    <div id="cart-overlay" class="cart-overlay">
+        <div class="cart-overlay-content">
+            <div class="cart-overlay-header">
+                <h2>Your Cart</h2>
+                <span class="cart-close-button" id="cart-close-button">&times;</span>
+            </div>
+            <div class="cart-body">
+                <ul id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </ul>
+            </div>
+            <div class="cart-footer">
+                <button id="checkout-button">Proceed to Checkout</button>
+                <button id="clear-cart-button">Clear Cart</button>
+            </div>
+
+        </div>
+    </div>
 </body>
-<script src="../js/components.js"></script>
+
 <script src="../js/product_page.js"></script>
 
 </html>
