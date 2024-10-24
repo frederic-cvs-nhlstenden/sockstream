@@ -21,7 +21,7 @@ $cartItems = [
 
     <div id="cart-overlay" class="cart-overlay">
         <div class="cart-overlay-content">
-            <div class="cart-header">
+            <div class="cart-overlay-header">
                 <h2>Your Cart</h2>
                 <span class="cart-close-button" id="cart-close-button">&times;</span>
             </div>
