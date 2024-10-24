@@ -40,6 +40,10 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
 
   <body id="profile">
 
+    <?php
+    echo require_once '../components/header.php';
+    ?>
+
     <section class="profile-page">
       <div class="container">
         <div class="profile-header">
@@ -220,7 +224,10 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
   </head>
 
   <body id="login-page">
-    <main>
+    <?php
+    echo require_once '../components/header.php';
+    ?>
+    <main id="login-elements">
       <div class="container">
         <div class="login-form">
           <h2 class="login">Log in</h2>
@@ -279,14 +286,13 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
           </div>
         </div>
       </div>
-      <div class="privacy">
-        <p>
-          Secure Login with reCAPTCHA subject to Google <a href="#">Terms</a> &
-          <a href="#">Privacy</a>
-        </p>
-      </div>
     </main>
-
+    <div class="privacy">
+      <p>
+        Secure Login with reCAPTCHA subject to Google <a href="#">Terms</a> &
+        <a href="#">Privacy</a>
+      </p>
+    </div>
     <script src="../js/login.js"></script>
   </body>
 
