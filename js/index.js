@@ -1,6 +1,10 @@
-let selectedFilters = {};
-let currentStoreType = "classic";
-let selectedColors = [];
+const colors = [
+  "var(--color-blue)",
+  "var(--color-orange)",
+  "var(--color-yellow)",
+  "var(--color-green)",
+  "var(--color-pink)",
+];
 
 const images = [
   "assets/images/sunny_socks_photos/catalogus/Sunny_socks_blue.webp",
@@ -146,56 +150,33 @@ const preloadImages = async (imageArray) => {
       img.onerror = reject;
     });
   });
+  await Promise.all(promises);
 };
 
-const handleFilterClick = (element, isColorFilter = false) => {
-  const { filter, value } = element.dataset;
- 
-  if (isColorFilter) {
-    const index = selectedColors.indexOf(value);
-    if (index > -1) {
-      selectedColors.splice(index, 1);
-    } else {
-      selectedColors.push(value);
-    }
-  } else {
-    if (selectedFilters[filter] === value) {
-      delete selectedFilters[filter];
-    } else {
-      selectedFilters[filter] = value;
-    }
+const initializeColorWheel = () => {
+  let colorWheel = {
+    $id: "pie1",
+    radius: 200,
+    segments: [
+      { value: 1, color: colors[0] },
+      { value: 1, color: colors[1] },
+      { value: 1, color: colors[2] },
+      { value: 1, color: colors[3] },
+      { value: 1, color: colors[4] },
+    ],
+  };
+
+  pie(colorWheel);
+
+  const blueSegment = document.querySelectorAll(".segment")[0];
+
+  if (blueSegment) {
+    const event = new Event("click");
+    blueSegment.dispatchEvent(event);
   }
-  updateButtonStates();
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  currentStoreType = urlParams.get("storeType") || "classic";
-  
-  document.querySelectorAll(".filter-panel__category-btn, .filter-panel__size-btn").forEach(button => {
-    button.addEventListener("click", () => handleFilterClick(button));
-  });
-  
-  document.querySelectorAll(".filter-panel__color-btn").forEach(button => {
-    button.addEventListener("click", () => handleFilterClick(button, true));
-  });
-
-  const priceSlider = document.getElementById("priceSlider");
-  const priceMin = document.getElementById("priceMin");
-  
-  priceSlider.addEventListener("input", function() {
-    priceMin.textContent = `€${this.value}`;
-    selectedFilters["price"] = `${this.value}-20`;
-  });
-
-  document.getElementById("applyFilters").addEventListener("click", () => {
-    if (selectedColors.length > 0) {
-      selectedFilters["color"] = selectedColors.join(",");
-    } else {
-      delete selectedFilters["color"];
-    }
-    loadStore(currentStoreType, selectedFilters);
-  });
-
-  loadStore(currentStoreType);
+document.addEventListener("DOMContentLoaded", async () => {
+  await preloadImages(images);
+  initializeColorWheel();
 });
