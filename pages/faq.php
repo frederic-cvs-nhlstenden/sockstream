@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../styles/styles.css" type="text/css">
+    <link rel="stylesheet" href="../styles/components.css" type="text/css">
 </head>
 
 <body id="faq">
@@ -50,5 +52,8 @@
             </div>
         </div>
     </div>
+
+    <? include '../components/chatbot.php'; ?>
 </body>
+<script src="../js/components.js"></script>
 </html>

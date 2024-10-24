@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         userInput.value = '';
 
         
-        fetch('components/chatbot.php', { 
+        fetch('../components/chatbot.php', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

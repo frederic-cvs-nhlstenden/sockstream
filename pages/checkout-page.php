@@ -7,6 +7,7 @@
     <title>Checkout Page</title>
     <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
     <link rel="stylesheet" href="../styles/styles.css" type="text/css">
+    <link rel="stylesheet" href="../styles/components.css" type="text/css">
     <link rel="icon" href="../assets/images/logos/png/sunny_logos_white.png" type="image/png">
 </head>
 
@@ -228,9 +229,11 @@
 
 
     </div>
-
+    <? include '../components/chatbot.php';?>
     <script src="../js/checkout-page.js"></script>
 
 </body>
+
+<script src="../js/components.js"></script>
 
 </html>

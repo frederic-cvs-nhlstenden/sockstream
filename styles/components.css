@@ -7,21 +7,23 @@
 }
 
 @font-face {
-    font-family: "Nexa Bold";
-    src: url("../assets/fonts/Nexa\ Bold.otf") format("opentype");
+    font-family: "Nexa";
+    src: url("../assets/fonts/Nexa_Light.otf") format("opentype");
+    font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Nexa Light";
-    src: url("../assets/fonts/Nexa\ Light.otf") format("opentype");
+    font-family: "Nexa";
+    src: url("../assets/fonts/Nexa_Bold.otf") format("opentype");
+    font-weight: 700;
     font-style: normal;
 }
 
 .chatbot {
     display: none;
-    position: fixed; 
-    bottom: 80px; 
+    position: fixed;
+    bottom: 80px;
     right: 20px;
     background-image: url(../assets/images/sunny_illustrations/png/background-socks.png);
     background-size: 320px;
@@ -30,18 +32,18 @@
     width: 300px;
     max-width: 100%;
     border-radius: 20px;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 .chat-icon {
     position: fixed;
-    bottom: 20px; 
+    bottom: 20px;
     right: 20px;
-    cursor: pointer; 
-    z-index: 1000; 
+    cursor: pointer;
+    z-index: 1000;
 }
 
-.chat-header{
+.chat-header {
     background-color: var(--color-pink);
     border-radius: 10px;
     color: white;
@@ -54,7 +56,8 @@
     grid-column: 2/3;
     text-align: center;
     margin-top: 25px;
-    font-family: "Nexa Bold";
+    font-family: "Nexa", sans-serif;
+    font-weight: bold;
 }
 
 #close-btn {
@@ -66,7 +69,8 @@
     margin-top: 9px;
     margin-bottom: 10px;
     margin-left: 40px;
-    font-family: "Nexa Bold";
+    font-family: "Nexa", sans-serif;
+    font-weight: bold;
 }
 
 .chat-body {
@@ -84,7 +88,7 @@
 }
 
 .chat-body p {
-    margin:  0;
+    margin: 0;
 }
 
 .bot-response {
@@ -97,12 +101,12 @@
 }
 
 .user-message {
-    background-color: var(--color-green); 
+    background-color: var(--color-green);
     color: white;
     border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
-    margin-left: 20px; 
+    margin-left: 20px;
 }
 
 .chat-footer {
@@ -113,7 +117,7 @@
     text-align: center;
     display: flex;
     justify-content: center;
-    font-family: "Nexa Light";
+    font-family: "Nexa", sans-serif;
 }
 
 .chat-footer div {
@@ -155,8 +159,8 @@
 .cart-overlay {
     display: none;
     position: fixed;
-    top: 5px; 
-    right: 30px; 
+    top: 5px;
+    right: 30px;
     background-image: url(../assets/images/sunny_illustrations/png/background-socks.png);
     background-size: 320px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -168,22 +172,23 @@
     height: 300px;
 }
 
-.cart-header {
+.cart-overlay-header {
     background-color: var(--color-pink);
     border-radius: 10px;
     color: white;
-    height: 80px; 
+    height: 80px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: 1fr; 
-    align-items: center; 
-    justify-items: center; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
 }
 
-.cart-header h2 {
+.cart-overlay-header h2 {
     grid-column: 2/3;
     text-align: center;
-    font-family: "Nexa Bold";
+    font-family: "Nexa", sans-serif;
+    font-weight: bold;
     margin: 0;
 }
 
@@ -201,7 +206,8 @@
     grid-column: 3/4;
     text-align: center;
     margin: 0;
-    font-family: "Nexa Bold";
+    font-family: "Nexa", sans-serif;
+    font-weight: bold;
 }
 
 .cart-body {
@@ -222,13 +228,14 @@
     background-color: var(--color-green);
     border-radius: 10px;
     color: white;
-    height: 50px; 
+    height: 50px;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
 }
 
-.product-image, .cart-item-image {
+.product-image,
+.cart-item-image {
     width: 50px;
     height: 50px;
     object-fit: cover;
@@ -245,34 +252,35 @@
     border-radius: 20px;
     width: fit-content;
     height: 40px;
-    font-family: "Nexa Light";
+    font-family: "Nexa", sans-serif;
 }
 
 .popup {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 1000; 
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 .popup-content {
     background-color: var(--color-orange);
     border-radius: 20px;
     text-align: center;
-    font-family: "Nexa Bold";
+    font-family: "Nexa", sans-serif;
+    font-weight: bold;
     color: white;
     display: flex;
     flex-direction: row;
     max-width: 800px;
     width: 90%;
     gap: 10px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 #discount {
@@ -305,7 +313,7 @@
     height: 40px;
     width: 190px;
     padding: 5px;
-    font-family: "Nexa Light";
+    font-family: "Nexa", sans-serif;
 }
 
 .popup-content ::placeholder {
@@ -322,7 +330,7 @@
     width: fit-content;
     height: 25px;
     width: 25px;
-    font-family: "Nexa Light";
+    font-family: "Nexa", sans-serif;
 }
 
 .newsletter-close-btn {
@@ -331,9 +339,10 @@
     padding: 0;
     margin: 0;
     font-size: 20px;
-    font-family: "Nexa Bold";
+    font-family: "Nexa", sans-serif;
+    font-weight: bold;
     color: white;
-    z-index: 1001; 
+    z-index: 1001;
     margin-right: 10px;
     margin-top: 5px;
 }
