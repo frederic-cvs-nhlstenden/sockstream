@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,90 +11,17 @@
 </head>
 
 <body>
-
+    <? require '../components/header.php'; ?>
     <div class="cart-main-container">
 
         <!-- Left Part -->
 
         <div class="cart-container">
+            <<ul id="checkout-items">
+                <!-- Checkout items will be displayed here -->
 
-            <!-- Green Sock -->
-            <div class="uni-green-product cart-product-item">
-
-                <img src="../assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_green.png"
-                    alt="Uni_Green_Sock" class="uni-green-img">
-
-                <div class="cart-product-details">
-                    <h4><b>Classic Uni Color</b></h4>
-                    <p><b>Size:</b> 37-40</p>
-                    <p><b>Color:</b> Green</p>
-                    <h3><b>€6.75</b></h3>
-                </div>
-
-                <div class="up-num-input">
-                    <button class="minus" onclick="decreaseg()">-</button>
-                    <input type="number" id="quantity1" value="1" min="0">
-                    <button class="plus" onclick="increaseg()">+</button>
-                </div>
-
-                <div class="cart-product-action">
-                    <button class="delete-button">🗑️</button>
-                </div>
-
-            </div>
-
-            <!-- Yellow Sock -->
-            <div class="uni-yellow-product cart-product-item">
-
-                <img src="../assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_yellow.png"
-                    alt="Uni-yellow-sock" class="uni-yellow-img">
-
-                <div class="cart-product-details">
-                    <h4><b>Classic Uni Color</b></h4>
-                    <p><b>Size:</b> 37-40</p>
-                    <p><b>Color:</b> Yellow</p>
-                    <h3><b>€6.75</b></h3>
-                </div>
-
-                <div class="up-num-input">
-                    <button class="minus" onclick="decreasey()">-</button>
-                    <input type="number" id="quantity2" value="1" min="0">
-                    <button class="plus" onclick="increasey()">+</button>
-                </div>
-
-                <div class="cart-product-action">
-                    <button class="delete-button">🗑️</button>
-                </div>
-
-            </div>
-
-            <!-- Pink Sock -->
-            <div class="uni-pink-product cart-product-item">
-
-                <img src="../assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_pink.png"
-                    alt="Uni-pink-sock" class="uni-pink-img">
-
-                <div class="cart-product-details">
-                    <h4><b>Classic Uni Color</b></h4>
-                    <p><b>Size:</b> 37-40</p>
-                    <p><b>Color:</b> Pink</p>
-                    <h3><b>€6.75</b></h3>
-                </div>
-
-                <div class="up-num-input">
-                    <button class="minus" onclick="decreasep()">-</button>
-                    <input type="number" id="quantity3" value="1" min="0">
-                    <button class="plus" onclick="increasep()">+</button>
-                </div>
-
-                <div class="cart-product-action">
-                    <button class="delete-button">🗑️</button>
-                </div>
-
-            </div>
-
+            </ul>
         </div>
-
         <!-- Right Part -->
 
         <div class="right-cart">
@@ -105,7 +31,7 @@
 
                 <div class="cart-sum-details">
 
-                    <p>Subtotal <span id="cart-subtotal">€20.25</span></p>
+                    <p>Subtotal <span id="cart-subtotal" >€</span></p>
                     <p>Delivery <span id="cart-delivery">€2.50</span></p>
 
                     <hr>
@@ -166,10 +92,15 @@
             </div>
         </div>
 
-    </div>
-    <? include '../components/chatbot.php';?>
-    <script src="../js/cart-page.js"></script>
 
+    </div>
+
+
+    
+    <? require '../components/footer.php'; ?>
+    <? include '../components/chatbot.php'; ?>
 </body>
+<script src="../js/cart-page.js"></script>
 <script src="../js/components.js"></script>
+
 </html>

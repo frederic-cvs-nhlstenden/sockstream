@@ -262,6 +262,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  document.getElementById('checkout-button').addEventListener('click', function() {
+    // Get all cart items
+    const cartItems = document.querySelectorAll('#cart-overlay #cart-items .cart-item');
+    const itemsArray = Array.from(cartItems).map(item => {
+        const itemName = item.querySelector('.cart-item-name').textContent;
+        const itemImage = item.querySelector('.cart-item-image').src;
+        const itemSize = item.querySelector('.cart-item-size').textContent.replace('Size: ', '');
+        const itemQuantity = item.querySelector('.cart-item-quantity').textContent.replace('Quantity: ', '');
+        return { name: itemName, image: itemImage, size: itemSize, quantity: itemQuantity };
+    });
+
+    // Convert the items to a query string
+    const queryString = itemsArray.map((item, index) => 
+        `item${index + 1}=${encodeURIComponent(item.name)}&image${index + 1}=${encodeURIComponent(item.image)}&size${index + 1}=${encodeURIComponent(item.size)}&quantity${index + 1}=${encodeURIComponent(item.quantity)}`
+    ).join('&');
+
+    // Redirect to another page with the cart items as query parameters
+    window.location.href = `../pages/cart-page.php?${queryString}`;
+  });
+
   const clearCartButton = document.getElementById("clear-cart-button");
   clearCartButton.addEventListener("click", function () {
     // Clear cart items and localStorage
