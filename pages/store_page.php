@@ -113,7 +113,7 @@
       <div class="product-section__grid" id="product-grid"></div>
     </main>
   </div>
-  <? include '../components/chatbot.php'; ?>
+  <?php include '../components/chatbot.php'; ?>
   <?php include '../components/footer.php'; ?>
   <script src="../js/store-page.js"></script>
   <script src="../js/components.js"></script>
