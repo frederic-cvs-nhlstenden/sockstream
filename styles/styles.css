@@ -504,8 +504,7 @@ body {
 .orders-shipping,
 .customer-support {
   border-radius: 20px;
-  padding: 50px;
-  padding-top: 30px;
+  padding: 50px 30px 30px 30px;
 }
 
 .general-information {
@@ -547,7 +546,7 @@ body {
   background-color: var(--color-blue);
 }
 
-/* Store CSS */
+/* Store Styling */
 
 .sock-store__layout {
   display: grid;
@@ -748,7 +747,7 @@ body {
   opacity: 0.7;
 }
 
-/* Main Page */
+/* Main Page Styling */
 
 #main-page {
   display: block;
@@ -763,7 +762,6 @@ body {
 
 #main-page h1 {
   font-size: 10rem;
-  color: #fff;
   margin: 0;
 }
 
@@ -790,21 +788,23 @@ body {
   resize: vertical;
 }
 
-#main-page .newsbutton {
+#main-page .newsbutton,
+#main-page button[type="submit"] {
   background-color: var(--color-orange);
   color: white;
+  font-family: "Nexa", sans-serif;
+}
+
+#main-page .newsbutton {
   font-size: 16px;
   border: 2px solid white;
   border-radius: 50%;
   width: 25px;
   height: 25px;
-  font-family: "Nexa", sans-serif;
 }
 
 #main-page button[type="submit"] {
-  background-color: var(--color-orange);
   border: none;
-  color: white;
   padding: 2vh 2vw;
   text-align: center;
   text-decoration: none;
@@ -848,14 +848,12 @@ body {
 #main-page .description {
   font-size: 2rem;
   text-align: center;
-  color: #fff;
   margin: 0 0 4vh 0;
 }
 
 #main-page .hero-button {
   padding: 1.5vh 2vw;
   font-size: 2rem;
-  color: #fff;
   border: 1.5px solid #fff;
   border-radius: 1rem;
   cursor: pointer;
@@ -892,7 +890,6 @@ body {
 
 #main-page .feature-item p {
   font-size: 1.2rem;
-  color: #fff;
 }
 
 #main-page #best-sellers {
@@ -1152,7 +1149,7 @@ body {
   border-radius: 0.5rem;
 }
 
-/* Profile Page */
+/* Profile Page Styling */
 
 .profile-page {
   display: flex;
@@ -1329,12 +1326,6 @@ input[type="file"] {
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.page-title {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  color: #333;
 }
 
 .purchase-list {
@@ -1541,6 +1532,8 @@ input[type="file"] {
   margin-bottom: 0;
 }
 
+/* Cart Styling */
+
 /* Layout */
 #cart-main-container {
   display: flex;
@@ -1595,18 +1588,20 @@ input[type="file"] {
   padding-bottom: 20px;
 }
 
+.cart-product-details h4,
+.cart-product-details h3 {
+  font-family: "Nexa";
+  font-weight: 700;
+}
+
 .cart-product-details h4 {
   margin: 5px 0;
   font-size: 18px;
-  font-family: "Nexa";
-  font-weight: 700;
 }
 
 .cart-product-details h3 {
   margin: 0;
   padding-top: 45px;
-  font-family: "Nexa";
-  font-weight: 700;
 }
 
 .cart-product-details p {
@@ -1720,8 +1715,12 @@ input[type="file"] {
   font-size: 16px;
 }
 
+.cart-sum-details p {
+  display: flex;
+  justify-content: space-between;
+}
+
 .cart-sum-details p span {
-  padding-left: 270px;
   text-align: right;
 }
 
@@ -1737,7 +1736,7 @@ input[type="file"] {
 
 /* Checkout Button */
 .cart-checkout button {
-  width: 370px;
+  width: 100%;
   padding: 15px;
   background-color: #51b2a2;
   color: white;

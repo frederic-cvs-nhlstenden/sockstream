@@ -220,8 +220,14 @@
     const checkoutButton = document.getElementById("checkout-button");
     if (checkoutButton) {
       checkoutButton.addEventListener("click", function () {
-        // Redirect to the cart page
-        window.location.href = "cart-page.php";
+        // Check if the current page is index.php
+        if (window.location.pathname.endsWith("index.php")) {
+          // Redirect to the cart page within the pages directory
+          window.location.href = "pages/cart-page.php";
+        } else {
+          // Redirect to the cart page
+          window.location.href = "cart-page.php";
+        }
       });
     }
 
