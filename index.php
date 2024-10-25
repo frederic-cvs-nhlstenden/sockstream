@@ -186,8 +186,7 @@ function searchFAQs($input, $faqs)
             <img
               src="./assets/images/sunny_socks_photos/catalogus/Sunny_socks_blue.webp"
               class="inner-image"
-              alt="Center"
-              />
+              alt="Center" />
             <a href="#" class="buy-button">Buy</a>
           </div>
         </div>
@@ -258,7 +257,57 @@ function searchFAQs($input, $faqs)
                 in the office or lounging at home, my Sunny Socks always stand
                 out. They're soft, snug, and the designs are so unique. A
                 must-have for anyone who wants to bring a bit of fun into
-                their wardrobe.
+                their wardrobe."
+              </p>
+              <div class="user">
+                <img
+                  src="./assets/images/team/femke.png"
+                  alt="profile"
+                  class="profile" />
+                <div class="main-stars">
+                  <h4 class="user-name">Mia J.</h4>
+                  <div class="star-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="carousel-review">
+              <p>
+                "I love supporting brands with a conscience,
+                and Sunny Socks ticks all the boxes.
+                Not only are the socks beautifully crafted,
+                but they’re also sustainable and made with love.
+                Every step I take feels like a statement of joy and care for the planet!"
+              </p>
+              <div class="user">
+                <img
+                  src="./assets/images/team/femke.png"
+                  alt="profile"
+                  class="profile" />
+                <div class="main-stars">
+                  <h4 class="user-name">Oliver R.</h4>
+                  <div class="star-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-review">
+              <p>
+                "These socks are a work of art!
+                I’m obsessed with the mix of bold patterns and eco-friendly materials.
+                They’re perfect for adding a pop of colour to any outfit.
+                Sunny Socks really lives up to its name – they’re like little rays of sunshine for your feet!"
               </p>
               <div class="user">
                 <img
@@ -279,18 +328,127 @@ function searchFAQs($input, $faqs)
             </div>
             <div class="carousel-review">
               <p>
-                "I get compliments on my socks all the time now! Whether I'm
-                in the office or lounging at home, my Sunny Socks always stand
-                out. They're soft, snug, and the designs are so unique. A
-                must-have for anyone who wants to bring a bit of fun into
-                their wardrobelll
+                "Who knew socks could be this exciting?
+                Sunny Socks has turned an everyday item into a joyful experience.
+                The fit is perfect, and the colours are even more vibrant in person.
+                I love the hippie-chic vibe – it’s like wearing happiness on my feet!"
               </p>
               <div class="user">
                 <img
-                  src="./assets/images/team/pieter.png"
+                  src="./assets/images/team/femke.png"
                   alt="profile"
                   class="profile" />
-                <h4 class="user-name">Daniel T.</h4>
+                <div class="main-stars">
+                  <h4 class="user-name">Jack P.</h4>
+                  <div class="star-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-review">
+              <p>
+                "Sunny Socks are my new go-to for gifts!
+                Everyone I’ve bought them for absolutely loves them.
+                The mix of creativity and quality is hard to beat,
+                and knowing they’re sustainably made makes them even better.
+                These socks are more than just accessories – they’re little bursts of personality!"
+              </p>
+              <div class="user">
+                <img
+                  src="./assets/images/team/femke.png"
+                  alt="profile"
+                  class="profile" />
+                <div class="main-stars">
+                  <h4 class="user-name">Anna K.</h4>
+                  <div class="star-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-review">
+              <p>
+                "These socks are the epitome of feel-good fashion!
+                From the moment I opened the package, I was hooked.
+                The designs are so fun, and they’re incredibly soft.
+                I love that they reflect the eco-friendly and artistic spirit of the brand.
+                Highly recommended!"
+              </p>
+              <div class="user">
+                <img
+                  src="./assets/images/team/femke.png"
+                  alt="profile"
+                  class="profile" />
+                <div class="main-stars">
+                  <h4 class="user-name">Tom H.</h4>
+                  <div class="star-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-review">
+              <p>
+                "Sunny Socks are like a hug for your feet!
+                The comfort is unmatched, and the designs are totally unique.
+                I feel like I’m walking on sunshine every time I put them on.
+                Plus, the customer service was top-notch
+                – you can really feel the love that goes into each pair."
+              </p>
+              <div class="user">
+                <img
+                  src="./assets/images/team/femke.png"
+                  alt="profile"
+                  class="profile" />
+                <div class="main-stars">
+                  <h4 class="user-name">Lucy W.</h4>
+                  <div class="star-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-review">
+              <p>
+                "My wardrobe just got a serious upgrade, thanks to Sunny Socks!
+                I can’t get enough of their quirky, colourful patterns.
+                Each pair feels like a little piece of wearable art,
+                and they’ve become my new favourite accessory.
+                The quality is unbeatable – I’ll definitely be back for more!"
+              </p>
+              <div class="user">
+                <img
+                  src="./assets/images/team/femke.png"
+                  alt="profile"
+                  class="profile" />
+                <div class="main-stars">
+                  <h4 class="user-name">Harry S.</h4>
+                  <div class="star-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

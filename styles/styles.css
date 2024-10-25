@@ -940,6 +940,7 @@ body {
 
 #main-page .carousel {
   overflow-x: auto;
+  overflow-y: hidden;
   display: flex;
   gap: 3.5vw;
   width: 90%;
