@@ -44,7 +44,7 @@
       chatbot.style.display = "none";
 
       chatIcon.addEventListener("click", function () {
-        chatbot.style.display = "block";
+        chatbot.style.display = "flex";
         chatIcon.style.display = "none";
       });
 

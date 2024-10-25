@@ -972,6 +972,18 @@ footer {
     resize: vertical;
   }
 
+  .newsbutton {
+    background-color: var(--color-orange);
+    color: white;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: fit-content;
+    height: 25px;
+    width: 25px;
+    font-family: "Nexa", sans-serif;
+  }
+
   button[type="submit"] {
     background-color: var(--color-orange);
     border: none;
@@ -984,6 +996,8 @@ footer {
     cursor: pointer;
     margin: auto;
   }
+
+  
 
   section {
     margin-bottom: 14vh;

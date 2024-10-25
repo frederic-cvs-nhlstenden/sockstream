@@ -21,7 +21,7 @@
 
 
         <div class="header-logo">
-            <a href="../index.html"><img src="../assets/images/logos/png/sunny_logos-01.png"></a>
+            <a href="../index.php"><img src="../assets/images/logos/png/sunny_logos-01.png"></a>
         </div>
 
         <div class="header-right">
