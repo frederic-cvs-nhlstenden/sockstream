@@ -122,6 +122,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
               <div class="input-group">
                 <label for="gender">Gender</label>
                 <select id="gender" name="gender" required>
+                  <option value="" disabled selected>Select your gender</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </select>
