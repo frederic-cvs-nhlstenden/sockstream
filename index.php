@@ -450,23 +450,31 @@ function searchFAQs($input, $faqs)
 
   <div id="newsletter-popup" class="popup">
     <div class="popup-content">
-      <div><img src="./assets/images/sunny_socks_photos/seasonal/halloween_socks.png" alt="sustainablesocks"></div>
       <div>
+        <img src="./assets/images/sunny_socks_photos/seasonal/halloween_socks.png" alt="Sustainable Socks">
+      </div>
+      <div id="popup-main-content">
         <div class="newsletter-close-btn"><span>&times;</span></div>
-        <div id="discount">
-          <h2>EXTRA 10% OFF ON OUR</h2>
-          <h2 id="hallowen">HALLOWEEN SALE</h2>
-        </div>
-        <div>
-          <h2>FOR</h2>
-          <img id="logohalloween" src="./assets/images/logos/png/sunny_logos_white.png" alt="sunny">
-          <h2>CUSTOMERS</h2>
-        </div>
-        <div class="newsform">
-          <form id="newsletter-form" method="POST" action="./index.php">
-            <input type="email" name="email" placeholder="Enter your email address" required>
-            <button class="newsbutton" type="submit">=></button>
-          </form>
+        <div class="popup-info">
+          <div id="discount">
+            <h2>EXTRA 10% OFF ON OUR</h2>
+            <h2 id="hallowen">HALLOWEEN SALE</h2>
+          </div>
+          <div class="popup-center-content">
+            <h2>FOR</h2>
+            <h2 id="popup-title">Sunny.</h2>
+            <h2>CUSTOMERS</h2>
+          </div>
+          <div class="newsform">
+            <form id="newsletter-form" method="POST" action="./index.php">
+              <label for="email">Sign up</label>
+              <div class="email_button">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button class="newsbutton" type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </form>
+          </div>
+          <p>Already a customer? <a href="./pages/login.php">Log in</a></p>
         </div>
       </div>
     </div>

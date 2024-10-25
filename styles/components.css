@@ -322,17 +322,49 @@
   background-color: var(--color-orange);
   border-radius: 20px;
   text-align: center;
-  font-family: "Nexa", sans-serif;
-  font-weight: bold;
   color: white;
   display: flex;
-  flex-direction: row;
-  gap: 10px;
-  overflow: hidden;
+  justify-content: space-evenly;
+  min-width: 60%;
+  min-height: 60vh;
+}
+
+#popup-main-content {
+  width: 60%;
+}
+
+.popup-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90%;
+
+  label {
+    color: white;
+    text-align: left;
+  }
+}
+
+.newsletter-form {
+  width: 80%;
+}
+
+.popup-center-content h2 {
+  margin: 0;
+}
+
+#popup-title {
+  font-size: 4rem;
+  margin: 1vh 0;
 }
 
 #discount {
   margin-bottom: 20px;
+
+  h2 {
+    margin: 0;
+  }
 }
 
 #hallowen {
@@ -348,19 +380,16 @@
 }
 
 #logohalloween {
-  width: 90%;
+  width: 100%;
 }
 
 .popup-content input {
   background-color: var(--color-orange);
-  border-style: solid;
-  border-width: 2px;
-  border-color: white;
+  border: 2px solid white;
   border-radius: 10px;
-  color: white;
   height: 40px;
-  width: 190px;
-  padding: 5px;
+  width: 15vw;
+  padding: 2vh 1vw;
   font-family: "Nexa", sans-serif;
 }
 
@@ -369,15 +398,22 @@
 }
 
 .newsbutton {
-  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
   color: white;
   font-size: 16px;
   border: 2px solid white;
   border-radius: 50%;
-  width: fit-content;
   height: 25px;
   width: 25px;
-  font-family: "Nexa", sans-serif;
+}
+
+.email_button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .newsletter-close-btn {
