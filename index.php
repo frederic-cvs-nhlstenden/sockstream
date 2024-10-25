@@ -489,7 +489,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </section>
   </main>
 
-  <div id="chatbot" class="chatbot">
+  <div id="chatbot" class="chatbot" data-chatbot-endpoint="index.php">
     <div class="chat-header">
       <h2>Support</h2>
       <button id="close-btn">X</button>
@@ -497,10 +497,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="chat-body">
       <div id="base-question">
         <p>Have you checked our support? We're happy to help with further issues.</p>
-        <p>You can access to the <a href="./pages/faq.php">FAQs</a> page by clicking on the link.</p>
+        <p>You can access the <a href="./pages/faq.php">FAQs</a> page by clicking on the link.</p>
       </div>
       <div id="base-question">
-        <p>To use the chatbot you just have to ask a question regarding our page.</p>
+        <p>To use the chatbot, just ask a question regarding our page.</p>
         <p>For example: "How long will it take for the package to arrive at its destination?"</p>
         <p>Try it!!</p>
       </div>
