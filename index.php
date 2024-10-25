@@ -138,6 +138,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </ul>
     </section>
 
+    <?php
+    require_once './js/best-sellers.php';
+    ?>
+
     <section id="best-sellers">
       <h2 class="heading">OUR BEST SELLERS</h2>
 
@@ -147,93 +151,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </button>
         <div class="carousel-background">
           <div class="carousel" id="carousel-products">
-            <a href="#" class="carousel-item">
-              <img
-                src="./assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_stripes_blue.png"
-                alt="Blue sock"
-                loading="lazy" />
-              <div class="product-label">
-                <p class="product-name">Classic Stripes</p>
-                <b>€6,75 <span class="discount">€11.50</span></b>
-              </div>
-            </a>
-
-            <a href="#" class="carousel-item">
-              <img
-                src="./assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_stripes_green.png"
-                alt="Green sock"
-                loading="lazy" />
-              <div class="product-label">
-                <p class="product-name">Classic Stripes</p>
-                <b>€6,75 <span class="discount">€11.50</span></b>
-              </div>
-            </a>
-
-            <a href="#" class="carousel-item">
-              <img
-                src="./assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_stripes_pink.png"
-                alt="Pink sock"
-                loading="lazy" />
-              <div class="product-label">
-                <p class="product-name">Classic Stripes</p>
-                <b>€6,75 <span class="discount">€11.50</span></b>
-              </div>
-            </a>
-
-            <a href="#" class="carousel-item">
-              <img
-                src="./assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_stripes_yellow.png"
-                alt="Yellow sock"
-                loading="lazy" />
-              <div class="product-label">
-                <p class="product-name">Classic Stripes</p>
-                <b>€6,75 <span class="discount">€11.50</span></b>
-              </div>
-            </a>
-
-            <a href="#" class="carousel-item">
-              <img
-                src="./assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_stripes_red.png"
-                alt="Red sock"
-                loading="lazy" />
-              <div class="product-label">
-                <p class="product-name">Classic Stripes</p>
-                <b>€6,75 <span class="discount">€11.50</span></b>
-              </div>
-            </a>
-
-            <a href="#" class="carousel-item">
-              <img
-                src="./assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_blue.png"
-                alt="Blue sock"
-                loading="lazy" />
-              <div class="product-label">
-                <p class="product-name">Classic Stripes</p>
-                <b>€6,75 <span class="discount">€11.50</span></b>
-              </div>
-            </a>
-
-            <a href="#" class="carousel-item">
-              <img
-                src="./assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_green.png"
-                alt="Green sock"
-                loading="lazy" />
-              <div class="product-label">
-                <p class="product-name">Classic Stripes</p>
-                <b>€6,75 <span class="discount">€11.50</span></b>
-              </div>
-            </a>
-
-            <a href="#" class="carousel-item">
-              <img
-                src="./assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_pink.png"
-                alt="Pink sock"
-                loading="lazy" />
-              <div class="product-label">
-                <p class="product-name">Classic Stripes</p>
-                <b>€6,75 <span class="discount">€11.50</span></b>
-              </div>
-            </a>
+            <?php foreach ($bestSellers as $product): ?>
+              <a href="pages/productpage.php?product_id=<?php echo urlencode($product['product_id']); ?>" class="carousel-item">
+                <img src="<?php echo htmlspecialchars($product['image']); ?>"
+                  alt="<?php echo htmlspecialchars($product['alt']); ?>"
+                  loading="lazy" />
+                <div class="product-label">
+                  <p class="product-name"><?php echo htmlspecialchars($product['name']); ?></p>
+                  <b>€<?php echo number_format($product['price'], 2); ?>
+                    <span class="discount">€<?php echo number_format($product['original_price'], 2); ?></span>
+                  </b>
+                </div>
+              </a>
+            <?php endforeach; ?>
           </div>
         </div>
         <button id="products-nextBtn" class="btns">

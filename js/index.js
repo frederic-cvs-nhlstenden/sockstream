@@ -14,6 +14,14 @@ const images = [
   "assets/images/sunny_socks_photos/catalogus/Sunny_socks_pink_01.webp",
 ];
 
+const links = [
+  "pages/productpage.php?product_id=7",
+  "pages/productpage.php?product_id=9",
+  "pages/productpage.php?product_id=10",
+  "pages/productpage.php?product_id=6",
+  "pages/productpage.php?product_id=8",
+];
+
 const carouselProducts = document.getElementById("carousel-products");
 const prevBtnProducts = document.getElementById("products-prevBtn");
 const nextBtnProducts = document.getElementById("products-nextBtn");
@@ -127,6 +135,9 @@ let pie = (data) => {
           observer.observe(imgElement);
         }
       }
+
+      const buyButton = document.querySelector(".buy-button");
+      buyButton.setAttribute("href", links[i]);
     });
 
     startAngle += angle;
