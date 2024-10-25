@@ -1,41 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<header>
+    <div class="header-left">
+        <a href="../pages/store_page.php" class="header-left-border">
+            <p>All Socks</p>
+        </a>
+        <a href="../pages/store_page.php?storeType=seasonal" class="header-left-border">
+            <p>Seasonal</p>
+        </a>
+    </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="../styles/styles.css" type="text/css">
-    <link rel="stylesheet" href="../styles/components.css" type="text/css">
-</head>
+    <div class="header-logo">
+        <a href="../index.php"><img src="../assets/images/logos/png/sunny_logos-01.png" alt="Sunny Logo"></a>
+    </div>
 
-<body>
-    <header>
-        <div class="header-left">
-            <p class="header-left-border"><a href="../pages/store_page.php">All Socks</p></a>
-            <a href="../pages/store_page.php?storeType=seasonal">
-                <p>Seasonal</p>
-            </a>
-        </div>
+    <div class="header-right">
+        <a href="../pages/aboutus.php">About Us</a>
+        <a href="../pages/faq.php" class="header-right-border">FAQs</a>
+    </div>
 
-
-        <div class="header-logo">
-            <a href="../index.php"><img src="../assets/images/logos/png/sunny_logos-01.png"></a>
-        </div>
-
-        <div class="header-right">
-            <a href="../pages/aboutus.php">About Us</a>
-            <a href="../pages/faq.php" div="header-right-border">FAQs</a>
-        </div>
-
-        <div class="icons-header">
-            <a href="../pages/login.php"><img src="../assets/icons/png/profile.png" class="profile-header"></a>
-            <img src="../assets/icons/png/cart.png" class="cart-header" id="cart-button">
-        </div>
-    </header>
-</body>
+    <div class="icons-header">
+        <a href="../pages/login.php"><img src="../assets/icons/png/profile.png" class="profile-header" alt="Profile Icon"></a>
+        <img src="../assets/icons/png/cart.png" class="cart-header" id="cart-button" alt="Cart Icon">
+    </div>
+</header>
 <script src="../js/headerandfooter.js"></script>
 <script src="../js/components.js"></script>
-
-</html>

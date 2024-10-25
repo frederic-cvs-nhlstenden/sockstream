@@ -12,10 +12,9 @@
 </head>
 
 <body>
+    <?php include '../components/header.php'; ?>
 
     <div class="checkout-container">
-
-        <!-- Left side: Form for customer and shipping info -->
         <form action="process_order.php" method="post" class="checkout-form">
             <h2>Contact Information</h2>
             <div class="form-row">
@@ -59,14 +58,14 @@
             <div class="form-row">
                 <div class="form-group full-width">
                     <label for="card-number">Card Number</label>
-                    <input type="text" type="hidden" id="card-number" name="card-number" placeholder="Card Number" required minlength="8" maxlength="19">
+                    <input type="text" id="card-number" name="card-number" placeholder="Card Number" required minlength="8" maxlength="19">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group half-width">
                     <label for="expiry">Expiry Date</label>
-                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required minlength="4" maxlength="4">
                 </div>
                 <div class="form-group half-width">
                     <label for="cvv">CVV</label>
@@ -77,38 +76,38 @@
             <!-- Payment buttons -->
 
             <h4 class="CO-img-pay">Mode of Payment:</h4>
-            
+
             <div class="form-row">
                 <div class="CO-payment-options full-width">
 
                     <label>
                         <input type="radio" name="option1" value="applepay" required>
-                        <img src="../assets/icons/png/applepay-badge.png" alt="applepay" id="ap1">
+                        <img src="../assets/icons/png/applepay-badge.png" alt="applepay" class="CO-img-radio">
                     </label>
 
                     <label>
                         <input type="radio" name="option1" value="ideal" required>
-                        <img src="../assets/icons/png/ideal-badge.png" alt="ideal" id="id1">
+                        <img src="../assets/icons/png/ideal-badge.png" alt="ideal" class="CO-img-radio">
                     </label>
 
                     <label>
                         <input type="radio" name="option1" value="mastercard" required>
-                        <img src="../assets/icons/png/mastercard-badge.png" alt="mastercard" id="mc1">
+                        <img src="../assets/icons/png/mastercard-badge.png" alt="mastercard" class="CO-img-radio">
                     </label>
 
                     <label>
                         <input type="radio" name="option1" value="paypal" required>
-                        <img src="../assets/icons/png/paypal-badge.png" alt="paypal" id="pp1">
+                        <img src="../assets/icons/png/paypal-badge.png" alt="paypal" class="CO-img-radio">
                     </label>
 
                     <label>
                         <input type="radio" name="option1" value="visa" required>
-                        <img src="../assets/icons/png/visa-badge.png" alt="visa" id="v1">
+                        <img src="../assets/icons/png/visa-badge.png" alt="visa" class="CO-img-radio">
                     </label>
 
                     <label>
                         <input type="radio" name="option1" value="googleplay" required>
-                        <img src="../assets/icons/png/googlepay-badge.png" alt="googlepay" id="gp1">
+                        <img src="../assets/icons/png/googlepay-badge.png" alt="googlepay" class="CO-img-radio">
                     </label>
 
                 </div>
@@ -118,122 +117,41 @@
                 <button type="submit" class="checkout-btn">Complete Purchase</button>
             </div>
         </form>
-
-        <!-- Right side: Cart and order summary -->
         <div class="CO-order-summary">
-
-            <div class="CO-product-items-wrapper">
-
-                <!-- Product-items -->
-                <h2>Your Cart</h2>
-
-
-                <!-- Green Sock -->
-                <div class="uni-green-product cart-product-item CO-product-items">
-
-                    <img src="../assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_green.png"
-                        alt="Uni_Green_Sock" class="uni-green-img">
-
-                    <div class="cart-product-details">
-                        <h4><b>Classic Uni Color</b></h4>
-                        <p><b>Size:</b> 37-40</p>
-                        <p><b>Color:</b> Green</p>
-                        <h3><b>€6.75</b></h3>
-                    </div>
-
-                    <div class="up-num-input">
-                        <button class="minus" onclick="Gdecrease()">-</button>
-                        <input type="number" id="sock1" value="1" min="0">
-                        <button class="plus" onclick="Gincrease()">+</button>
-                    </div>
-
-                    <div class="cart-product-action">
-                        <button class="delete-button">🗑️</button>
-                    </div>
-
-                </div>
-
-                <!-- Yellow Sock -->
-                <div class="uni-yellow-product cart-product-item CO-product-items">
-
-                    <img src="../assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_yellow.png"
-                        alt="Uni-yellow-sock" class="uni-yellow-img">
-
-                    <div class="cart-product-details">
-                        <h4><b>Classic Uni Color</b></h4>
-                        <p><b>Size:</b> 37-40</p>
-                        <p><b>Color:</b> Yellow</p>
-                        <h3><b>€6.75</b></h3>
-                    </div>
-
-                    <div class="up-num-input">
-                        <button class="minus" onclick="Ydecrease()">-</button>
-                        <input type="number" id="sock2" value="1" min="0">
-                        <button class="plus" onclick="Yincrease()">+</button>
-                    </div>
-
-                    <div class="cart-product-action">
-                        <button class="delete-button">🗑️</button>
-                    </div>
-
-                </div>
-
-                <!-- Pink Sock -->
-                <div class="uni-pink-product cart-product-item CO-product-items">
-
-                    <img src="../assets/images/sunny_socks_photos/packaging/png/catalogus_sokken_uni_pink.png"
-                        alt="Uni-pink-sock" class="uni-pink-img">
-
-                    <div class="cart-product-details">
-                        <h4><b>Classic Uni Color</b></h4>
-                        <p><b>Size:</b> 37-40</p>
-                        <p><b>Color:</b> Pink</p>
-                        <h3><b>€6.75</b></h3>
-                    </div>
-
-                    <div class="up-num-input">
-                        <button class="minus" onclick="Pdecrease()">-</button>
-                        <input type="number" id="sock3" value="1" min="0">
-                        <button class="plus" onclick="Pincrease()">+</button>
-                    </div>
-
-                    <div class="cart-product-action">
-                        <button class="delete-button">🗑️</button>
-                    </div>
-
-                </div>
-            </div>
-            <!-- SUMMARY -->
             <div class="CO-summary">
 
                 <h2><b>Order Summary</b></h2>
-                <p><b>Subtotal</b> <span id="cart-subtotal">€20.25</span></p>
+                <p><b>Subtotal</b> <span id="cart-subtotal">€0.00</span></p>
                 <p><b>Delivery</b> <span id="cart-delivery">€2.50</span></p>
 
                 <hr>
 
-                <p class="CO-total"><b>Total</b> <span id="cart-total">€22.75</span></p>
+                <p class="CO-total"><b>Total</b> <span id="cart-total">€0.00</span></p>
 
                 <div class="promo-code">
 
                     <input type="text" id="promo-code" placeholder="Add promo code">
-                    <button onclick="applyPromo()">Apply</button>
+                    <button type="button" onclick="applyPromo()">Apply</button>
 
                 </div>
 
-
             </div>
+            <div class="cart-container">
 
+                <h2>Your Cart</h2>
+
+                <ul id="checkout-items">
+                    <!-- Cart items will be dynamically inserted here -->
+                </ul>
+            </div>
 
         </div>
 
-
     </div>
-    <? include '../components/chatbot.php';?>
+    <?php include '../components/footer.php'; ?>
+    <?php include '../components/chatbot.php'; ?>
     <script src="../js/checkout-page.js"></script>
-
+    <script src="../js/components.js"></script>
 </body>
-
-<script src="../js/components.js"></script>
 
 </html>

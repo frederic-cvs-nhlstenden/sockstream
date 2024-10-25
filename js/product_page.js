@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const urlParams = new URLSearchParams(window.location.search);
     const startProductId = parseInt(urlParams.get("product_id")) || 1;
-    const selectedColor = urlParams.get("color");
+    let selectedColor = urlParams.get("color");
 
     const colorProductMap = {
       green: [1, 6],
@@ -127,11 +127,24 @@ document.addEventListener("DOMContentLoaded", function () {
       const defaultColor = Object.keys(colorProductMap).find((color) =>
         colorProductMap[color].includes(startProductId)
       );
-      const defaultOption = document.querySelector(
-        `.colorOption[data-color="${defaultColor}"]`
-      );
-      if (defaultOption) {
-        defaultOption.classList.add("selected");
+
+      if (defaultColor) {
+        const defaultOption = document.querySelector(
+          `.colorOption[data-color="${defaultColor}"]`
+        );
+        if (defaultOption) {
+          defaultOption.classList.add("selected");
+          // Update the URL with the default color without reloading the page
+          urlParams.set("color", defaultColor);
+          const newUrl =
+            window.location.protocol +
+            "//" +
+            window.location.host +
+            window.location.pathname +
+            "?" +
+            urlParams.toString();
+          window.history.replaceState({ path: newUrl }, "", newUrl);
+        }
       }
     }
   }
@@ -169,23 +182,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Load cart items from localStorage or initialize as empty array
-  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-  // Update the cart overlay on page load
-  updateCartOverlay();
-
   // Handle Add to Cart button click
   addToCartButton.addEventListener("click", function () {
     if (selectedSize) {
-      const productId = new URLSearchParams(window.location.search).get(
-        "product_id"
-      );
-      const color = new URLSearchParams(window.location.search).get("color");
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get("product_id");
+      const color = urlParams.get("color");
 
       // Get product details from the page
       const productName = document.querySelector(".productInfo h2").textContent;
       const productImage = document.querySelector(".mainProductImage img").src;
+
+      // Extract and parse the price
+      const priceElement = document.querySelector(".reducedPrice");
+      let priceText = priceElement ? priceElement.textContent : "0";
+      // Remove any non-numeric characters (like currency symbols) and parse to float
+      let price = parseFloat(
+        priceText.replace(/[^0-9.,]/g, "").replace(",", ".")
+      );
+      if (isNaN(price)) {
+        price = 0; // Default to 0 if price is invalid
+        console.error("Invalid price detected for product:", productName);
+      }
 
       // Create cart item object
       const item = {
@@ -195,98 +213,20 @@ document.addEventListener("DOMContentLoaded", function () {
         quantity,
         size: selectedSize,
         color,
+        price, // Include the price as a number
       };
 
-      // Check if the item already exists in the cart
-      const existingItemIndex = cartItems.findIndex(
-        (cartItem) =>
-          cartItem.productId === item.productId &&
-          cartItem.size === item.size &&
-          cartItem.color === item.color
-      );
-
-      if (existingItemIndex >= 0) {
-        // If item exists, update the quantity
-        cartItems[existingItemIndex].quantity += quantity;
-      } else {
-        // If item doesn't exist, add it to the cart
-        cartItems.push(item);
-      }
-
-      // Save cart items to localStorage
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-      // Update the cart overlay
-      updateCartOverlay();
-
-      // Show the cart overlay
-      document.getElementById("cart-overlay").style.display = "block";
+      // Add item to cart using function from components.js
+      addItemToCart(item);
 
       // Reset quantity to 1
       quantity = 1;
       quantityDisplay.textContent = quantity;
+
+      // Show the cart overlay
+      document.getElementById("cart-overlay").style.display = "block";
     } else {
       alert("Please select a size.");
     }
-  });
-
-  // Function to update the cart overlay content
-  function updateCartOverlay() {
-    const cartItemsContainer = document.getElementById("cart-items");
-    cartItemsContainer.innerHTML = "";
-
-    if (cartItems.length > 0) {
-      cartItems.forEach((item) => {
-        const cartItem = document.createElement("li");
-        cartItem.classList.add("cart-item");
-
-        cartItem.innerHTML = `
-          <img src="${item.productImage}" alt="${item.productName}" class="cart-item-image">
-          <div class="cart-item-details">
-            <span class="cart-item-name">${item.productName}</span>
-            <span class="cart-item-size">Size: ${item.size}</span>
-            <span class="cart-item-quantity">Quantity: ${item.quantity}</span>
-          </div>
-        `;
-        cartItemsContainer.appendChild(cartItem);
-      });
-    } else {
-      cartItemsContainer.innerHTML =
-        '<li id="cart-empty">Your cart is empty.</li>';
-    }
-
-    // Attach event listener to close button
-    const cartCloseButton = document.getElementById("cart-close-button");
-    cartCloseButton.addEventListener("click", function () {
-      document.getElementById("cart-overlay").style.display = "none";
-    });
-  }
-
-  document.getElementById('checkout-button').addEventListener('click', function() {
-    // Get all cart items
-    const cartItems = document.querySelectorAll('#cart-overlay #cart-items .cart-item');
-    const itemsArray = Array.from(cartItems).map(item => {
-        const itemName = item.querySelector('.cart-item-name').textContent;
-        const itemImage = item.querySelector('.cart-item-image').src;
-        const itemSize = item.querySelector('.cart-item-size').textContent.replace('Size: ', '');
-        const itemQuantity = item.querySelector('.cart-item-quantity').textContent.replace('Quantity: ', '');
-        return { name: itemName, image: itemImage, size: itemSize, quantity: itemQuantity };
-    });
-
-    // Convert the items to a query string
-    const queryString = itemsArray.map((item, index) => 
-        `item${index + 1}=${encodeURIComponent(item.name)}&image${index + 1}=${encodeURIComponent(item.image)}&size${index + 1}=${encodeURIComponent(item.size)}&quantity${index + 1}=${encodeURIComponent(item.quantity)}`
-    ).join('&');
-
-    // Redirect to another page with the cart items as query parameters
-    window.location.href = `../pages/cart-page.php?${queryString}`;
-  });
-
-  const clearCartButton = document.getElementById("clear-cart-button");
-  clearCartButton.addEventListener("click", function () {
-    // Clear cart items and localStorage
-    cartItems = [];
-    localStorage.removeItem("cartItems");
-    updateCartOverlay();
   });
 });

@@ -12,18 +12,18 @@
 </head>
 
 <body>
-    <? require '../components/header.php';?>
+    <? require '../components/header.php'; ?>
     <div id="aboutus">
         <div class="about-us">
             <img src="../assets/images/ai_generated_photos/company.png" alt="company">
             <div>
                 <h2> About Us – A Colourful Journey in Sockland </h2>
                 <p>At Sunny Socks, we believe that life is too short for boring socks! Nestled in the vibrant town of
-                        Emmen, our headquarters is a kaleidoscope of creativity and colour. From hand-knitted wonders to
-                        machine-crafted masterpieces, our team of cheerful, free-spirited sock artisans is dedicated to
-                        bringing a splash of joy to your feet. Every pair of Sunny Socks is made with love, care, and a
-                        touch of that groovy hippie magic. Step into a world where socks aren’t just footwear, they’re a
-                        celebration of individuality and creativity!</p>
+                    Emmen, our headquarters is a kaleidoscope of creativity and colour. From hand-knitted wonders to
+                    machine-crafted masterpieces, our team of cheerful, free-spirited sock artisans is dedicated to
+                    bringing a splash of joy to your feet. Every pair of Sunny Socks is made with love, care, and a
+                    touch of that groovy hippie magic. Step into a world where socks aren’t just footwear, they’re a
+                    celebration of individuality and creativity!</p>
             </div>
         </div>
         <div class="our-socks">
@@ -63,8 +63,9 @@
             <img src="../assets/images/ai_generated_photos/afbeelding.png" alt="">
         </div>
     </div>
-    <? require '../components/footer.php';?>
-    <? include '../components/chatbot.php';?>
+    <? require '../components/footer.php'; ?>
+    <? include '../components/chatbot.php'; ?>
+    <script src="../js/components.js"></script>
 </body>
-<script src="../js/components.js"></script>
+
 </html>

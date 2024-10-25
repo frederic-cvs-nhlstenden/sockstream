@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>newsteller</title>
-    <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="../styles/components.css" type="text/css">
-</head>
-
-<body>
     <div id="newsletter-popup" class="popup">
         <div class="popup-content">
             <div><img src="../assets/images/sunny_socks_photos/seasonal/halloween_socks.png" alt="sustainablesocks"></div>
@@ -33,7 +21,4 @@
         </div>
     </div>
 
-</body>
-<script src="../js/components.js"></script>
-
-</html>
+    <script src="../js/components.js"></script>
