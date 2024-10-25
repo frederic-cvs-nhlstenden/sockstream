@@ -57,7 +57,7 @@
 
     <? require '../components/footer.php'; ?>
     <? include '../components/chatbot.php'; ?>
+    <script src="../js/components.js"></script>
 </body>
-<script src="../js/components.js"></script>
 
 </html>

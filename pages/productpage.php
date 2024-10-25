@@ -313,7 +313,7 @@
                 <div class="ppReviewButtons">
                     <div class="ppSortReviews">
                         <p>Latest</p>
-                        <img src="../assets/icons/svg/sort-arrow.svg">
+                        <img src="../assets/icons/svg/sort-arrow.svg" alt="Sort Arrow Icon">
                     </div>
                     <div class="ppWriteReview">
                         <p>Write a Review</p>
@@ -323,11 +323,11 @@
             <div class="ppReviews">
                 <div class="ppReviewItem ppReviewLeft">
                     <div class="ppReviewStars">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
                     </div>
                     <h3>Anna K.</h3>
                     <p class="ppReviewDesc">"Sunny Socks are my new go-to for gifts! Everyone I’ve bought them for absolutely loves them. The mix of creativity and quality is hard to beat, and knowing they’re sustainably made makes them even better. These socks are more than just accessories – they’re little bursts of personality!"</p>
@@ -335,11 +335,11 @@
                 </div>
                 <div class="ppReviewItem ppReviewRight">
                     <div class="ppReviewStars">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
                     </div>
                     <h3>Tom H.</h3>
                     <p class="ppReviewDesc">"These socks are the epitome of feel-good fashion! From the moment I opened the package, I was hooked. The designs are so fun, and they’re incredibly soft. I love that they reflect the eco-friendly and artistic spirit of the brand. Highly recommended!"</p>
@@ -347,11 +347,11 @@
                 </div>
                 <div class="ppReviewItem ppReviewLeft">
                     <div class="ppReviewStars">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
                     </div>
                     <h3>Harry S.</h3>
                     <p class="ppReviewDesc">"My wardrobe just got a serious upgrade, thanks to Sunny Socks! I can’t get enough of their quirky, colourful patterns. Each pair feels like a little piece of wearable art, and they’ve become my new favourite accessory. The quality is unbeatable – I’ll definitely be back for more!"</p>
@@ -359,11 +359,11 @@
                 </div>
                 <div class="ppReviewItem ppReviewRight">
                     <div class="ppReviewStars">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
-                        <img src="../assets/icons/svg/review-star.svg">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
+                        <img src="../assets/icons/svg/review-star.svg" alt="Review Star Icon">
                     </div>
                     <h3>Lucy W.</h3>
                     <p class="ppReviewDesc">"Sunny Socks are like a hug for your feet! The comfort is unmatched, and the designs are totally unique. I feel like I’m walking on sunshine every time I put them on. Plus, the customer service was top-notch – you can really feel the love that goes into each pair."</p>
@@ -392,8 +392,7 @@
 
         </div>
     </div>
+    <script src="../js/product_page.js"></script>
 </body>
-
-<script src="../js/product_page.js"></script>
 
 </html>

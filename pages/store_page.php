@@ -115,8 +115,8 @@
   </div>
   <? include '../components/chatbot.php'; ?>
   <?php include '../components/footer.php'; ?>
+  <script src="../js/store-page.js"></script>
+  <script src="../js/components.js"></script>
 </body>
-<script src="../js/store-page.js"></script>
-<script src="../js/components.js"></script>
 
 </html>

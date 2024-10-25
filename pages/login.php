@@ -221,6 +221,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
     <title>Log In</title>
     <link rel="stylesheet" href="../assets/css/normalize.css" />
     <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/components.css" type="text/css">
   </head>
 
   <body id="login-page">

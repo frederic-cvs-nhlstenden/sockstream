@@ -129,8 +129,46 @@
       }
     }
 
-    // Expose updateCartOverlay globally so it can be called from productpage.js
+    // Expose updateCartOverlay globally so it can be called from other scripts
     window.updateCartOverlay = updateCartOverlay;
+
+    // Function to add an item to the cart
+    function addItemToCart(item) {
+      // Ensure that the price is a number
+      const price = parseFloat(item.price);
+      if (isNaN(price)) {
+        console.error("Invalid price for item:", item);
+        return;
+      }
+
+      // Check if the item already exists in the cart
+      const existingItemIndex = cartItems.findIndex(
+        (cartItem) =>
+          cartItem.productId === item.productId &&
+          cartItem.size === item.size &&
+          cartItem.color === item.color
+      );
+
+      if (existingItemIndex >= 0) {
+        // If item exists, update the quantity
+        cartItems[existingItemIndex].quantity += item.quantity;
+      } else {
+        // If item doesn't exist, add it to the cart with the price
+        cartItems.push({
+          ...item,
+          price: price, // Ensure price is a number
+        });
+      }
+
+      // Save cart items to localStorage
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+      // Update the cart overlay
+      updateCartOverlay();
+    }
+
+    // Expose addItemToCart globally so it can be called from other scripts
+    window.addItemToCart = addItemToCart;
 
     // Update the cart overlay on page load
     updateCartOverlay();
@@ -154,7 +192,8 @@
     const checkoutButton = document.getElementById("checkout-button");
     if (checkoutButton) {
       checkoutButton.addEventListener("click", function () {
-        alert("Proceeding to checkout (demo functionality).");
+        // Redirect to the cart page
+        window.location.href = "cart-page.php";
       });
     }
 

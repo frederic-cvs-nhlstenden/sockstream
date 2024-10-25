@@ -43,40 +43,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot</title>
-    <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="../styles/components.css" type="text/css">
-
-</head>
-
-<body>
-    <div id="chatbot" class="chatbot">
-        <div class="chat-header">
-            <h2>Support</h2>
-            <button id="close-btn">X</button>
-        </div>
-        <div class="chat-body">
-            <div id="base-question">
-                <p>Have you checked our support? We're happy to help with further issues.</p>
-            </div>
-        </div>
-        <div class="chat-footer">
-            <div>
-                <input type="text" placeholder="Type here..." id="user-input">
-                <button id="send-btn">></button>
-            </div>
+<div id="chatbot" class="chatbot">
+    <div class="chat-header">
+        <h2>Support</h2>
+        <button id="close-btn">X</button>
+    </div>
+    <div class="chat-body">
+        <div id="base-question">
+            <p>Have you checked our support? We're happy to help with further issues.</p>
         </div>
     </div>
-    <img class="chat-icon" src="../assets/icons/svg/icon-chatbot.svg" id="chat-icon" alt="Chat Icon" />
+    <div class="chat-footer">
+        <div>
+            <input type="text" placeholder="Type here..." id="user-input">
+            <button id="send-btn">></button>
+        </div>
+    </div>
+</div>
+<img class="chat-icon" src="../assets/icons/svg/icon-chatbot.svg" id="chat-icon" alt="Chat Icon" />
 
 
-</body>
+
 <script src="../js/components.js"></script>
-
-</html>
