@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <? require '../components/header.php'; ?>
+    <?php require '../components/header.php'; ?>
     <div id="faq">
         <div class="general-information">
             <h2> General Information</h2>
@@ -55,8 +55,8 @@
         </div>
     </div>
 
-    <? require '../components/footer.php'; ?>
-    <? include '../components/chatbot.php'; ?>
+    <?php require '../components/footer.php'; ?>
+    <?php include '../components/chatbot.php'; ?>
     <script src="../js/components.js"></script>
 </body>
 

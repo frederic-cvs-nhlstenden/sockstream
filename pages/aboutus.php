@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <? require '../components/header.php'; ?>
+    <?php require '../components/header.php'; ?>
     <div id="aboutus">
         <div class="about-us">
             <img src="../assets/images/ai_generated_photos/company.png" alt="company">
@@ -63,8 +63,8 @@
             <img src="../assets/images/ai_generated_photos/afbeelding.png" alt="">
         </div>
     </div>
-    <? require '../components/footer.php'; ?>
-    <? include '../components/chatbot.php'; ?>
+    <?php require '../components/footer.php'; ?>
+    <?php include '../components/chatbot.php'; ?>
     <script src="../js/components.js"></script>
 </body>
 
