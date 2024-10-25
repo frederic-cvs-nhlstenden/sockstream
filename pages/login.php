@@ -58,7 +58,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
 
           <h2 class="page-title">User Profile</h2>
 
-          <form action="../js/logout.php" method="POST" class="logout-form">
+          <form action="../php/logout.php" method="POST" class="logout-form">
             <button type="submit" class="btn logout-btn">
               <i class="fa-solid fa-right-from-bracket"></i>
             </button>

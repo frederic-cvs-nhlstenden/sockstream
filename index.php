@@ -143,7 +143,7 @@ function searchFAQs($input, $faqs)
     </section>
 
     <?php
-    require_once './js/best-sellers.php';
+    require_once './php/best-sellers.php';
     ?>
 
     <section id="best-sellers">
