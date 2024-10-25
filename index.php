@@ -1,49 +1,3 @@
-<?php
-
-$faqs = [
-  "return" => "You can return any item within 30 days of purchase.",
-  "contact" => "You can reach our customer service team by emailing support@sunnysocks.com or through our live chat feature on the website. We are available from 9 AM to 5 PM CET, Monday to Friday.",
-  "problems" => "If you experience any issues with your order, contact our customer support team immediately. We'll do our best to resolve the issue as quickly as possible.",
-  "shipping" => "Yes, We ship worldwide! Shipping times and costs will vary depending on your location. International orders may also be subject to customs duties and taxes, which are the responsibility of the customer.",
-  "long" => "Shipping times depends on your location. Orders within Europe typically take 3-5 business days, while international orders can take up to 14 business days. You can track your orders via the confirmation email we send once your order has shipped.",
-  "payment" => "We accept a wide range of payment options, including IDeal, Visa, Mastercard, PayPal, and Apple Pay. All transactions are securely processed to protect your information."
-];
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  if (isset($_POST['chatbot']) && $_POST['chatbot'] === 'true') {
-    if (isset($_POST['userInput'])) {
-      $userInput = $_POST['userInput'];
-      $response = searchFAQs($userInput, $faqs);
-      echo json_encode(['response' => htmlspecialchars($response, ENT_QUOTES, 'UTF-8')]);
-      exit;
-    } else {
-      echo json_encode(['response' => "I'm sorry, I didn't understand that."]);
-      exit;
-    }
-  }
-  if (isset($_POST['email'])) {
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      file_put_contents('subscribers.txt', $email . PHP_EOL, FILE_APPEND);
-    } else {
-    }
-  }
-}
-
-function searchFAQs($input, $faqs)
-{
-  $input = strtolower($input);
-  foreach ($faqs as $keyword => $answer) {
-    if (stripos($input, $keyword) !== false) {
-      return $answer;
-    }
-  }
-  return "I'm sorry, I don't have an answer for that.";
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,31 +18,7 @@ function searchFAQs($input, $faqs)
 </head>
 
 <body>
-
-  <header>
-    <div class="header-left">
-      <a href="./pages/store_page.php" class="header-left-border">
-        <p>All Socks</p>
-      </a>
-      <a href="./pages/store_page.php?storeType=seasonal" class="header-left-border">
-        <p>Seasonal</p>
-      </a>
-    </div>
-
-    <div class="header-logo">
-      <a href="./index.php"><img src="./assets/images/logos/png/sunny_logos-01.png" alt="Sunny Logo"></a>
-    </div>
-
-    <div class="header-right">
-      <a href="./pages/aboutus.php">About Us</a>
-      <a href="./pages/faq.php" class="header-right-border">FAQs</a>
-    </div>
-
-    <div class="icons-header">
-      <a href="./pages/login.php"><img src="./assets/icons/png/profile.png" class="profile-header" alt="Profile Icon"></a>
-      <img src="./assets/icons/png/cart.png" class="cart-header" id="cart-button" alt="Cart Icon">
-    </div>
-  </header>
+  <?php include_once 'components/header.php';?>
 
   <main id="main-page">
     <section id="hero-section">
@@ -293,97 +223,6 @@ function searchFAQs($input, $faqs)
                 <h4 class="user-name">Daniel T.</h4>
               </div>
             </div>
-            <div class="carousel-review">
-              <p>
-                "I get compliments on my socks all the time now! Whether I'm
-                in the office or lounging at home, my Sunny Socks always stand
-                out. They're soft, snug, and the designs are so unique. A
-                must-have for anyone who wants to bring a bit of fun into
-                their wardrobelll
-              </p>
-              <div class="user">
-                <img
-                  src="./assets/images/team/jack.png"
-                  alt="profile"
-                  class="profile" />
-                <h4 class="user-name">Daniel T.</h4>
-              </div>
-            </div>
-            <div class="carousel-review">
-              <p>
-                "I get compliments on my socks all the time now! Whether I'm
-                in the office or lounging at home, my Sunny Socks always stand
-                out. They're soft, snug, and the designs are so unique. A
-                must-have for anyone who wants to bring a bit of fun into
-                their wardrobelll
-              </p>
-              <div class="user">
-                <img
-                  src="./assets/images/team/jack.png"
-                  alt="profile"
-                  class="profile" />
-                <div class="main-stars">
-                  <h4 class="user-name">Daniel T.</h4>
-                  <div class="star-rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-review">
-              <p>
-                "I get compliments on my socks all the time now! Whether I'm
-                in the office or lounging at home, my Sunny Socks always stand
-                out. They're soft, snug, and the designs are so unique. A
-                must-have for anyone who wants to bring a bit of fun into
-                their wardrobelll
-              </p>
-              <div class="user">
-                <img
-                  src="./assets/images/team/jack.png"
-                  alt="profile"
-                  class="profile" />
-                <div class="main-stars">
-                  <h4 class="user-name">Daniel T.</h4>
-                  <div class="star-rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-review">
-              <p>
-                "I get compliments on my socks all the time now! Whether I'm
-                in the office or lounging at home, my Sunny Socks always stand
-                out. They're soft, snug, and the designs are so unique. A
-                must-have for anyone who wants to bring a bit of fun into
-                their wardrobelll
-              </p>
-              <div class="user">
-                <img
-                  src="./assets/images/team/jack.png"
-                  alt="profile"
-                  class="profile" />
-                <div class="main-stars">
-                  <h4 class="user-name">Daniel T.</h4>
-                  <div class="star-rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <button id="reviews-nextBtn" class="btns">
@@ -423,31 +262,6 @@ function searchFAQs($input, $faqs)
     </section>
   </main>
 
-  <div id="chatbot" class="chatbot" data-chatbot-endpoint="index.php">
-    <div class="chat-header">
-      <h2>Support</h2>
-      <button id="close-btn">X</button>
-    </div>
-    <div class="chat-body">
-      <div class="base-question">
-        <p>Have you checked our support? We're happy to help with further issues.</p>
-        <p>You can access to the <a href="./pages/faq.php">FAQs</a> page by clicking on the link.</p>
-      </div>
-      <div class="base-question">
-        <p>To use the chatbot you just have to ask a question regarding our page.</p>
-        <p>For example: "How long will it take for the package to arrive at its destination?"</p>
-        <p>Try it!!</p>
-      </div>
-    </div>
-    <div class="chat-footer">
-      <div>
-        <input type="text" placeholder="Type here..." id="user-input">
-        <button id="send-btn">></button>
-      </div>
-    </div>
-  </div>
-  <img class="chat-icon" src="./assets/icons/svg/icon-chatbot.svg" id="chat-icon" alt="Chat Icon" />
-
   <div id="newsletter-popup" class="popup">
     <div class="popup-content">
       <div>
@@ -479,64 +293,9 @@ function searchFAQs($input, $faqs)
       </div>
     </div>
   </div>
-  <footer>
-    <div>
-      <div class="footer-top-text">
-
-        <div class="farleft-text-footer">
-          <img src="./assets/icons/png/ssl-secure.png" class="ssl-secured-footer" alt="SSL Secured Icon">
-          <p>Address:</p>
-          <p>Sunny Street, Emmen</p>
-          <p>Contact Us:</p>
-          <p>06 12 34 56 78</p>
-          <p>info@sunnysocks.nl</p>
-        </div>
-
-        <div class="footer-right-center">
-          <p class="right">Contact Us</p>
-          <p class="right">Sunny's Values</p>
-          <p class="right">Join Our Community</p>
-          <p class="right">Socks of the Month</p>
-        </div>
-
-        <div class="footer-right">
-          <p>Gift Cards</p>
-          <p>Wholesale Inquiries</p>
-          <p>FAQs</p>
-          <p>Careers</p>
-        </div>
-
-      </div>
-
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/">
-          <img src="./assets/images/socials/facebook-logo.png" alt="Facebook Logo">
-        </a>
-        <a href="https://instagram.com/">
-          <img src="./assets/images/socials/instagram-logo.png" alt="Instagram Logo">
-        </a>
-        <a href="https://x.com">
-          <img src="./assets/images/socials/x-logo.png" alt="X Logo">
-        </a>
-        <a href="https://www.linkedin.com/">
-          <img src="./assets/images/socials/linkedin-logo.png" alt="LinkedIn Logo">
-        </a>
-        <a href="https://www.youtube.com/">
-          <img src="./assets/images/socials/youtube-logo.png" alt="YouTube Logo">
-        </a>
-      </div>
-
-      <hr class="hr-footer">
-
-      <div class="footer-copyrights">
-        <div>© 2024 Sunny Socks. All rights reserved.</div>
-        <div>Privacy Policy &nbsp;&nbsp;&nbsp; Terms of Service &nbsp;&nbsp;&nbsp; Shipping & Return Policy</div>
-      </div>
-    </div>
-  </footer>
+  <?php include_once 'components/chatbot.php';?>
+  <?php include_once 'components/footer.php';?>
   <script src="./js/index.js"></script>
-  <script src="./js/components.js"></script>
-  <script src="./js/headerandfooter.js"></script>
 </body>
 
 </html>
