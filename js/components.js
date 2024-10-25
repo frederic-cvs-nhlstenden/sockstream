@@ -54,14 +54,13 @@
       });
 
       sendBtn.addEventListener("click", function () {
-        const inputText = userInput.value;
+        const inputText = userInput.value.trim();
 
-        if (inputText.trim() === "") {
+        if (inputText === "") {
           return;
         }
 
-        chatBody.innerHTML = "";
-
+        // Append user message
         const userMessageDiv = document.createElement("div");
         userMessageDiv.className = "user-message";
         userMessageDiv.textContent = inputText;
@@ -69,23 +68,52 @@
 
         userInput.value = "";
 
-        fetch("../components/chatbot.php", {
+        // Scroll to the bottom of the chat
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+        // Get the chatbot endpoint from data attribute
+        const chatbotEndpoint = chatbot.getAttribute("data-chatbot-endpoint");
+
+        fetch(chatbotEndpoint, {
+          // Use dynamic endpoint
           method: "POST",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: "userInput=" + encodeURIComponent(inputText),
+          body: "userInput=" + encodeURIComponent(inputText) + "&chatbot=true", // Add a parameter to distinguish chatbot requests
         })
-          .then((response) => response.json())
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
           .then((data) => {
             const botResponseDiv = document.createElement("div");
             botResponseDiv.className = "bot-response";
             botResponseDiv.textContent = data.response;
             chatBody.appendChild(botResponseDiv);
+
+            // Scroll to the bottom of the chat
+            chatBody.scrollTop = chatBody.scrollHeight;
           })
           .catch((error) => {
             console.error("Error:", error);
+            const errorDiv = document.createElement("div");
+            errorDiv.className = "bot-response";
+            errorDiv.textContent =
+              "Sorry, something went wrong. Please try again later.";
+            chatBody.appendChild(errorDiv);
+
+            // Scroll to the bottom of the chat
+            chatBody.scrollTop = chatBody.scrollHeight;
           });
+      });
+
+      userInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          sendBtn.click();
+        }
       });
     }
 
@@ -118,7 +146,7 @@
           '<li id="cart-empty">Your cart is empty.</li>';
       }
 
-      // Update cart item count (optional)
+      // Update cart item count
       const cartItemCount = document.getElementById("cart-item-count");
       if (cartItemCount) {
         const totalItems = cartItems.reduce(
