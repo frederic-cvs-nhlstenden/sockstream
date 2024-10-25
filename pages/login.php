@@ -213,6 +213,9 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
     </section>
 
     <script src="../js/profile.js"></script>
+    <?php
+    require_once '../components/footer.php';
+    ?>
   </body>
 
   </html>
