@@ -799,7 +799,8 @@ body {
 
   * {
     margin: 0;
-    font-family: "Nexa Bold", Arial, sans-serif;
+    font-family: "Nexa", sans-serif;
+    font-weight: 700;
     color: #fff;
   }
 
@@ -1019,7 +1020,7 @@ body {
   }
 
   .product-name {
-    font-family: "Nexa Light", Arial, sans-serif;
+    font-family: "Nexa", Arial, sans-serif;
   }
 
   .discount {
@@ -1613,21 +1614,21 @@ body {
 /* Cart */
 
 /* Main Cart-Container */
-.cart-main-container {
-  display: grid;
-  margin: 40px auto;
-  max-width: 100%;
+#cart-main-container {
+  display: flex;
+  margin: 100px 0;
   justify-content: center;
+  column-gap: 100px;
+  max-width: 100%;
 }
 
 /* Product Display */
 .cart-container {
   display: flex;
   flex-direction: column;
-  margin: 100px 40px auto;
   border-radius: 30px;
   border: 2px solid #51b2a2;
-  max-width: 700px;
+  width: 700px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 5px #555;
   gap: 20px;
@@ -1687,13 +1688,15 @@ body {
 .cart-product-details > h4 {
   margin: 5px 0;
   font-size: 18px;
-  font-family: "Nexa Bold";
+  font-family: "Nexa";
+  font-weight: 700;
 }
 
 .cart-product-details > h3 {
   margin: 0px 0px;
   padding-top: 45px;
-  font-family: "Nexa Bold";
+  font-family: "Nexa";
+  font-weight: 700;
 }
 
 .cart-product-details > p {
@@ -1705,7 +1708,8 @@ body {
 
 .cart-product-details > p > b {
   color: black;
-  font-family: "Nexa Bold";
+  font-family: "Nexa";
+  font-weight: 700;
 }
 
 /* Button */
@@ -1772,11 +1776,10 @@ body {
 
 /* Order Summary Box */
 .right-cart {
-  grid-column: 2/2;
-
   display: flex;
   flex-direction: column;
-  align-items: center;
+  row-gap: 100px;
+  height: min-content;
 }
 
 .cart-order-summary {
@@ -1794,8 +1797,8 @@ body {
 .cart-order-summary > h2 {
   font-size: 20px;
   margin-bottom: 20px;
-  font-weight: bolder;
-  font-family: "Nexa Bold";
+  font-family: "Nexa";
+  font-weight: 700;
 }
 
 .cart-sum-details {
@@ -1816,7 +1819,8 @@ body {
 }
 
 .cart-sum-details > p.cart-total {
-  font-family: "Nexa Bold";
+  font-family: "Nexa";
+  font-weight: 700;
 }
 
 /* Checkout Button */
@@ -1830,7 +1834,7 @@ body {
   border-radius: 20px;
   cursor: pointer;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 700;
   box-shadow: inset 0 0 3px 0.2px #555;
 }
 
@@ -1874,7 +1878,8 @@ body {
   margin: 47px 10px auto;
   font-size: 17px;
   justify-content: center;
-  font-family: "Nexa Bold";
+  font-family: "Nexa";
+  font-weight: 700;
 }
 
 .powered-by > img {
@@ -2004,23 +2009,22 @@ li#cart-empty {
 }
 
 .CO-img-pay {
-  font-family: "Nexa Light";
+  font-family: "Nexa";
   color: #555;
   margin-bottom: inherit;
 }
 
 /* Checkout-button */
 .checkout-btn {
-  width: 600px;
+  width: 100%;
   padding: 15px;
-  align-items: center;
   background-color: #51b2a2;
   color: white;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
   box-shadow: inset 0 0 3px 0.2px #555;
 }
 
@@ -2029,7 +2033,7 @@ li#cart-empty {
   width: 100%;
   grid-column: 2/2;
   margin: 100px 40px;
-  gap: 20px;
+  row-gap: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2063,18 +2067,20 @@ li#cart-empty {
   width: 700px;
   background-color: #ffffff;
   border-radius: 30px;
-  padding: 10px;
+  padding: 10px 40px;
   box-shadow: 0 2px 5px #555;
   border: 2px solid #51b2a2;
 }
 
 .CO-summary > h2 {
-  font-family: "Nexa Bold";
+  font-family: "Nexa";
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
 .CO-summary > p > b {
-  font-family: "Nexa Bold";
+  font-family: "Nexa";
+  font-weight: 700;
 }
 
 .CO-summary > hr {
@@ -2089,7 +2095,8 @@ li#cart-empty {
 
 .CO-total {
   font-size: 20px;
-  font-family: "Nexa Bold";
+  font-family: "Nexa";
+  font-weight: 700;
 }
 
 /* Promo Code */

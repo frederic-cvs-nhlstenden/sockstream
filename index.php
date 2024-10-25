@@ -2,21 +2,34 @@
 
 $faqs = [
   "return" => "You can return any item within 30 days of purchase.",
-  "contact" => "You can reach our customer service team by emailing You can reach our customer service team by emailing support@sunnysocks.com or through our live chat feature on the website. We are available from 9 AM to 5 PM CET, Monday to Friday.",
+  "contact" => "You can reach our customer service team by emailing support@sunnysocks.com or through our live chat feature on the website. We are available from 9 AM to 5 PM CET, Monday to Friday.",
   "problems" => "If you experience any issues with your order, contact our customer support team immediately. We'll do our best to resolve the issue as quickly as possible.",
   "shipping" => "Yes, We ship worldwide! Shipping times and costs will vary depending on your location. International orders may also be subject to customs duties and taxes, which are the responsibility of the customer.",
   "long" => "Shipping times depends on your location. Orders within Europe typically take 3-5 business days, while international orders can take up to 14 business days. You can track your orders via the confirmation email we send once your order has shipped.",
   "payment" => "We accept a wide range of payment options, including IDeal, Visa, Mastercard, PayPal, and Apple Pay. All transactions are securely processed to protect your information."
 ];
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  if (isset($_POST['chatbot']) && $_POST['chatbot'] === 'true') {
+    if (isset($_POST['userInput'])) {
+      $userInput = $_POST['userInput'];
+      $response = searchFAQs($userInput, $faqs);
+      echo json_encode(['response' => htmlspecialchars($response, ENT_QUOTES, 'UTF-8')]);
+      exit;
+    } else {
+      echo json_encode(['response' => "I'm sorry, I didn't understand that."]);
+      exit;
+    }
+  }
+  if (isset($_POST['email'])) {
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['userInput'])) {
-  $userInput = $_POST['userInput'];
-  $response = searchFAQs($userInput, $faqs);
-  echo json_encode(['response' => $response]);
-  exit;
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      file_put_contents('subscribers.txt', $email . PHP_EOL, FILE_APPEND);
+    } else {
+    }
+  }
 }
-
 
 function searchFAQs($input, $faqs)
 {
@@ -29,18 +42,8 @@ function searchFAQs($input, $faqs)
   return "I'm sorry, I don't have an answer for that.";
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-
-  if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-
-    file_put_contents('subscribers.txt', $email . PHP_EOL, FILE_APPEND); // Placehoder for where to store the user emails
-    //echo "<p>Thank you for subscribing!</p>";
-  } else {
-    //echo "<p>Invalid email address.</p>";
-  }
-}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,25 +67,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   <header>
     <div class="header-left">
-      <p class="header-left-border"><a href="./pages/store_page.php">All Socks</p></a>
-      <a href="./pages/store_page.php?storeType=seasonal">
+      <a href="./pages/store_page.php" class="header-left-border">
+        <p>All Socks</p>
+      </a>
+      <a href="./pages/store_page.php?storeType=seasonal" class="header-left-border">
         <p>Seasonal</p>
       </a>
     </div>
 
-
     <div class="header-logo">
-      <a href="./index.php"><img src="./assets/images/logos/png/sunny_logos-01.png"></a>
+      <a href="./index.php"><img src="./assets/images/logos/png/sunny_logos-01.png" alt="Sunny Logo"></a>
     </div>
 
     <div class="header-right">
       <a href="./pages/aboutus.php">About Us</a>
-      <a href="./pages/faq.php" div="header-right-border">FAQs</a>
+      <a href="./pages/faq.php" class="header-right-border">FAQs</a>
     </div>
 
     <div class="icons-header">
-      <a href="./pages/login.php"><img src="./assets/icons/png/profile.png" class="profile-header"></a>
-      <img src="./assets/icons/png/cart.png" class="cart-header" id="cart-button">
+      <a href="./pages/login.php"><img src="./assets/icons/png/profile.png" class="profile-header" alt="Profile Icon"></a>
+      <img src="./assets/icons/png/cart.png" class="cart-header" id="cart-button" alt="Cart Icon">
     </div>
   </header>
 
@@ -97,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
       <img
         class="hero-image"
-        src="./assets/images/sunny_misc_photos/sustainablesocks.png"
+        src="./assets/images/sunny_illustrations/png/hero-image.png"
         alt="Sunny Socks store banner" />
     </section>
 
@@ -497,10 +501,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="chat-body">
       <div id="base-question">
         <p>Have you checked our support? We're happy to help with further issues.</p>
-        <p>You can access the <a href="./pages/faq.php">FAQs</a> page by clicking on the link.</p>
+        <p>You can access to the <a href="./pages/faq.php">FAQs</a> page by clicking on the link.</p>
       </div>
       <div id="base-question">
-        <p>To use the chatbot, just ask a question regarding our page.</p>
+        <p>To use the chatbot you just have to ask a question regarding our page.</p>
         <p>For example: "How long will it take for the package to arrive at its destination?"</p>
         <p>Try it!!</p>
       </div>
@@ -542,12 +546,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="footer-top-text">
 
         <div class="farleft-text-footer">
-          <img src="./assets/icons/png/ssl-secure.png" class="ssl-secured-footer">
+          <img src="./assets/icons/png/ssl-secure.png" class="ssl-secured-footer" alt="SSL Secured Icon">
           <p>Address:</p>
           <p>Sunny Street, Emmen</p>
           <p>Contact Us:</p>
           <p>06 12 34 56 78</p>
-          <p>info@sunnysocksn.nl</p>
+          <p>info@sunnysocks.nl</p>
         </div>
 
         <div class="footer-right-center">
@@ -568,26 +572,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       <div class="footer-socials">
         <a href="https://www.facebook.com/">
-          <img src="./assets/images/socials/facebook-logo.png">
+          <img src="./assets/images/socials/facebook-logo.png" alt="Facebook Logo">
         </a>
-
         <a href="https://instagram.com/">
-          <img src="./assets/images/socials/instagram-logo.png">
+          <img src="./assets/images/socials/instagram-logo.png" alt="Instagram Logo">
         </a>
-
         <a href="https://x.com">
-          <img src="./assets/images/socials/x-logo.png">
+          <img src="./assets/images/socials/x-logo.png" alt="X Logo">
         </a>
-
         <a href="https://www.linkedin.com/">
-          <img src="./assets/images/socials/linkedin-logo.png">
+          <img src="./assets/images/socials/linkedin-logo.png" alt="LinkedIn Logo">
         </a>
-
         <a href="https://www.youtube.com/">
-          <img src="./assets/images/socials/youtube-logo.png">
+          <img src="./assets/images/socials/youtube-logo.png" alt="YouTube Logo">
         </a>
       </div>
-
 
       <hr class="hr-footer">
 
@@ -595,7 +594,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div>© 2024 Sunny Socks. All rights reserved.</div>
         <div>Privacy Policy &nbsp;&nbsp;&nbsp; Terms of Service &nbsp;&nbsp;&nbsp; Shipping & Return Policy</div>
       </div>
-
     </div>
   </footer>
   <script src="./js/index.js"></script>

@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const target = event.target;
     const index = target.getAttribute("data-index");
 
-    if (target.classList.contains("delete-button")) {
+    if (target.classList.contains("cart-delete-button")) {
       // Remove item from cart
       cartItems.splice(index, 1);
       updateLocalStorage();
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    if (target.classList.contains("minus-button")) {
+    if (target.classList.contains("minus")) {
       // Decrease quantity
       if (cartItems[index].quantity > 1) {
         cartItems[index].quantity -= 1;
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    if (target.classList.contains("plus-button")) {
+    if (target.classList.contains("plus")) {
       // Increase quantity
       cartItems[index].quantity += 1;
       updateLocalStorage();

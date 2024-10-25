@@ -13,7 +13,7 @@
 
 <body>
     <?php require '../components/header.php'; ?>
-    <div class="cart-main-container">
+    <div id="cart-main-container">
 
         <div class="cart-container">
             <ul id="checkout-items">
