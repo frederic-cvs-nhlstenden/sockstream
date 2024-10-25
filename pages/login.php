@@ -41,12 +41,20 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
   <body id="profile">
 
     <?php
-    echo require_once '../components/header.php';
+    require_once '../components/header.php';
     ?>
 
     <section class="profile-page">
       <div class="container">
+
+        <a href="./purchase_history.php" id="purchase-history-btn">
+          <div class="history">
+            <i class="fa-solid fa-clock-rotate-left"></i><span>Purchase History</span>
+          </div>
+        </a>
+
         <div class="profile-header-form">
+
           <h2 class="page-title">User Profile</h2>
 
           <form action="../js/logout.php" method="POST" class="logout-form">
@@ -226,7 +234,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
 
   <body id="login-page">
     <?php
-    echo require_once '../components/header.php';
+    require_once '../components/header.php';
     ?>
     <main id="login-elements">
       <div class="container">
