@@ -29,6 +29,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
     <title>Sunny Socks</title>
     <link rel="stylesheet" href="../assets/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="../styles/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../styles/components.css">
     <link
       rel="shortcut icon"
       href="../assets/images/logos/png/sunny_logos-01.png"

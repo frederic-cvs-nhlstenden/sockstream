@@ -13,6 +13,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
     <meta charset="UTF-8" />
     <title>Purchase History</title>
     <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/components.css">
 </head>
 
 <body>
